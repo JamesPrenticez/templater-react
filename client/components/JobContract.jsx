@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-export default class JobListItem extends React.Component {
+export default class JobContract extends React.Component {
 render(){
     const {job, dispatch} = this.props
 

@@ -2,7 +2,22 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
+import {fetchJobs} from '../actions'
+import {getJobs} from '../api'
+
+import JobListItem from './JobListItem'
+
 class JobsList extends React.Component {
+    componentDidMount() {
+        getJobs()
+        .then(jobs => {
+            this.props.dispatch(fetchJobs(jobs))
+        })
+        .catch(err => {
+            console.log(err)
+      })
+    }
+
     render(){
         return (
         <>
@@ -11,9 +26,7 @@ class JobsList extends React.Component {
 
         <div>
             <ul>
-                <li>Job 1</li>
-                <li>Job 2</li>
-                <li>Job 3</li>
+                {this.props.jobs.map(job => <div className="card" key={job.id}><JobListItem job={job}/></div>)}
             </ul>
         </div>
 
@@ -27,4 +40,10 @@ class JobsList extends React.Component {
     }
 }
 
-export default connect ()(JobsList)
+function mapStateToProps (state) {
+    return {
+        jobs: state.jobs
+    }
+}
+
+export default connect (mapStateToProps)(JobsList)

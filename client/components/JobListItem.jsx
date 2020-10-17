@@ -7,8 +7,8 @@ render(){
 
         return(
             <>
-            <Link to={`/`}>
-                <h4>Home</h4>
+            <Link to={`/view`}>
+                <h4>{job.jname}</h4>
             </Link>
             </>
         )
