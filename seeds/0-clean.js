@@ -3,5 +3,5 @@ exports.seed = function (knex, Promise) {
     () => knex(table).del()
 
   return empty('jobs')()
-  .then(empty('favourites'))
+  .then(empty('products'))
 }
