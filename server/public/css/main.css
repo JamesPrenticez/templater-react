@@ -87,19 +87,26 @@ margin-bottom: 10px;
 /*---------- Add Job Form ----------*/
 .formGrid {
     display: grid;
-    width: 75%;
-    grid-template-columns: 15% 30% 15%;
+    width: 100%;
+    grid-template-columns: 50% 50% ;
     column-gap: 1px;
     justify-content: space-evenly;
     }
     
     label {
     font-size: 12px;
-    display: inline-block;
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
     }
     
     input {
-        font-size: 12px;
+        height: 20px;
+        width: 300px;
+        border: 1px solid #000;
+        margin-top: 10px;
+        float: right;
     }
     
     select {

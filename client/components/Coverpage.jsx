@@ -10,7 +10,7 @@ render(){
         return(
             <>
             <Header></Header>
-            <div class="coverPage">
+            <div className="coverPage">
 				<img id="logo" src="./img/logo.png"></img>
 				<img id="house" src="./img/houses/jamesarchitectural.png"></img>
 				<p id="jobNameDisplay">Job Name</p>

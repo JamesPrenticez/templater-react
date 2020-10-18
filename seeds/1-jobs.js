@@ -1,14 +1,17 @@
 exports.seed = (knex, Promise) => {
   return knex('jobs').insert([
     {
-      id: 0, client: 'Client 000', jname: 'The Meadows', jnumber: '000', lot: 'DP13578',
+      id: 0, client: 'Bob & Mary', jobName: 'The Meadows', jobNumber: '000', siteAddress: '123 Street', lotNumber: 'DP13578', gfa: '178.94m2',
     },
     {
-          id: 1, client: 'Client 001', jname: 'The Estate', jnumber: '001', lot: 'DP56468',
+      id: 1, client: 'Alex & Charlotte', jobName: 'The Estate', jobNumber: '001', siteAddress: '123 Street', lotNumber: 'DP56468', gfa: '150m2',
     },
     { 
-        id: 2, client: 'Client 002', jname: 'The Valley', jnumber: '002', lot: 'DP96548',
+      id: 2, client: 'James & Lucy', jobName: 'The Valley', jobNumber: '002', siteAddress: '123 Street', lotNumber: 'DP96548', gfa: '250m2',
     }
   ])
 }
+
+
+
 

@@ -11,6 +11,10 @@ render(){
             <>
             <div className='nav'>
                 <Link to={`/`}><h6>Home</h6></Link>
+                <Link to={`/add`}><h6>Edit Details</h6></Link>
+                <Link to={`/sums`}><h6>Add Sums</h6></Link>
+                <Link to={`/products`}><h6>Add Products</h6></Link>
+
                 <h4 className="navTitle">Menu</h4>
                     <ul id="menu">
                         <li ><Link to={`#page0`} class="active">Zero</Link></li> 
