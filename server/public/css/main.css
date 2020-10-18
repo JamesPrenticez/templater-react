@@ -49,3 +49,25 @@ margin-bottom: 10px;
     margin: 25px auto;
     background-color: white;
 }
+
+/*---------- Add Job Form ----------*/
+.formGrid {
+    display: grid;
+    width: 75%;
+    grid-template-columns: 15% 30% 15%;
+    column-gap: 1px;
+    justify-content: space-evenly;
+    }
+    
+    label {
+    font-size: 12px;
+    display: inline-block;
+    }
+    
+    input {
+        font-size: 12px;
+    }
+    
+    select {
+        font-size: 12px;
+    }
