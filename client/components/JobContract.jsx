@@ -1,6 +1,8 @@
 import React from 'react'
 import { HashLink as Link } from 'react-router-hash-link';
 
+import Coverpage from './Coverpage'
+
 export default class JobContract extends React.Component {
 render(){
     const {job, dispatch} = this.props
@@ -9,9 +11,13 @@ render(){
             <>
             <div className='nav'>
                 <Link to={`/`}><h6>Home</h6></Link>
+                <Link to={`/add`}><h6>Edit Details</h6></Link>
+                <Link to={`/sums`}><h6>Add Sums</h6></Link>
+                <Link to={`/products`}><h6>Add Products</h6></Link>
+
                 <h4 className="navTitle">Menu</h4>
                     <ul id="menu">
-                        <li ><Link to={`#page0`} >Zero</Link></li> 
+                        <li ><Link to={`#page0`} class="active">Zero</Link></li> 
                         <li ><Link to={`#page1`}>First</Link></li> 
                         <li ><Link to={`#page2`}>Second</Link></li> 
                         <li ><Link to={`#page3`}>Third</Link></li> 
@@ -26,7 +32,7 @@ render(){
                 </div>
   
             <div className='pages'>
-                <div className="page" id="page0">Page 0</div>
+                <div className="page" id="page0"><Coverpage/></div>
                 <div className="page" id="page1">Page 1</div>
                 <div className="page" id="page2">Page 2</div>
                 <div className="page" id="page3">Page 3</div>

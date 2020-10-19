@@ -5,6 +5,8 @@ import { connect } from 'react-redux'
 import {fetchJobs} from '../actions'
 import {getJobs} from '../api'
 
+import AddJob from './AddJob'
+
 import JobListItem from './JobListItem'
 
 class JobsList extends React.Component {
@@ -31,9 +33,9 @@ class JobsList extends React.Component {
         </div>
 
         <div>
-            <Link to={`/add`}>
-                <button>Create Job</button>
-            </Link>
+
+        <AddJob/>
+
         </div>
         </>
         )

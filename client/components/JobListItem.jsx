@@ -8,7 +8,7 @@ render(){
         return(
             <>
             <Link to={`/view`}>
-                <h4>{job.jname}</h4>
+                <h4>{job.jobName}</h4>
             </Link>
             </>
         )
