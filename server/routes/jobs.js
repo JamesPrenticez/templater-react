@@ -13,3 +13,11 @@ router.get('/api/jobs', (req, res) => {
         res.status(500).send('something went wrong')
   })
 })
+
+router.post('/api/jobs', (req, res) => {
+  let {jobName} = req.body
+      db.createJob({jobName})
+          .then((ids) => {
+              res.status(201).json({id: ids[0]})
+          })
+})

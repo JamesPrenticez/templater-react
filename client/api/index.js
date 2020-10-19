@@ -5,3 +5,9 @@ export function getJobs () {
     .get('/api/jobs')
     .then(res => res.body.jobs)
 }
+
+export function addJob(jobName){
+    return request.post('/api/jobs')
+        .send({jobName})
+        .then(res => res.body.id)
+}

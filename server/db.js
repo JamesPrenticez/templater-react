@@ -3,9 +3,14 @@ const config = require('../knexfile')[environment]
 const database = require('knex')(config)
 
 module.exports = {
-    getJobs
+    getJobs,
+    createJob
 }
 
-function getJobs(db = database) {
+function getJobs(db = database){
     return db('jobs')
+}
+
+function createJob({jobName}, db = database){
+    return db('jobs').insert({jobName})
 }
