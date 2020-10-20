@@ -34,8 +34,10 @@ class AddJob extends React.Component {
 				return(
 					<>
 					<h4>Create New Job</h4>
-
+					<p>Job Name (name)</p>
 					<input name='name' onChange={this.handleChange}/>           
+					<p>GFA</p>
+					<input gfa='150m2' onChange={this.handleChange}/>
 					<button onClick={this.submit}>Create Job</button>
 
 		{/* 			

@@ -1,12 +1,11 @@
 import request from 'supertest'
 import server from '../server'
 
-import {getJobs, createJobs} from '../db'
-
+import {getJobs, createJob} from '../db'
 
 jest.mock('../db', () => ({
     getJobs: jest.fn(),
-    createJobs: jest.fn()
+    createJob: jest.fn()
 }))
 
 describe("GET /api/jobs", () => {
@@ -30,4 +29,20 @@ describe("GET /api/jobs", () => {
                     expect(res.text).toMatch(/something went wrong/)
                 })
     })
+})
+
+describe("POST /api/jobs", () => {
+    test("add job to database", () => {
+        createJob.mockImplementation(() => Promise.resolve[0])
+        return request(server)
+            .post('/api/jobs')
+            .send({jobName: 'NewJob'})
+            .then(res => {
+                expect(createJob).toHaveBeenCalled()
+                expect(createJob.mock.calls[0][0].jobName).toBe('NewJob')
+                
+                expect(res.status).toBe(201)
+                expect(res.body.id).toBe(0)
+            })
+        })
 })

@@ -10,15 +10,12 @@ import Products from './Products'
 const App = () => {
   return (
 <>
-    <div className='main'>
     <Router>
       <Route exact path='/' component={JobList} />
       <Route path='/view' component={JobContract} />
       <Route path='/sums' component={Sums} />
       <Route path='/products' component={Products} />
-
     </Router>
-    </div>
 </>
   )
 }
