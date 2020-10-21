@@ -57,7 +57,6 @@ table {
   }
 
 #jobs td, #jobs th {
-    width: 100%;
     border-bottom: 1px solid firebrick;
     padding: 8px;
   }

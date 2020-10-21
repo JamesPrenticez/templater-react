@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import {fetchJobs} from '../actions'
@@ -31,10 +30,14 @@ class JobsList extends React.Component {
                 <thead>
                 <tr>
                     <th>Jobs</th>
+                    <th>Address</th>
+                    <th>Client</th>
+                    <th>GFA</th>
+                    <th>DELETE</th>
                 </tr>
                 </thead>
                 <tbody>
-                {this.props.jobs.map(job => <tr key={job.id}><Link to={`/view`}><JobListItem job={job}/></Link></tr>)}
+                {this.props.jobs.map(job => <tr key={job.id}><JobListItem job={job}/></tr>)}
                 </tbody>
             </table>
 
