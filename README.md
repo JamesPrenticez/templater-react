@@ -1,5 +1,6 @@
 ## Templater
-Taking the stress out of deciding what to cook
+Job Information Database 
+Residential Tender Letter Generator 
 
 By James Prentice
 
