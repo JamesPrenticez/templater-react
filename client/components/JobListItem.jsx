@@ -7,9 +7,15 @@ render(){
 
         return(
             <>
-            <Link to={`/view`}>
-                <h4>{job.jobName}</h4>
-            </Link>
+            <td>
+                {job.jobName}
+           </td>
+            <td>
+                {job.clientName}
+            </td>
+            <td>
+                {job.gfa}          
+            </td>
             </>
         )
     }

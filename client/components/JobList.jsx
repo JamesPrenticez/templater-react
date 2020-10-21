@@ -23,19 +23,24 @@ class JobsList extends React.Component {
     render(){
         return (
         <>
-        <h1>Job List</h1>
-        <p>A list of all current jobs displayed here.</p>
+        <div className='jobContainer'>
+            <h1>Job List</h1>
+            <p>A list of all current jobs displayed here.</p>
 
-        <div>
-            <ul>
-                {this.props.jobs.map(job => <div className="card" key={job.id}><JobListItem job={job}/></div>)}
-            </ul>
-        </div>
+            <table id="jobs">
+                <thead>
+                <tr>
+                    <th>Jobs</th>
+                </tr>
+                </thead>
+                <tbody>
+                {this.props.jobs.map(job => <tr key={job.id}><Link to={`/view`}><JobListItem job={job}/></Link></tr>)}
+                </tbody>
+            </table>
 
-        <div>
-
-        <AddJob/>
-
+            <div>
+                <AddJob/>
+            </div>
         </div>
         </>
         )

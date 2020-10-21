@@ -9,6 +9,7 @@ render(){
 
         return(
             <>
+            <div className='main'>
             <div className='nav'>
                 <Link to={`/`}><h6>Home</h6></Link>
                 <Link to={`/add`}><h6>Edit Details</h6></Link>
@@ -43,6 +44,7 @@ render(){
                 <div className="page" id="page8">Page 8</div>
                 <div className="page" id="page9">Page 9</div>
                 <div className="page" id="page10">Page 10</div>
+            </div>
             </div>
             </>
         )
