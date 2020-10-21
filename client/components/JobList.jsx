@@ -28,14 +28,14 @@ class JobsList extends React.Component {
             <p>A list of all current jobs displayed here.</p>
 
             <table id="jobs">
+                <thead>
                 <tr>
-                    <th>Job</th>
-                    <th>Project</th>
-                    <th>GFA</th>
+                    <th>Jobs</th>
                 </tr>
-
-                {this.props.jobs.map(job => <tr key={job.id} link={`/view`}><JobListItem job={job}/></tr>)}
-                
+                </thead>
+                <tbody>
+                {this.props.jobs.map(job => <tr key={job.id}><Link to={`/view`}><JobListItem job={job}/></Link></tr>)}
+                </tbody>
             </table>
 
             <div>

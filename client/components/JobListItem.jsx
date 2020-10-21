@@ -8,10 +8,8 @@ render(){
         return(
             <>
             <td>
-            <Link to={`/view`}>
                 {job.jobName}
-            </Link>
-            </td>
+           </td>
             <td>
                 {job.clientName}
             </td>
