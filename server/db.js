@@ -4,13 +4,22 @@ const database = require('knex')(config)
 
 module.exports = {
     getJobs,
-    createJob
+    createJob,
+    deleteJob
 }
 
+// GET Jobs
 function getJobs(db = database){
     return db('jobs')
 }
 
+// ADD Job
 function createJob({jobName}, db = database){
     return db('jobs').insert({jobName})
+}
+
+// DELETE Job
+function deleteJob(id, db = database){
+    if(!id) return Promise.reject('Id must be specified')
+    return db('jobs').where({id}).delete()
 }
