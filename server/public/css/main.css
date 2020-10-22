@@ -128,12 +128,9 @@ background-color: red;
 .navTitle {
 color: white;
 font-weight: 700;
-text-align: center;
+margin-top: 10px;
 margin-bottom: 10px;
 }
-
-
-
 
 /*---------- Page ----------*/
 .page{
@@ -145,19 +142,16 @@ margin-bottom: 10px;
 
 /*---------- Add Job Form ----------*/
 .formGrid {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 50% 50% ;
-    column-gap: 1px;
-    justify-content: space-evenly;
+        display: grid;
+        width: 80%;
+        grid-template-columns: 50% 50%;
+        column-gap: 1px;
+        justify-content: space-evenly;
     }
     
     label {
-    font-size: 12px;
-    text-align: right;
-    clear: both;
-    float:left;
-    margin-right:15px;
+        font-size: 12px;
+        margin-right:15px;
     }
     
     input {
@@ -165,11 +159,18 @@ margin-bottom: 10px;
         width: 300px;
         border: 1px solid #000;
         margin-top: 10px;
+        display: inline;
     }
 
     button{
-        background-color: white;
-        margin-left: 10px;
+        color: white;
+        padding: 5px;
+        width: 66px;
+        height: 33px;
+        background-color: red;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline;
     }
     
     select {

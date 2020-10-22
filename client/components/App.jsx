@@ -3,7 +3,7 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 
 import JobList from './JobList'
 import JobContract from './JobContract'
-import Sums from './Sums'
+import EditDetails from './EditDetails'
 import Products from './Products'
 
 
@@ -13,7 +13,7 @@ const App = () => {
     <Router>
       <Route exact path='/' component={JobList} />
       <Route path='/view' component={JobContract} />
-      <Route path='/sums' component={Sums} />
+      <Route path='/edit' component={EditDetails} />
       <Route path='/products' component={Products} />
     </Router>
 </>
