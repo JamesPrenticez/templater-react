@@ -4,7 +4,7 @@ exports.up = (knex) => {
       table.integer('comment_count').defaultsTo(0)
       table.integer('number')
       table.string('title')
-      table.string('section')
+      table.string('paragraphs')
     })
   }
   

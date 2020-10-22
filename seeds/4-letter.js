@@ -1,7 +1,5 @@
 exports.seed = (knex, Promise) => {
-  return knex('letter').del()
-    .then(function () {
-      return knex('letter').insert([
+  return knex('letter').insert([
         {id: 0, number: 0, title: 'CLIENT APPROVAL', comment_count: 0, paragraphs: JSON.stringify([
           'Before you read this contract, it is important that you understand that this document is the basis for building your new home.  All previous discussions that you have had with the consultant about various products etc. are now irrelevant as this document represents what you have finally agreed on',
           'To ensure that you acknowledge all the aspects of this schedule, we will tick each clause upon your confirmation that you fully understand and for any reason you do not – please ask your consultant to explain'
@@ -190,23 +188,23 @@ exports.seed = (knex, Promise) => {
         {id: 34, number: 34, title: 'SOLAR', comment_count: 0, paragraphs: JSON.stringify([
           'No allowance has been made for any solar',
         ])},
-        {id: 31, number: 31, title: 'HEATING', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 35, number: 35, title: 'HEATING', comment_count: 0, paragraphs: JSON.stringify([
           'Shall include a high wall Mitsubishi EcoCore MSZ-GL50VGD inverter heatpump',
           'Interior heat pump unit shall be located in the dining room ',
         ])},
-        {id: 35, number: 35, title: 'DRAINAGE', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 36, number: 36, title: 'DRAINAGE', comment_count: 0, paragraphs: JSON.stringify([
           'This contract includes a Provisional Sum of $5,750.00 for drainage works',
           'Includes sewer/stormwater drains, sumps and gullys finished to correct council levels. Should your landscaping affect these finished heights then any rectification work required will be at your own cost',
           'All drains, phone, power and water to house. Owners to connect and transfer power and phone account',
         ])},
-        {id: 36, number: 36, title: 'FRIDGE WATER SUPPLY', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 37, number: 37, title: 'FRIDGE WATER SUPPLY', comment_count: 0, paragraphs: JSON.stringify([
           'No allowance has been made for a fridge water connection',
         ])},
-        {id: 37, number: 37, title: 'MIRRORS', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 38, number: 38, title: 'MIRRORS', comment_count: 0, paragraphs: JSON.stringify([
           'Shall include a 1200 high x 500 wide polished edge mirror to each of the downstairs and upstairs water closets',
           'Shall include a Broadway mirror fixed above each of the 900 wide vanities',
         ])},
-        {id: 38, number: 38, title: 'DECORATING', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 39, number: 39, title: 'DECORATING', comment_count: 0, paragraphs: JSON.stringify([
           'Resene paint system to the complete home',
           'Ceilings to be Resene flat ceiling paint ',
           'Interior walls to be Zylone sheen 3 coat system ',
@@ -221,25 +219,25 @@ exports.seed = (knex, Promise) => {
           'Downpipes shall be painted',
           'Plaster finish will be painted under the work of the Rockcote Contractor',
         ])},
-        {id: 39, number: 39, title: 'COLOR SCHEMES', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 40, number: 40, title: 'COLOR SCHEMES', comment_count: 0, paragraphs: JSON.stringify([
           'Shall include the services of a professional colour consultant at Studio J',
           'Choice of colours for the various products included in this contract will be from the manufacturers standard colour range',
         ])},
-        {id: 40, number: 40, title: 'CURTAIN AND BLINDS', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 41, number: 41, title: 'CURTAIN AND BLINDS', comment_count: 0, paragraphs: JSON.stringify([
           'No allowance has been made for curtains or blinds',
         ])},
-        {id: 41, number: 41, title: 'CARPET', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 42, number: 42, title: 'CARPET', comment_count: 0, paragraphs: JSON.stringify([
           'This contract includes a Prime Cost Sum of $6,400.00 for carpet',
           'All carpets from Hubbers Flooring - Typical carpet rating: Jennian Specification',
           'This contract allows for carpet to be laid to the following areas - Dining, living, hallway, master, bed 2, bed 3, linen and wardrobes',
           'Excludes any garage carpet',
         ])},
-        {id: 42, number: 42, title: 'VINYL', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 43, number: 43, title: 'VINYL', comment_count: 0, paragraphs: JSON.stringify([
           'This contract includes a Prime Cost Sum of $1,859.32 for vinyl',
           'All vinyl from Hubbers Flooring - Typical carpet rating: Jennian Specification',
           'This contract allows for vinyl to be laid to the following areas - kitchen, dining, bathroom, toilet, ensuite, laundry and entry',
         ])},
-        {id: 43, number: 43, title: 'TILING', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 44, number: 44, title: 'TILING', comment_count: 0, paragraphs: JSON.stringify([
           'This contract includes a Prime Cost Sum of $920.00 for tiles and waterproofing',
           'All tiles from Hubbers Flooring - Typical carpet rating: Jennian Specification',
           'Tiles to bath apron and bath splash included - Three rows high',
@@ -248,49 +246,49 @@ exports.seed = (knex, Promise) => {
           'Masterbuild guarantee does not cover any tiled areas',
           'No allowance has been made for any surplus tiles to be left on site for future maintenance, as an additional option you may choose to do this, please ask your consultant for a quote' 
         ])},
-        {id: 44, number: 44, title: 'DRIVEWAYS & LANDSCAPING', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 45, number: 45, title: 'DRIVEWAYS & LANDSCAPING', comment_count: 0, paragraphs: JSON.stringify([
           'No allowance has been made for any driveways or paving',
           'No allowance has been made for any landscaping', 
         ])},
-        {id: 45, number: 45, title: 'DECKS', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 46, number: 46, title: 'DECKS', comment_count: 0, paragraphs: JSON.stringify([
           'No allowance has been made for any form of timber decking',
         ])},
-        {id: 46, number: 46, title: 'WARRANTIES', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 47, number: 47, title: 'WARRANTIES', comment_count: 0, paragraphs: JSON.stringify([
           'To ensure that all guarantees and warranties for the product included in this project remain valid, please keep up with the recommended maintenance programme',
         ])},
-        {id: 47, number: 47, title: 'MAINTENANCE', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 48, number: 48, title: 'MAINTENANCE', comment_count: 0, paragraphs: JSON.stringify([
           'After taking possession the maintenance period will be 3 years',
           '90 days after the possession date, our construction manager will make contact to arrange a home visit.  Prior to this visit if you could take note of any maintenance that may need attending.  ',
           'For any urgent matters please contact our Construction Manager',
           'This maintenance period is non-transferable and only remains valid as long as the owner of the home is the person stated at the top of this schedule of works',
         ])},
-        {id: 48, number: 48, title: 'EXCLUSIONS', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 49, number: 49, title: 'EXCLUSIONS', comment_count: 0, paragraphs: JSON.stringify([
           'Valuation fees',
           'Surveyor’s fees for lost boundary peg locations',
           'Letterbox, clothesline or television aerial',
           'Water rates used during build (to be by owner)',
         ])},
-        {id: 49, number: 49, title: 'PRODUCT OPTIONS', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 50, number: 50, title: 'PRODUCT OPTIONS', comment_count: 0, paragraphs: JSON.stringify([
           'Requested price options, but have not been included in this contract',
         ])},
-        {id: 50, number: 50, title: 'SUMMARY OF PROVISIONAL SUMS INCLUDED IN THIS CONTRACT', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 51, number: 51, title: 'SUMMARY OF PROVISIONAL SUMS INCLUDED IN THIS CONTRACT', comment_count: 0, paragraphs: JSON.stringify([
           'Provisional sums are an estimate for portion of work, for example site excavation - for which the extent is not known. Accordingly, the amount of a provisional sum can be, to a large extent, outside of either party’s control',
         ])},
-        {id: 51, number: 51, title: 'SUMMARY OF PRIME COST SUMS INCLUDED IN THIS CONTRACT', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 52, number: 52, title: 'SUMMARY OF PRIME COST SUMS INCLUDED IN THIS CONTRACT', comment_count: 0, paragraphs: JSON.stringify([
           'Prime cost sums cover the supply cost only for a  specific item; example a bathroom vanity, a PC sum is to be spent at the instruction of the client, meaning they will have some ability to control the final amount',
         ])},
-        {id: 52, number: 52, title: 'CONFIRMATION OF PLANS', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 53, number: 53, title: 'CONFIRMATION OF PLANS', comment_count: 0, paragraphs: JSON.stringify([
           'Final plans need to be checked carefully, as with the new Building Act alterations cannot be made after the submission of the documents to the council',
           'If an amendment were to be made, no further work at that stage could proceed until it has been approved by the Council',
           'This would affect construction time and possession dates',
           'Clients will incur a fee from not only the Council but Jennian Homes for this amendment',
         ])},
-        {id: 53, number: 53, title: 'VARIATIONS TO CONTRACT', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 54, number: 54, title: 'VARIATIONS TO CONTRACT', comment_count: 0, paragraphs: JSON.stringify([
           'Once the plans are finalised and the Contract has been signed, all changes will be made by a ’Variation to the Contract’.  If there has been a change made after the Contract this will be in a written format and will need to be signed off for the change of works to take place',
           'There will be two copies of the V.O., one for the owner and one to be signed and returned to the Jennian Office',
           'Note:  If you do not have the ‘Variation of the Contract’ signed and returned to the office the current contract will still stand.  A verbal agreement with a member of the Jennian Office will not be considered a ‘Variation to the Contract’',
         ])},
-        {id: 54, number: 54, title: 'EXPECTED START & COMPLETION DATES', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 55, number: 55, title: 'EXPECTED START & COMPLETION DATES', comment_count: 0, paragraphs: JSON.stringify([
           'Please read the following in reference to ‘Part 3 - Specific Conditions’ No’s  III and IV of the attached Masterbuild Contract',
           'It is a requirement to provide specific dates for expected start and completion dates as part of the contract.  These dates are a guide only and are subject to change',
           'Jennian Homes will do their upmost best to achieve the earliest outcome possible, however it is important to be aware that much of this process is out of our hands, such as the following:',
@@ -300,12 +298,11 @@ exports.seed = (knex, Promise) => {
           'If a title for a section has not yet been issued at time of Contract, the development of these sections falls under the same scrutiny as mentioned in clause (c)',
           'Jennian Homes would recommend working on a start date within 6 weeks of the Building Consent being applied for, and/or the completion date being within 24 weeks of the actual start date',
         ])},
-        {id: 55, number: 55, title: 'CLIENT APPROVAL', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 56, number: 56, title: 'CLIENT', comment_count: 0, paragraphs: JSON.stringify([
           '',
         ])},
-        {id: 56, number: 56, title: 'VARIATIONS TO CONTRACT', comment_count: 0, paragraphs: JSON.stringify([
+        {id: 57, number: 57, title: 'VARIATIONS TO CONTRACT', comment_count: 0, paragraphs: JSON.stringify([
           '',
         ])}
-      ])
-    })
-}
+   ])
+ }
