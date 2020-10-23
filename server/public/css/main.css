@@ -72,6 +72,11 @@ table {
     text-decoration: none;
     color: black;
 }
+/*---------- Thumbnail ---------*/
+.thumbnail{
+    width: 50px;
+}
+
 /*---------- Cover Page ---------*/
 .coverPage{
     height: 90%;

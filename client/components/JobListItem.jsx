@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+
 import {FaMinusCircle} from 'react-icons/fa'
 
 import {removeJob} from '../actions'
@@ -34,18 +35,16 @@ class JobListItem extends React.Component {
     const deleteStyle = {color: 'red', marginLeft: '7px', cursor: 'pointer'}
         return(
             <>
-                
-               
                 <td>
-                     <Link to={`/view`}>
+                <Link to={`/view`}>
                     {job.jobName}
-                    </Link>
+                </Link>
                 </td>
                 <td>
-                    {job.siteAddress}
+                    {job.jobNumber}
                 </td>
                 <td>
-                    {job.clientName}
+                    {job.collection}
                 </td>
                 <td>
                     {job.gfa}          
