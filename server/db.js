@@ -5,7 +5,7 @@ const database = require('knex')(config)
 module.exports = {
     getJobs,
     createJob,
-    deleteJob
+    deleteJob,
 }
 
 // GET Jobs
