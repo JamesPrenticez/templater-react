@@ -3,7 +3,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 0,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Alexandra.png',
+      img: 'img/houses/SS_Alexandra.png',
       jobName: 'Alexandra',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',

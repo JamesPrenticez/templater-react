@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route, Link, useParams} from "react-router-dom";
 
 import {FaMinusCircle} from 'react-icons/fa'
 
@@ -36,7 +36,7 @@ class JobListItem extends React.Component {
         return(
             <>
                 <td>
-                <Link to={`/view`}>
+                <Link to={`/details/` + job.id}>
                     {job.jobName}
                 </Link>
                 </td>
