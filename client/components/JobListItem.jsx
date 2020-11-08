@@ -36,7 +36,7 @@ class JobListItem extends React.Component {
         return(
             <>
                 <td>
-                <Link to={`/details/` + job.id}>
+                <Link to={`/` + job.id}>
                     {job.jobName}
                 </Link>
                 </td>

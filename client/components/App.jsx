@@ -1,38 +1,63 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import {BrowserRouter as Router, Switch, Route, Link, useParams} from "react-router-dom";
 
+import Header from './Header'
+import Footer from './Footer'
+import Homepage from './Homepage'
+import Nav from './Nav'
+import Sidebar from './Sidebar'
+
 import JobList from './JobList'
+import ImageViewer from './ImageViewer'
 import JobDetails from './JobDetails'
 import JobContract from './JobContract'
 import Products from './Products'
 
+import {fetchJobs} from '../actions'
+import {getJobs} from '../api'
 
-const App = () => {
+class App extends React.Component{
+    componentDidMount() {
+        getJobs()
+        .then(jobs => {
+            this.props.dispatch(fetchJobs(jobs))
+        })
+        .catch(err => {
+            console.log(err)
+      })
+    }
+
+render(){
+console.log(this.props)
+let id = 1 //useParams()
   return (
 <>
-    <Router>
-      <Route exact path='/' component={JobList} />
-      <Route exact path='/products' component={Products} />
-      <Route exact path='/view' component={JobContract} />
-
-      <Switch>
-          <Route exact path="/details/:id" children={<Child/>} />
-      </Switch>
-    </Router>
+<Header/>
+<Sidebar/>
+<Router>
+  <main>
+  <Nav/>
+<Switch>
+<Route path="/" component={Homepage}/> 
+<Route path="/a" component={JobDetails}/> 
+<Route path="/b" component={JobContract}/> 
+<Route path="/c" component={ImageViewer}/> 
+</Switch>
+  </main>
+</Router>
+<Footer/>
 </>
 
 
   )
 }
-
-function Child() {
-  // We can use the `useParams` hook here to access
-  // the dynamic pieces of the URL.
-  let {id} = useParams();
-
-  return (
-      <JobDetails id={id}/>
-  );
 }
 
-export default App
+function mapStateToProps (state) {
+    return {
+        jobs: state.jobs
+    }
+}
+
+export default connect(mapStateToProps)(App)

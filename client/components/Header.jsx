@@ -6,7 +6,9 @@ render(){
 
         return(
             <>
-            <header></header>
+            <header>
+                <div className="title">Jennian Homes</div>
+            </header> 
             </>
         )
     }
