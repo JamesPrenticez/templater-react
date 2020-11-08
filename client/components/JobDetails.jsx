@@ -33,18 +33,3 @@ render(){
 }
 
 export default JobDetails
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
