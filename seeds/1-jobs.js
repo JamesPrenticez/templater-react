@@ -3,7 +3,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 0,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS_Alexandra.png',
+      img: './img/houses/alexandra/alexandra.png',
       jobName: 'Alexandra',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -15,7 +15,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 1,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Alexandra Architectural.png',
+      img: './img/houses/alexandra/alexandra_architectural.png',
       jobName: 'Alexandra Architectural',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -27,7 +27,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 2,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Andrew.png',
+      img: './img/houses/andrew/andrew.png',
       jobName: 'Andrew',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -39,7 +39,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 3,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Andrew Architectural.png',
+      img: './img/houses/andrew/andrew_architectural.png',
       jobName: 'Andrew Architectural',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -51,7 +51,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 4,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Anne.png',
+      img: './img/houses/anne/anne.png',
       jobName: 'Anne',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -63,7 +63,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 5,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Anne Architectural.png',
+      img: './img/houses/anne/anne_architechtural.png',
       jobName: 'Anne Architectural',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -76,7 +76,7 @@ exports.seed = (knex, Promise) => {
       id: 6,
       jobName: 'Cathrine',
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Cathrine.png',
+      img: './img/houses/cathrine/cathrine.png',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
       jobNumber: 'SS04',
@@ -87,7 +87,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 7,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Cathrine Architectural.png',
+      img: './img/houses/cathrine/cathrine_architectural.png',
       jobName: 'Cathrine Architectural',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -99,7 +99,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 8,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Charles.png',
+      img: './img/houses/charles/charles.png',
       jobName: 'Charles',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -111,7 +111,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 9,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Charles Architectural.png',
+      img: './img/houses/charles/charles_architectural.png',
       jobName: 'Charles Architectural',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -124,7 +124,7 @@ exports.seed = (knex, Promise) => {
       id: 10,
       jobName: 'Charlotte',
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Charlotte.png',
+      img: './img/houses/charlotte/charlotte.png',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
       jobNumber: 'SS06',
@@ -135,7 +135,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 11,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Charlotte Architectural.png',
+      img: './img/houses/charlotte/charlotte_architectural.png',
       jobName: 'Charlotte Architectural',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -147,7 +147,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 12,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Edward 2.png',
+      img: './img/houses/edward2/edward2.png',
       jobName: 'Edward 2',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -159,7 +159,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 13,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Edward 3.png',
+      img: './img/houses/edward3/edward3.png',
       jobName: 'Edward 3',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -171,7 +171,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 14,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Edaward 3 Architectural.png',
+      img: './img/houses/edward3/edward3_architectural.png',
       jobName: 'Edward 3 Architectural',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -183,7 +183,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 15,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Edward 4.png',
+      img: './img/houses/edward4/edward4.png',
       jobName: 'Edward 4',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -195,7 +195,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 16,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Ernest.png',
+      img: './img/houses/ernest/ernest.png',
       jobName: 'Ernest',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -207,7 +207,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 17,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS George.png',      
+      img: './img/houses/george/george.png',
       jobName: 'George',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -219,7 +219,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 18,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS George Architectural.png',      
+      img: './img/houses/george/george_architectural.png',
       jobName: 'George Architectural',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -231,7 +231,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 19,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS James.png',      
+      img: './img/houses/james/james.png',
       jobName: 'James',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -243,7 +243,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 20,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS James Architectural.png',      
+      img: './img/houses/james/james_architectural.png',
       jobName: 'James Architectural',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -255,7 +255,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 21,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Louis.png',      
+      img: './img/houses/louis/louis.png',
       jobName: 'Louis',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -267,7 +267,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 22,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Louis Architectural.png',      
+      img: './img/houses/louis/louis_architectural.png',
       jobName: 'Louis Architectural',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -279,7 +279,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 23,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Louis 2 Architectural.png',      
+      img: './img/houses/louis2/louis2_architectural.png',
       jobName: 'Louis 2 Architectural',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -291,7 +291,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 24,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Louis 3 Architectural.png',      
+      img: './img/houses/louis3/louis3_architectural.png',
       jobName: 'Louis 3 Architectural',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -303,7 +303,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 25,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Mary.png',      
+      img: './img/houses/mary/mary.png',
       jobName: 'Mary',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -315,7 +315,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 26,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Mary Architectural.png',      
+      img: './img/houses/mary/mary_architectural.png',
       jobName: 'Mary Architectural',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -327,7 +327,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 27,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Victora.png',      
+      img: './img/houses/victoria/victoria.png',
       jobName: 'Victora',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -339,7 +339,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 28,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS Victora Architectural.png',      
+      img: './img/houses/victoria/victoria_architectural.png',
       jobName: 'Victora Architectural',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -351,7 +351,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 29,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS William.png',      
+      img: './img/houses/william/william.png',
       jobName: 'William',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
@@ -363,7 +363,7 @@ exports.seed = (knex, Promise) => {
     {
       id: 30,
       date_created: new Date(Date.now()),
-      img: 'img/houses/SS William Architectural.png',      
+      img: './img/houses/william/william_architectural.png',
       jobName: 'William Architectural',
       collection: 'Southern Series',
       client: 'Jennian Standard Pricing',
