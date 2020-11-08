@@ -2,7 +2,14 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {BrowserRouter as Router, Switch, Route, Link, useParams} from "react-router-dom";
 
+import Header from './Header'
+import Footer from './Footer'
+import Homepage from './Homepage'
+import Nav from './Nav'
+import Sidebar from './Sidebar'
+
 import JobList from './JobList'
+import ImageViewer from './ImageViewer'
 import JobDetails from './JobDetails'
 import JobContract from './JobContract'
 import Products from './Products'
@@ -26,15 +33,20 @@ console.log(this.props)
 let id = 1 //useParams()
   return (
 <>
-    <Router>
-      <Route exact path='/' component={JobList} />
-      <Route exact path='/products' component={Products} />
-      <Route exact path='/view' component={JobContract} />
-      <Switch>
-          <Route exact path="/:id" children={<JobDetails job={this.props.jobs[id]}/>} />
-      </Switch>
-
-    </Router>
+<Header/>
+<Sidebar/>
+<Router>
+  <main>
+  <Nav/>
+<Switch>
+<Route path="/" component={Homepage}/> 
+<Route path="/a" component={JobDetails}/> 
+<Route path="/b" component={JobContract}/> 
+<Route path="/c" component={ImageViewer}/> 
+</Switch>
+  </main>
+</Router>
+<Footer/>
 </>
 
 

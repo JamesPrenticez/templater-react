@@ -12,10 +12,94 @@ body {
 }
 /*---------- Header ---------*/
 header{
-    width: 100%;
-    height: 5%;
-    background-color: red;
+  width: 100%;
+  height: 10VH;
+  margin: auto;
+  background-color: #EC2027;
+  position: fixed;
 }
+
+.title{
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 5px;
+  font-size: 4em;
+}
+/*---------- Nav Bar ---------*/
+  nav{
+  width: 100%;
+  margin: auto;
+  margin-top: 10VH;
+  height: 5VH;
+  background-color: hsla(0, 0%, 0%, .5);
+  position: fixed;  
+  }
+
+nav li{
+  display: inline-block;
+  list-style-type: none;
+}
+/*---------- Side Bar ---------*/
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  min-width: 15VW; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #EC2027; /* Red */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  margin-top: 15VH;
+}
+
+/* The navigation menu links */
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    color: white;
+    background-color: #EC2027;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .btn:hover {
+    background-color: hsla(0, 0%, 45%, 0.247);
+  }
+  
+  /* Add a dark background color to the active button */
+  .btn.active {
+    background-color: #EC2027;
+     color: white;
+  }
 /*---------- Footer ---------*/
 footer{
     width: 100%;
@@ -25,13 +109,22 @@ footer{
     bottom:0;
 }
 
+/*---------- Main ----------*/
+main {
+  width: 85VW;
+  height: 100%;
+  margin-left: 15VW;
+  margin-top: 15VH;
+  position: fixed;
+  overflow: scroll;
+}
 /*---------- Job Container ----------*/
 .jobContainer{
-    margin: 25px auto;
     background-color: white;
+    margin: 5px auto;
     border-radius: 5px;
-    height: 100%;
-    width: 80%;
+    height: auto;
+    width: 90%;
     padding: 2%;
     border: 1px solid;
     box-shadow: 5px 10px 8px 10px #888888;
@@ -181,3 +274,60 @@ margin-bottom: 10px;
     select {
         font-size: 12px;
     }
+
+/*---------- Image Viewer ----------*/
+ .column{
+  height: 100%;
+  }
+  
+  .row {
+  padding: 5px;
+  display: none; /* Hide columns by default */
+  }
+
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: inline-block;
+    float: right;
+  }
+
+  /* Content */
+  .content {
+    background-color: white;
+    border-top: 3px solid #EC2027;
+    border-radius: 3px;
+    height: 20VH;
+  }
+
+  .content img {
+      height: 90%;
+      width: 15%;
+      border: 2px solid grey;
+      border-radius: 3px;
+      object-fit: cover;
+      margin: 5px;
+      float: right;
+  }
+
+.text {
+      height: 90%;
+      width: 25%;
+      margin: 5px;
+      padding: 5px;
+      float: left;
+}
+
+h2{
+line-height: 5px;  
+display: inline-block;
+}
+
+h4{
+  display: inline-block;
+}
+
+p{
+  display: inline-block;
+}
+
+/* ----------------------------------------------------- */
