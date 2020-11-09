@@ -5,7 +5,6 @@ import {BrowserRouter as Router, Switch, Route, Link, useParams} from "react-rou
 import Header from './Header'
 import Footer from './Footer'
 import Homepage from './Homepage'
-import Nav from './Nav'
 import Sidebar from './Sidebar'
 
 import AddJob from './AddJob'
