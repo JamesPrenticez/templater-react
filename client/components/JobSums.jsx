@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-export default class EditDetails extends React.Component {
+export default class JobSums extends React.Component {
 render(){
     const {job, dispatch} = this.props
 

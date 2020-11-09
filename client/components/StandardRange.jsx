@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class ImageViewer extends React.Component {
+export default class StandardRange extends React.Component {
 
 // Name plug
 // namePlug = (count) => {

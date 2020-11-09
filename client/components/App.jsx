@@ -4,16 +4,17 @@ import {BrowserRouter as Router, Switch, Route, Link, useParams} from "react-rou
 
 import Header from './Header'
 import Footer from './Footer'
-import Homepage from './Homepage'
 import Sidebar from './Sidebar'
 
-import AddJob from './AddJob'
+import Homepage from './Homepage'
+import StandardRange from './StandardRange'
+
 import JobList from './JobList'
-import ImageViewer from './ImageViewer'
-import JobDetails from './JobDetails'
+import JobAdd from './JobAdd'
+import JobEdit from './JobEdit'
+import JobSums from './JobSums'
+import JobSelections from './JobSelections'
 import JobContract from './JobContract'
-import Products from './Products'
-import Onepager from './Onepager'
 
 import {fetchJobs} from '../actions'
 import {getJobs} from '../api'
@@ -41,23 +42,29 @@ let id = 1 //useParams()
       <nav>
         <ul>
           <li><Link to="/">Homepage</Link></li>
-          <li><Link to="/image_viewer">Image Viewer</Link></li>
-          <li><Link to="/job_list">Job List</Link></li>
-          <li><Link to="/add_job">Add Job</Link></li>
-          <li><Link to="/edit_job">Job Details</Link></li>
-          <li><Link to="/selections">Selections</Link></li>
-          <li><Link to="/scope_of_works">Scope Of Works</Link></li>
+          <li><Link to="/standard_range">Standard Range</Link></li>
+
+          <li><Link to="/job_list">List</Link></li>
+          <li><Link to="/job_add">Add</Link></li>
+
+          <li><Link to="/job_edit">Edit</Link></li>
+          <li><Link to="/job_selections">Selections</Link></li>
+          <li><Link to="/job_scope_of_works">Scope Of Works</Link></li>
 
         </ul>
       </nav>
 
-    <Route path="/" exact component={Homepage} />
-    <Route path="/image_viewer"  component={ImageViewer} />
-    <Route path="/job_list"  component={JobList} />
-    <Route path="/add_job"  component={AddJob} />
-    <Route path="/edit_job"  component={JobList} />
-    <Route path="/selections"  component={Onepager} />
-    <Route path="/scope_of_works"  component={JobContract} />
+    <Route path="/" exact component={Homepage}/>
+    <Route path="/standard_range" component={StandardRange}/>
+
+    <Route path="/job_list" component={JobList}/>
+    <Route path="/job_add" component={JobAdd}/>
+
+    <Route path="/job_edit/:jobName" component={JobEdit}/>
+        
+    <Route path="/job_sums" component={JobSums}/>
+    <Route path="/job_selections" component={JobSelections}/>
+    <Route path="/job_contract" component={JobContract}/>
 
 
     </main>

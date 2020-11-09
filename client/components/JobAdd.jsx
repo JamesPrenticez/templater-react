@@ -1,10 +1,9 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {addJob, getJobs} from '../api'
 import {fetchJobs} from '../actions'
 
-class AddJob extends React.Component {
+class JobAdd extends React.Component {
 	     //We need to make this a 'controlled form so we add state
 		 state = {
 			name: ''    
@@ -73,4 +72,4 @@ class AddJob extends React.Component {
     	}
 }
 
-export default connect()(AddJob) 
+export default connect()(JobAdd) 

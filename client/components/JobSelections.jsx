@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class Onepager extends React.Component {
+export default class JobSelections extends React.Component {
 render(){
     const {job, dispatch} = this.props
 

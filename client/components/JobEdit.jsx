@@ -1,19 +1,15 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { connect } from 'react-redux'
 
-import EditDetails from './EditDetails'
 
-class JobDetails extends React.Component {
-
+class JobEdit extends React.Component {
 render(){
-    console.log(this.props)
+    console.log(this.props.jobs)
         return(
             <>
-            <div className='jobContainer'>
-            <Link to={`/`}><h4>Home</h4></Link>
-
             <h2>Job Details</h2>
-            <img height='200px' width='200px' src={this.props.job.img}></img>
+            {this.props.match.params.jobName}
+            {/* <img height='200px' width='200px' src={this.props.job.img}></img>
             <h4>Job ID</h4>{this.props.job.id}
             <h4>Date Created</h4>{this.props.job.date_created}
             <h4>Job Name</h4>{this.props.job.jobName}
@@ -24,12 +20,15 @@ render(){
             <h4>Lot Number</h4>{this.props.job.lotNumber}
             <h4>GFA</h4>{this.props.job.gfa}
 
-            {/* <EditDetails/> */}
+            <p>Need to add these to database</p>
+            <h4>Bedrooms</h4>{this.props.job.bedrooms}
+            <h4>Bathrooms</h4>{this.props.job.bathrooms}
+            <h4>Ensuite</h4>{this.props.job.ensuite}
+            <h4>Water Closet</h4>{this.props.job.waterCloset} */}
 
-            </div>
             </>
         )
     }
 }
 
-export default JobDetails
+export default connect()(JobEdit)
