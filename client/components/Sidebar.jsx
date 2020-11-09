@@ -49,7 +49,7 @@ render(){
 
                 <button className="btn" onClick={() => this.filterSelection('andrew')}>Andrew</button>
                 <button className="btn" onClick={() => this.filterSelection('anne')}> Anne</button>
-                <button className="btn" onClick={() => this.filterSelection('cathrine')}> Cathrine</button>
+                <button className="btn" onClick={() => this.filterSelection('catherine')}> Cathrine</button>
                 <button className="btn" onClick={() => this.filterSelection('charles')}> Anne</button>
                 <button className="btn" onClick={() => this.filterSelection('charlotte')}> Charlotte</button>
                 <button className="btn" onClick={() => this.filterSelection('edward2')}> Edward2</button>

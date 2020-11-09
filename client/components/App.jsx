@@ -64,7 +64,7 @@ let id = 1 //useParams()
         
     <Route path="/job_sums" component={JobSums}/>
     <Route path="/job_selections" component={JobSelections}/>
-    <Route path="/job_contract" component={JobContract}/>
+    <Route path="/job_scope_of_works" component={JobContract}/>
 
 
     </main>
