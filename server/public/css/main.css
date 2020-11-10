@@ -240,11 +240,48 @@ margin-bottom: 10px;
 
 /*---------- Add Job Form ----------*/
 .formGrid {
-        display: grid;
-        width: 80%;
-        grid-template-columns: 50% 50%;
-        column-gap: 1px;
-        justify-content: space-evenly;
+  background-color: white;
+  margin: 5px auto;
+  border-radius: 5px;
+  height: auto;
+  width: 90%;
+  padding: 2%;
+  border: 1px solid;
+  box-shadow: 5px 10px 8px 10px #888888;
+    }
+
+  .formHeader{
+    height: 5VH;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+  .formHeader h4{
+    padding: 10px;
+  }
+
+    form{
+      display: grid;
+      grid-template-columns: 20% 50%;
+      column-gap: 1px;
+
+    }
+
+    #jobCover{
+      width: 250px;
+      height: 250px;
+      float: right;
+      border: 3px, solid, black;
+    }
+
+    #suburbImg{
+      width: 50px;
+      height: 50px;
+      float: right;
+      border: 3px, solid, black; /*???*/
+      border-radius: 10px;
     }
     
     label {
@@ -254,10 +291,16 @@ margin-bottom: 10px;
     
     input {
         height: 20px;
-        width: 300px;
+        width: 50%;
         border: 1px solid #000;
         margin-top: 10px;
-        display: inline;
+    }
+
+    select {
+        height: 20px;
+        width: 50%;
+        border: 1px solid #000;
+        margin-top: 10px;
     }
 
     button{
