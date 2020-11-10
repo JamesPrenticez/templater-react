@@ -9,10 +9,11 @@ class JobAdd extends React.Component {
 		name: ''
 	}
 
-	setPicture = () => {
+	setBackgroundColor = () => {
 		var img = document.getElementById("suburbDropDown");
 		var value = suburbDropDown.options[suburbDropDown.selectedIndex].value;
-		document.getElementById("suburbImg").src = value;
+		document.getElementById("addForm").style.border = `solid 5px ${value}`;
+		console.log(value)
 	}
 
 	handleChange = (event) => {
@@ -46,7 +47,7 @@ class JobAdd extends React.Component {
 <div>
 					<img id="jobCover" src="./img/houses/default.png"></img>
 </div>
-					<form action="/action_page.php">
+					<form id="addForm" action="/action_page.php">
 
 						<label htmlFor="jobName">Job Name</label>
 						<input type='text' name="jobName" id="jobName" placeholder="Test Job"></input>
@@ -57,11 +58,11 @@ class JobAdd extends React.Component {
 						<label htmlFor="address">Site Address</label>
 						<input type="text" name="address" id="address" placeholder="123 Fake Street"></input>
 
-						<label htmlFor="suburb">Location</label>
-						<select id="suburbDropDown" onChange={this.setPicture}>
-							<option value="./img/suburb/default.png">None</option>
-							<option value="./img/suburb/meadows.png">Meadows</option>
-							<option value="./img/suburb/richmond.png">Richmond</option>
+						<label htmlFor="suburb">Suburb</label>
+						<select id="suburbDropDown" onChange={this.setBackgroundColor}>
+							<option value="grey">None</option>
+							<option value="green">Meadows</option>
+							<option value="red">Richmond</option>
 						</select>
 
 						<label htmlFor="lotNumber">Lot Number</label>
@@ -74,21 +75,19 @@ class JobAdd extends React.Component {
 						<input type="text" name="gfa" id="gfa" placeholder="150"></input>
 
 						<label htmlFor="bedrooms">Bedrooms</label>
-						<select name="bedrooms" id="bedroomDropDown">
-							<option value="0">0</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
+						<div>
+						<input type="radio" name="bedrooms" id="bedroomsRadio" value="0"></input><p>0</p>
+						<input type="radio" name="bedrooms" id="bedroomsRadio" value="1"></input><p>1</p>
+						<input type="radio" name="bedrooms" id="bedroomsRadio" value="2"></input><p>2</p>
+						<input type="radio" name="bedrooms" id="bedroomsRadio" value="3"></input><p>3</p>
+						<input type="radio" name="bedrooms" id="bedroomsRadio" value="4"></input><p>4</p>
+						</div>
+						
 
 						<input type="submit" value="Submit" onClick={this.submit}></input>
 
 					</form>
 
-<div>
-	<div id="suburbImg"></div>
-</div>
 				</div>
 			</>
 		)
