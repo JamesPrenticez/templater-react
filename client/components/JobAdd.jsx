@@ -45,7 +45,6 @@ class JobAdd extends React.Component {
 					</div>
 <div>
 					<img id="jobCover" src="./img/houses/default.png"></img>
-					<img id="suburbImg" src="./img/default.png"></img>
 </div>
 					<form action="/action_page.php">
 
@@ -86,6 +85,10 @@ class JobAdd extends React.Component {
 						<input type="submit" value="Submit" onClick={this.submit}></input>
 
 					</form>
+
+<div>
+	<div id="suburbImg"></div>
+</div>
 				</div>
 			</>
 		)

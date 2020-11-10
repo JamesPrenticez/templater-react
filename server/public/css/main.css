@@ -157,7 +157,7 @@ table {
 #jobs th{
     padding: 8px;
     text-align: left;
-    background-color: red;
+    background-color: #EC2027;
     color: white;
 }
 
@@ -220,7 +220,7 @@ padding-top: 20px;
   padding: 0;
 }
 .nav li:hover {
-background-color: red;
+background-color: #EC2027;
 }
 
 .navTitle {
@@ -272,16 +272,16 @@ margin-bottom: 10px;
     #jobCover{
       width: 250px;
       height: 250px;
-      float: right;
+      float: left;
       border: 3px, solid, black;
     }
 
     #suburbImg{
-      width: 50px;
-      height: 50px;
-      float: right;
-      border: 3px, solid, black; /*???*/
-      border-radius: 10px;
+      width: 100%;
+      height: 100px;
+      background-image: url("../img/suburb/meadows.png");
+      background-repeat: repeat;
+      background-size: auto 100px;
     }
     
     label {
@@ -294,6 +294,21 @@ margin-bottom: 10px;
         width: 50%;
         border: 1px solid #000;
         margin-top: 10px;
+    }
+
+    input[type=text], textarea {
+      transition: all 0.30s ease-in-out;
+      outline: none;
+      padding: 3px 0px 3px 3px;
+      margin: 5px 1px 3px 0px;
+      border: 1px solid #DDDDDD;
+    }
+     
+    input[type=text]:focus, textarea:focus {
+      box-shadow: 0 0 5px #EC2027;
+      padding: 3px 0px 3px 3px;
+      margin: 5px 1px 3px 0px;
+      border: 1px solid #EC2027;
     }
 
     select {
