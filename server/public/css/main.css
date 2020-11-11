@@ -278,6 +278,10 @@ margin-bottom: 10px;
       padding: 10px;
     }
 
+    #addForm p {
+      margin-right: 20px;
+    }
+
     #jobCover{
       width: 250px;
       height: 250px;
@@ -287,7 +291,9 @@ margin-bottom: 10px;
     
     label {
         font-size: 12px;
-        margin-right:15px;
+        margin-top: 5px;
+        margin-right: 15px;
+        font-weight: bold;
     }
     
     input {
@@ -313,20 +319,73 @@ margin-bottom: 10px;
     }
     
 /* Radio */
-    input[type=radio], textarea {
-      transition: all 0.30s ease-in-out;
-      outline: none;
-      padding: 3px 0px 3px 3px;
-      margin: 5px 1px 3px 0px;
-      border: 1px solid #DDDDDD;
-    }
-     
-    input[type=radio]:focus, textarea:focus {
-      box-shadow: 0 0 5px #EC2027;
-      padding: 3px 0px 3px 3px;
-      margin: 5px 1px 3px 0px;
-      border: 1px solid #EC2027;
-    }
+input[type=radio] {
+  transition: all 0.30s ease-in-out;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+ 
+input[type=radio]:focus{
+  box-shadow: 0 0 10px #EC2027;
+ }
+
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  top: -5px;
+  left: -5px;
+  border-radius: 15px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  position: relative;
+  background-color: #EC2027;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     select {
         height: 20px;

@@ -13,7 +13,7 @@ class JobAdd extends React.Component {
 		var img = document.getElementById("suburbDropDown");
 		var value = suburbDropDown.options[suburbDropDown.selectedIndex].value;
 		document.getElementById("addForm").style.border = `solid 5px ${value}`;
-		console.log(value)
+		document.getElementById("addForm").style.boxShadow = `0 0 5px ${value}`;
 	}
 
 	handleChange = (event) => {
@@ -81,8 +81,10 @@ class JobAdd extends React.Component {
 						<input type="radio" name="bedrooms" id="bedroomsRadio" value="2"></input><p>2</p>
 						<input type="radio" name="bedrooms" id="bedroomsRadio" value="3"></input><p>3</p>
 						<input type="radio" name="bedrooms" id="bedroomsRadio" value="4"></input><p>4</p>
-						</div>
-						
+						</div>						
+
+
+
 
 						<input type="submit" value="Submit" onClick={this.submit}></input>
 
