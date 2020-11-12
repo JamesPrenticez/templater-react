@@ -40,7 +40,7 @@ class JobAdd extends React.Component {
 		return (
 			<>
 
-				<div className="formGrid">
+				<div className="jobContainer">
 					<div className="formHeader">
 						<h4>Add Job</h4>
 					</div>

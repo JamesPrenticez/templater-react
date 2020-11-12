@@ -10,13 +10,9 @@ render(){
         return(
             <>
             <div className='main'>
-            <div className='nav'>
-                <ul id="menu">
-                <h4 className="navTitle">Menu</h4>
-                    <li><Link to={`/`}>Home</Link></li>
-                    <li><Link to={`/edit`}>Edit Details</Link></li>
-                    <li><Link to={`/products`}>Add Products</Link></li>
-                <h4 className="navTitle">Sections</h4>
+            <div className='sideNav'>
+                <ul>
+                <h4 className="sideNavTitle">Sections</h4>
                     <li ><Link to={`#page0`} class="active">Zero</Link></li> 
                     <li ><Link to={`#page1`}>First</Link></li> 
                     <li ><Link to={`#page2`}>Second</Link></li> 

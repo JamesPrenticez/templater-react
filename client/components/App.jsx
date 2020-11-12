@@ -31,38 +31,29 @@ class App extends React.Component{
     }
 
 render(){
-console.log(this.props)
-let id = 1 //useParams()
   return (
 <>
   <Header/>
-  <Sidebar/>
   <Router>
     <main>
       <nav>
-          <NavLink to="/">Homepage</NavLink>
-          <NavLink to="/standard_range">Standard Range</NavLink>
-
+          <NavLink to="/home">Homepage</NavLink>
           <NavLink to="/job_list">List</NavLink>
           <NavLink to="/job_add">Add</NavLink>
-
-          <NavLink to="/job_edit">Edit</NavLink>
           <NavLink to="/job_selections">Selections</NavLink>
           <NavLink to="/job_scope_of_works">Scope Of Works</NavLink>
       </nav>
-
-    <Route path="/" exact component={Homepage}/>
-    <Route path="/standard_range" component={StandardRange}/>
-
+    
+    <div class="container">
+    <Route path="/home" component={Homepage}/>
     <Route path="/job_list" component={JobList}/>
     <Route path="/job_add" component={JobAdd}/>
-
-    <Route path="/job_edit/:jobName" component={JobEdit}/>
-        
+    <Route path="/job_edit/:jobName" render={() => <JobEdit {...this.props}{...this.matchProps}/>} /> 
     <Route path="/job_sums" component={JobSums}/>
     <Route path="/job_selections" component={JobSelections}/>
     <Route path="/job_scope_of_works" component={JobContract}/>
 
+    </div>
 
     </main>
 </Router>
@@ -76,7 +67,8 @@ let id = 1 //useParams()
 }
 
 function mapStateToProps (state) {
-    return {
+  const {jobs} = state  
+  return {
         jobs: state.jobs
     }
 }
