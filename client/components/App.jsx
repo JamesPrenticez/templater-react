@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {BrowserRouter as Router, Switch, Route, Link, useParams} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, Link, NavLink, useParams} from "react-router-dom";
 
 import Header from './Header'
 import Footer from './Footer'
@@ -40,18 +40,15 @@ let id = 1 //useParams()
   <Router>
     <main>
       <nav>
-        <ul>
-          <li><Link to="/">Homepage</Link></li>
-          <li><Link to="/standard_range">Standard Range</Link></li>
+          <NavLink to="/">Homepage</NavLink>
+          <NavLink to="/standard_range">Standard Range</NavLink>
 
-          <li><Link to="/job_list">List</Link></li>
-          <li><Link to="/job_add">Add</Link></li>
+          <NavLink to="/job_list">List</NavLink>
+          <NavLink to="/job_add">Add</NavLink>
 
-          <li><Link to="/job_edit">Edit</Link></li>
-          <li><Link to="/job_selections">Selections</Link></li>
-          <li><Link to="/job_scope_of_works">Scope Of Works</Link></li>
-
-        </ul>
+          <NavLink to="/job_edit">Edit</NavLink>
+          <NavLink to="/job_selections">Selections</NavLink>
+          <NavLink to="/job_scope_of_works">Scope Of Works</NavLink>
       </nav>
 
     <Route path="/" exact component={Homepage}/>

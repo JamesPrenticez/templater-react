@@ -28,17 +28,31 @@ header{
 /*---------- Nav Bar ---------*/
   nav{
   width: 100%;
-  margin: auto;
-  margin-top: 10VH;
-  height: 5VH;
-  background-color: hsla(0, 0%, 0%, .5);
-  position: fixed;  
+  background-color: black;
+  overflow: hidden;
   }
 
-nav li{
-  display: inline-block;
-  list-style-type: none;
+nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
+
+nav a:hover{
+background-color: #EC2027;
+cursor: pointer;
+}
+
+nav a.active{
+  color: white;
+  text-decoration: none;
+  background-color:  #EC2027;
+}
+
+
 /*---------- Side Bar ---------*/
 /* The sidebar menu */
 .sidebar {
