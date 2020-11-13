@@ -44,9 +44,7 @@ class JobAdd extends React.Component {
 					<div className="formHeader">
 						<h4>Add Job</h4>
 					</div>
-<div>
-					<img id="jobCover" src="./img/houses/default.png"></img>
-</div>
+
 					<form id="addForm" action="/action_page.php">
 
 						<label htmlFor="jobName">Job Name</label>
