@@ -37,22 +37,21 @@ render(){
   <Router>
     <main>
       <nav>
-          <NavLink to="/home">Homepage</NavLink>
-          <NavLink to="/job_list">List</NavLink>
-          <NavLink to="/job_add">Add</NavLink>
-          <NavLink to="/job_selections">Selections</NavLink>
-          <NavLink to="/job_scope_of_works">Scope Of Works</NavLink>
+        <NavLink to="/home">Homepage</NavLink>
+        <NavLink to="/job_add">Add</NavLink>
+        <NavLink to="/job_list">List</NavLink>
+        <NavLink to="/job_selections">Selections</NavLink>
+        <NavLink to="/job_scope_of_works">Scope Of Works</NavLink>
       </nav>
     
     <div class="container">
-    <Route path="/home" component={Homepage}/>
-    <Route path="/job_list" component={JobList}/>
-    <Route path="/job_add" component={JobAdd}/>
-    <Route path="/job_edit/:jobName" render={(matchProps) => <JobEdit {...matchProps}{...this.props}/>} /> 
-    <Route path="/job_sums" component={JobSums}/>
-    <Route path="/job_selections" component={JobSelections}/>
-    <Route path="/job_scope_of_works" component={JobContract}/>
-
+      <Route path="/home" component={Homepage}/>
+      <Route path="/job_add" component={JobAdd}/>
+      <Route path="/job_list" component={JobList}/>
+      <Route path="/job_edit/:jobName" render={(matchProps) => <JobEdit {...matchProps}{...this.props}/>} /> 
+      <Route path="/job_sums" component={JobSums}/>
+      <Route path="/job_selections" component={JobSelections}/>
+      <Route path="/job_scope_of_works" component={JobContract}/>
     </div>
 
     </main>

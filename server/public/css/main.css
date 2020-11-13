@@ -253,6 +253,12 @@ table {
 }
 
 /*---------- Add Job Form ----------*/
+form{
+  display: grid;
+  grid-template-columns: 20% 50%;
+  column-gap: 1px;
+}
+
 .formHeader{
   height: 5VH;
   width: 100%;
@@ -264,12 +270,6 @@ table {
 
 .formHeader h4{
   padding: 10px;
-}
-
-form{
-  display: grid;
-  grid-template-columns: 20% 50%;
-  column-gap: 1px;
 }
 
 #addForm{
@@ -360,7 +360,19 @@ input[type='radio']:checked:after {
   visibility: visible;
   border: 2px solid white;
 }
-
+/*---------- View Job --------*/
+#jobDetails{
+  display: grid;
+  grid-template-columns: 20% 50%;
+  column-gap: 1px;
+  border: 5px, solid, black;
+  border: 5px solid dodgerblue;
+  border-radius: 5px;
+  box-shadow: 0 0 5px dodgerblue;
+  transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 10px;
+}
 /*---------- Media Queries ----------*/
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
