@@ -14,9 +14,10 @@ function getJobs(db = database){
 }
 
 // ADD Job
-function createJob({jobName}, db = database){
-    return db('jobs').insert({jobName})
+function createJob({jobName, clientName}, db = database){
+    return db('jobs').insert({jobName, clientName})
 }
+
 
 // DELETE Job
 function deleteJob(id, db = database){

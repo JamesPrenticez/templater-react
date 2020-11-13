@@ -12,7 +12,7 @@ render(){
 
             <h4>Client Details</h4>
 
-			<div class="formGrid">
+			<div className="formGrid">
                 <label for="cost">Cost (including GST): </label>
 				<input type="text" id="cost" name="cost" placeholder="$500,000.00"></input>
 
