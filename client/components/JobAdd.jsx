@@ -1,14 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addJob, getJobs } from '../api'
-import { fetchJobs } from '../actions'
+import { addJob } from '../api'
 
 class JobAdd extends React.Component {
-	//We need to make this a 'controlled form so we add state
 	state = {
-		name: ''
+		name: 'Alexandra',
+		jobName: "test1",
+		clientName: "test2"    
 	}
-
+	
 	setBackgroundColor = () => {
 		var img = document.getElementById("suburbDropDown");
 		var value = suburbDropDown.options[suburbDropDown.selectedIndex].value;
@@ -23,20 +23,10 @@ class JobAdd extends React.Component {
 	}
 
 	submit = () => {
-		//get addJob from api
-		addJob(this.state.name)
-			.then(() => {
-				return getJobs()
-			})
-			.then((jobs) => {
-				this.props.dispatch(fetchJobs(jobs))
-			})
-		console.log(this.state)
+		addJob(this.state.jobName, this.state.clientName)
 	}
 
 	render() {
-		const { job, dispatch } = this.props
-
 		return (
 			<>
 
@@ -45,15 +35,13 @@ class JobAdd extends React.Component {
 						<h4>Add Job</h4>
 					</div>
 
-					<form id="addForm" action="/action_page.php">
-
 						<label htmlFor="jobName">Job Name</label>
-						<input type='text' name="jobName" id="jobName" placeholder="Test Job"></input>
+						<input type='text' name="jobName" id="jobName" placeholder="Test Job" onChange={this.handleChange} />
 
 						<label htmlFor="clientName">Client Name</label>
-						<input type="text" name="clientName" id="clientName" placeholder="John Doe"></input>
+						<input type="text" name="clientName" id="clientName" placeholder="John Doe" onChange={this.handleChange} />
 
-						<label htmlFor="address">Site Address</label>
+						{/* <label htmlFor="address">Site Address</label>
 						<input type="text" name="address" id="address" placeholder="123 Fake Street"></input>
 
 						<label htmlFor="suburb">Suburb</label>
@@ -64,7 +52,7 @@ class JobAdd extends React.Component {
 						</select>
 
 						<label htmlFor="lotNumber">Lot Number</label>
-						<input type="text" name="lotNumber" id="lotNumber" placeholder="2"></input>
+						<input type="text" name="lotNumber" id="lotNumber" placeholder="DP 15692"></input>
 
 						<label htmlFor="jobNumber">Job Number</label>
 						<input type="text" name="jobNumber" id="jobNumber" placeholder="JNB 001"></input>
@@ -79,14 +67,14 @@ class JobAdd extends React.Component {
 						<input type="radio" name="bedrooms" id="bedroomsRadio" value="2"></input><p>2</p>
 						<input type="radio" name="bedrooms" id="bedroomsRadio" value="3"></input><p>3</p>
 						<input type="radio" name="bedrooms" id="bedroomsRadio" value="4"></input><p>4</p>
-						</div>						
+						</div>						 */}
 
 
 
+						<button onClick={this.submit}>Create Job</button>
+						{/* <input type="submit" value="Submit" onClick={this.submit}></input> */}
 
-						<input type="submit" value="Submit" onClick={this.submit}></input>
 
-					</form>
 
 				</div>
 			</>

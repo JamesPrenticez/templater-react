@@ -6,7 +6,7 @@ render(){
 
         return(
             <>
-                <div class="jobContainer">
+                <div className="jobContainer">
                 <h1>Welcome to the Jennian Homes internal jobs database</h1>
                 <p>You can view all current jobs</p>
                 <p>Add a Job</p>

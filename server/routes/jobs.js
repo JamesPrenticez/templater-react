@@ -15,12 +15,20 @@ router.get('/api/jobs', (req, res) => {
 })
 
 //ADD Job
-router.post('/api/jobs', (req, res) => {
-  let {jobName} = req.body
-      db.createJob({jobName})
-          .then((ids) => {
-              res.status(201).json({id: ids[0]})//broken?
-          })
+// router.post('/api/jobs', (req, res) => {
+//   let {jobName, clientName} = req.body
+//       db.createJob({jobName, clientName})
+//           .then((ids) => {
+//               res.status(201).json({id: ids[0]})//broken?
+//           })
+// })
+
+router.post('/api/add', (req, res) => {
+  let {jobName, clientName} = req.body
+    db.createJob({jobName, clientName})
+    .then((ids) => {
+      res.status(201).json({ id: ids[0] })
+    })
 })
 
 //DELETE Job
