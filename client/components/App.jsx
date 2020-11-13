@@ -48,7 +48,7 @@ render(){
     <Route path="/home" component={Homepage}/>
     <Route path="/job_list" component={JobList}/>
     <Route path="/job_add" component={JobAdd}/>
-    <Route path="/job_edit/:jobName" render={() => <JobEdit {...this.props}{...this.matchProps}/>} /> 
+    <Route path="/job_edit/:jobName" render={(matchProps) => <JobEdit {...matchProps}{...this.props}/>} /> 
     <Route path="/job_sums" component={JobSums}/>
     <Route path="/job_selections" component={JobSelections}/>
     <Route path="/job_scope_of_works" component={JobContract}/>
