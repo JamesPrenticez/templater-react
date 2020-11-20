@@ -9,13 +9,13 @@ render(){
 
         return(
             <>
-            <Header></Header>
+            <div className="pageHeader"></div>
             <div className="coverPage">
 				<img id="logo" src="./img/logo.png"></img>
 				<img id="house" src="./img/houses/jamesarchitectural.png"></img>
 				<p id="jobNameDisplay">Job Name</p>
             </div>
-            <Footer></Footer>
+            <div className="pageFooter"></div>
             </>
         )
     }

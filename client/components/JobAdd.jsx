@@ -4,9 +4,13 @@ import { addJob } from '../api'
 
 class JobAdd extends React.Component {
 	state = {
-		name: 'Alexandra',
-		jobName: "test1",
-		clientName: "test2"    
+		name: '',
+		jobName: '',
+		clientName: '',
+		siteAddress: '',
+		suburb: '',
+		lotNumber: '',
+		jobNumber: ''		
 	}
 	
 	setBackgroundColor = () => {
@@ -30,7 +34,7 @@ class JobAdd extends React.Component {
 		return (
 			<>
 
-				<div className="jobContainer">
+				<div id="addForm">
 					<div className="formHeader">
 						<h4>Add Job</h4>
 					</div>
@@ -41,33 +45,22 @@ class JobAdd extends React.Component {
 						<label htmlFor="clientName">Client Name</label>
 						<input type="text" name="clientName" id="clientName" placeholder="John Doe" onChange={this.handleChange} />
 
-						{/* <label htmlFor="address">Site Address</label>
-						<input type="text" name="address" id="address" placeholder="123 Fake Street"></input>
+						<label htmlFor="address">Site Address</label>
+						<input type="text" name="address" id="address" placeholder="123 Fake Street" onChange={this.handleChange}></input>
 
 						<label htmlFor="suburb">Suburb</label>
-						<select id="suburbDropDown" onChange={this.setBackgroundColor}>
+						<select id="suburbDropDown" onChange={this.setBackgroundColor} onChange={this.handleChange}>
 							<option value="grey">None</option>
 							<option value="green">Meadows</option>
 							<option value="red">Richmond</option>
 						</select>
 
 						<label htmlFor="lotNumber">Lot Number</label>
-						<input type="text" name="lotNumber" id="lotNumber" placeholder="DP 15692"></input>
+						<input type="text" name="lotNumber" id="lotNumber" placeholder="DP 15692" onChange={this.handleChange}></input>
 
 						<label htmlFor="jobNumber">Job Number</label>
-						<input type="text" name="jobNumber" id="jobNumber" placeholder="JNB 001"></input>
+						<input type="text" name="jobNumber" id="jobNumber" placeholder="JNB 001" onChange={this.handleChange}></input>
 
-						<label htmlFor="GFA">GFA</label>
-						<input type="text" name="gfa" id="gfa" placeholder="150"></input>
-
-						<label htmlFor="bedrooms">Bedrooms</label>
-						<div>
-						<input type="radio" name="bedrooms" id="bedroomsRadio" value="0"></input><p>0</p>
-						<input type="radio" name="bedrooms" id="bedroomsRadio" value="1"></input><p>1</p>
-						<input type="radio" name="bedrooms" id="bedroomsRadio" value="2"></input><p>2</p>
-						<input type="radio" name="bedrooms" id="bedroomsRadio" value="3"></input><p>3</p>
-						<input type="radio" name="bedrooms" id="bedroomsRadio" value="4"></input><p>4</p>
-						</div>						 */}
 
 
 
