@@ -1,0 +1,80 @@
+body {
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 0px; 
+    margin-right: 0px;
+    padding: 0;
+    background-color: rgb(204,204,204); 
+    font: 12pt "Tahoma";
+}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.contractZoom {
+    width: 85%;
+    float: right;
+    height: auto;
+    position: sticky;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 50px;
+    left: 0;
+    z-index: 1; 
+}
+
+#mainWrapper{
+    height: auto;
+    width: 100%;
+    margin: auto;
+    transform: scale(1);
+    position: relative;
+    top: 25px;
+}
+
+.page {
+    size: "A4";
+    background: white;
+    width: 21cm;
+    height: 100VH;
+    margin: 1% auto 1% auto;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+    transform: scale(1);
+}
+
+.pageHeader{
+    
+}
+
+.pageFooter{
+    
+}
+.subpage {
+    padding: 2cm;
+    height: 100%;
+    width: 100%;
+    outline: 2px dodgerblue dashed;
+    outline-offset: -2cm;
+}
+
+  @media print {
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+}
+
+#cladding img{
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+

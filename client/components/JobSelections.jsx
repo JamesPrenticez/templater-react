@@ -6,8 +6,19 @@ render(){
 
         return(
             <>
-            <div>
+            <div className="jobContainer">
 
+						<label htmlFor="GFA">GFA</label>
+						<input type="text" name="gfa" id="gfa" placeholder="150" onChange={this.handleChange}></input>
+
+						<label htmlFor="bedrooms">Bedrooms</label>
+						<div>
+						<input type="radio" name="bedrooms" id="bedroomsRadio" value="0" onChange={this.handleChange}></input><p>0</p>
+						<input type="radio" name="bedrooms" id="bedroomsRadio" value="1" onChange={this.handleChange}></input><p>1</p>
+						<input type="radio" name="bedrooms" id="bedroomsRadio" value="2" onChange={this.handleChange}></input><p>2</p>
+						<input type="radio" name="bedrooms" id="bedroomsRadio" value="3" onChange={this.handleChange}></input><p>3</p>
+						<input type="radio" name="bedrooms" id="bedroomsRadio" value="4" onChange={this.handleChange}></input><p>4</p>
+						</div>						
 
             <h1>Preliminary</h1>
                 <h4>Building Consent</h4>

@@ -4,7 +4,6 @@ import {BrowserRouter as Router, Switch, Route, Link, NavLink, useParams} from "
 
 import Header from './Header'
 import Footer from './Footer'
-import Sidebar from './Sidebar'
 
 import Homepage from './Homepage'
 import StandardRange from './StandardRange'
@@ -14,7 +13,7 @@ import JobAdd from './JobAdd'
 import JobEdit from './JobEdit'
 import JobSums from './JobSums'
 import JobSelections from './JobSelections'
-import JobContract from './JobContract'
+import PageScale from './PageScale'
 
 import {fetchJobs} from '../actions'
 import {getJobs} from '../api'
@@ -44,15 +43,15 @@ render(){
         <NavLink to="/job_scope_of_works">Scope Of Works</NavLink>
       </nav>
     
-    <div className="container">
+
       <Route path="/home" component={Homepage}/>
       <Route path="/job_add" component={JobAdd}/>
       <Route path="/job_list" component={JobList}/>
       <Route path="/job_edit/:jobName" render={(matchProps) => <JobEdit {...matchProps}{...this.props}/>} /> 
       <Route path="/job_sums" component={JobSums}/>
       <Route path="/job_selections" component={JobSelections}/>
-      <Route path="/job_scope_of_works" component={JobContract}/>
-    </div>
+      <Route path="/job_scope_of_works" component={PageScale}/>
+
 
     </main>
 </Router>
