@@ -6,7 +6,7 @@ render(){
 
         return(
             <>
-            <div>
+            <div className="jobContainer">
 
 						<label htmlFor="GFA">GFA</label>
 						<input type="text" name="gfa" id="gfa" placeholder="150" onChange={this.handleChange}></input>

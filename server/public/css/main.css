@@ -264,6 +264,18 @@ table {
   width: 100%;
   background-color: blue;
 }
+/*---------- Submit Button ----------*/
+.submitButton{
+        color: white;
+        margin: auto;
+        padding: 5px;
+        width: 80%;
+        height: 33px;
+        background-color: #EC2027;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline;
+}
 
 /*---------- Add Job Form ----------*/
 form{
@@ -286,7 +298,8 @@ form{
 }
 
 #addForm{
-  border: 5px, solid, black;
+  height: auto;
+  width: 100%;
   border: 5px solid grey;
   border-radius: 5px;
   box-shadow: 0 0 5px grey;
@@ -306,6 +319,14 @@ form{
   border: 3px, solid, black;
 }
   
+.addDescription{
+float: left;
+}
+
+.addInput{
+float: right;
+}
+
 label {
   font-size: 12px;
   margin-top: 5px;
@@ -392,35 +413,6 @@ input[type='radio']:checked:after {
   .sidenav a {font-size: 18px;}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     select {
         height: 20px;
         width: 50%;
@@ -439,15 +431,14 @@ input[type='radio']:checked:after {
         margin: 5px 1px 3px 0px;
         border: 1px solid #EC2027;
     }
-
-    
+  
 
     button{
         color: white;
         padding: 5px;
         width: 66px;
         height: 33px;
-        background-color: red;
+        background-color: green;
         border-radius: 5px;
         cursor: pointer;
         display: inline;
@@ -457,59 +448,4 @@ input[type='radio']:checked:after {
         font-size: 12px;
     }
 
-/*---------- Image Viewer ----------*/
- .column{
-  height: 100%;
-  }
-  
-  .row {
-  padding: 5px;
-  display: none; /* Hide columns by default */
-  }
 
-  /* The "show" class is added to the filtered elements */
-  .show {
-    display: inline-block;
-    float: right;
-  }
-
-  /* Content */
-  .content {
-    background-color: white;
-    border-top: 3px solid #EC2027;
-    border-radius: 3px;
-    height: 20VH;
-  }
-
-  .content img {
-      height: 90%;
-      width: 15%;
-      border: 2px solid grey;
-      border-radius: 3px;
-      object-fit: cover;
-      margin: 5px;
-      float: right;
-  }
-
-.text {
-      height: 90%;
-      width: 25%;
-      margin: 5px;
-      padding: 5px;
-      float: left;
-}
-
-h2{
-line-height: 5px;  
-display: inline-block;
-}
-
-h4{
-  display: inline-block;
-}
-
-p{
-  display: inline-block;
-}
-
-/* ----------------------------------------------------- */
