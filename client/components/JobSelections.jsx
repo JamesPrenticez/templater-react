@@ -151,15 +151,15 @@ render(){
                         <p>Desks and Selves to Living - none</p>
                     
                     <h4>Carpet</h4>
-                        <p>Carpet - Prime Cost Sum $6,000.00</p>   
+                        <p>Carpet - Provisional Sum $6,000.00</p>   
                         <p>Supply and Install by Hubbers - quote send by ____ on the _____</p>
 
                     <h4>Vinyl</h4>
-                        <p>Vinyl - Prime Cost Sum $3,000.00</p>   
+                        <p>Vinyl - Provisional Sum $3,000.00</p>   
                         <p>Supply and Install by Hubbers - quote send by ____ on the _____</p>  
 
                     <h4>Tiles</h4>
-                        <p>Tiles - Prime Cost Sum $6,000.00</p>   
+                        <p>Tiles - Provisional Cost Sum $6,000.00</p>   
                         <p>Supply and Install by Hubbers - quote send by ____ on the _____</p>
                         <p>Includes a tiles splash, apron and cradle to the bath</p>  
                         <p>Includes flat laid tiling to the following areas - Ensuite, Bathroom, Kitchen, Entry</p>

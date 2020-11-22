@@ -29,15 +29,16 @@ class JobAdd extends React.Component {
 
 	submit = () => {
 		addJob(this.state.jobName, this.state.clientName)
+		alert(`New job ${this.state.jobName} has been added`)
 	}
 
 	render() {
 		return (
 			<>
 			<div className="jobContainer">
+				<h1>Add Job</h1>
 
 				<div id="addForm">
-						<div className="formHeader"><h4>Add Job</h4></div>
 
 <form>
 						<label htmlFor="jobName" className="addDescription">Job Name</label>
