@@ -18,6 +18,7 @@ class JobAdd extends React.Component {
 			}
 		this.handleChange = this.handleChange.bind(this)
 		this.handleSubmit = this.handleSubmit.bind(this)
+		this.customSalesPerson = this.customSalesPerson.bind(this)
 	}
 	
 	setBackgroundColor = () => {
@@ -34,7 +35,6 @@ class JobAdd extends React.Component {
 		})
 	}
 
-	
 	customSalesPerson = () => {
 		var salesArr = [...this.state.salesPeople]
 		var person = "James"//prompt("Please enter your name")
@@ -45,10 +45,8 @@ class JobAdd extends React.Component {
 
 		if (person != null) {
 			//this.setState({salesPeople: salesArr + person})
-			sel.add(opt, null);
+			sel.add(opt);
 		  }
-			  console.log(this.state.salesPeople)
-			  console.log(sel)
 	}
 
 	handleSubmit = () => {
@@ -91,14 +89,15 @@ class JobAdd extends React.Component {
 						<input type="text" name="gfa" id="gfa" className="gfaInput" placeholder="150m2" onChange={this.handleChange}></input>
 
 						<label htmlFor="salesPerson" className="addDescription">Sales Person</label>
-						<select id="salesPersonDropDown" name="salesPeople" className="salesPersonInput" onChange={this.handleChange}>
+
+						<select id="salesPersonDropDown" name="salesPeople" className="salesPersonInput">
 							<option value="Ryan">Ryan</option>
 							<option value="Christine">Christine</option>
 							<option value="Steve">Steve</option>
 							<option value="Hugh">Hugh</option>
 							<option value="None">None</option>
 						</select>
-							<button value="Other" onClick={this.customSalesPerson}>Add Sales Person</button>
+						<button onClick={this.customSalesPerson}>Add Sales Person</button>
 
 						<button id="addJobButton" className="submitButton" onClick={this.handleSubmit}>Create Job</button>
 
