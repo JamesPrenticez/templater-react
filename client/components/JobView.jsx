@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 
-class JobEdit extends React.Component {
+class JobView extends React.Component {
     render() {
         console.log(this.props)
         const { jobName } = this.props.match.params
@@ -41,6 +41,9 @@ class JobEdit extends React.Component {
                         <h4>Sales Person</h4>
                         <p>{this.props.jobs[jobName].salesPerson}</p>
 
+                        <h4>GFA</h4>
+                        <p>{this.props.jobs[jobName].salesPerson}</p>
+
                     </div>
 
                 </div>
@@ -49,4 +52,4 @@ class JobEdit extends React.Component {
     }
 }
 
-export default connect()(JobEdit)
+export default connect()(JobView)

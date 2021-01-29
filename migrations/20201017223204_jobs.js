@@ -5,9 +5,10 @@ exports.up = (knex, Promise) => {
     table.string('jobName')
     table.string('clientName')
     table.string('siteAddress')
-    table.string('suburb')
+    table.string('collection')
     table.string('lotNumber')
     table.string('jobNumber')
+    table.string('gfa')
     table.string('salesPerson')
     })  
 };

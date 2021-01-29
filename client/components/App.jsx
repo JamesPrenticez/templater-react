@@ -10,7 +10,7 @@ import StandardRange from './StandardRange'
 
 import JobList from './JobList'
 import JobAdd from './JobAdd'
-import JobEdit from './JobEdit'
+import JobView from './JobView'
 import JobSums from './JobSums'
 import JobSelections from './JobSelections'
 import PageScale from './PageScale'
@@ -43,11 +43,10 @@ render(){
         <NavLink to="/job_scope_of_works">Scope Of Works</NavLink>
       </nav>
     
-
       <Route path="/home" component={Homepage}/>
       <Route path="/job_add" component={JobAdd}/>
       <Route path="/job_list" component={JobList}/>
-      <Route path="/job_edit/:jobName" render={(matchProps) => <JobEdit {...matchProps}{...this.props}/>} /> 
+      <Route path="/job_view/:jobName" render={(matchProps) => <JobView {...matchProps}{...this.props}/>} /> 
       <Route path="/job_sums" component={JobSums}/>
       <Route path="/job_selections" component={JobSelections}/>
       <Route path="/job_scope_of_works" component={PageScale}/>

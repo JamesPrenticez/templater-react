@@ -9,6 +9,7 @@ exports.seed = (knex, Promise) => {
       suburb: 'Southern Series',
       lotNumber: 'Lot 01',
       jobNumber: 'SS01',
+      gfa: "170.69m2",
       salesPerson: 'Standard Pricing'
     },
   ])
