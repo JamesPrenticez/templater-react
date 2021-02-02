@@ -355,7 +355,7 @@ input[type=text]:focus, textarea:focus{
   margin: 5px 1px 3px 0px;
   border: 1px solid #EC2027;
 }
-    
+
 /*---------- Add Job Form Radio Buttons ----------*/
 input[type=radio] {
   transition: all 0.30s ease-in-out;
@@ -395,9 +395,9 @@ input[type='radio']:checked:after {
   border: 2px solid white;
 }
 /*---------- View Job --------*/
-#jobDetails{
+.jobDetails{
   display: grid;
-  grid-template-columns: 20% 50%;
+  grid-template-columns: 20% 50%; 
   column-gap: 1px;
   border: 5px, solid, black;
   border: 5px solid dodgerblue;
@@ -406,6 +406,16 @@ input[type='radio']:checked:after {
   transition: all 0.30s ease-in-out;
   outline: none;
   padding: 10px;
+}
+
+.jobDetails img {
+  height: 90%;
+  width: 15%;
+  border: 2px solid grey;
+  border-radius: 3px;
+  margin: 5px;
+  float: right;
+  background-size: cover;
 }
 /*---------- Media Queries ----------*/
 @media screen and (max-height: 450px) {
