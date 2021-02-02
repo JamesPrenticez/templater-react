@@ -6,8 +6,6 @@ class SelectionsPreliminary extends React.Component {
     render() {
         return (
             <>
-                <div className="jobContainer">
-
                     <h1 className="selectionsHeader">Preliminary and General</h1>
 
                     <h4>Building Consent</h4>
@@ -40,7 +38,6 @@ class SelectionsPreliminary extends React.Component {
                         <p></p>
                         <p></p>  
 
-                </div>
             </>
         )
     }

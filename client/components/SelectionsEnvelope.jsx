@@ -6,11 +6,8 @@ class SelectionsEnvelope extends React.Component {
     render() {
         return (
             <>
-                <div className="jobContainer">
-
                     <h1 className="selectionsHeader">Envelope</h1>
 
-                    <h1>Envelope</h1>
                     <h4>Floor System</h4>
                         <p>Ribraft Concrete Floor</p>
                         <p></p>
@@ -58,8 +55,6 @@ class SelectionsEnvelope extends React.Component {
                         <p>Hardiflex 4.5mm</p>
                         <p></p>
                         <p></p>
-
-                </div>
             </>
         )
     }

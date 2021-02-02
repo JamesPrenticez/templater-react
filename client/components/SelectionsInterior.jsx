@@ -6,11 +6,8 @@ class SelectionsInterior extends React.Component {
     render() {
         return (
             <>
-                <div className="jobContainer">
-
                     <h1 className="selectionsHeader">Interior</h1>
 
-                    <h1>Interior</h1>
                     <h4>Roof Access</h4>
                         <p>Pre-fabricated manhole</p>
                         <p>Attic Ladder</p>
@@ -79,7 +76,6 @@ class SelectionsInterior extends React.Component {
                         <p></p>
                         <p></p>
 
-                </div>
             </>
         )
     }
