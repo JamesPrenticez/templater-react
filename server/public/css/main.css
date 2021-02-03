@@ -8,11 +8,61 @@
 /*---------- Body ---------*/
 /* 1920x1080 but really its less then this*/
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
     background-image: url('../img/texture/feathers.png') ;
     min-width: 900px;
 }
+/*---------- Headings ---------*/
+h1 {
+  color: black;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 23px;
+  display: inline-block;
+}
+
+h2 {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+h3 {
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 23px;
+  display: inline-block;
+}
+
+h4 {
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 23px;
+  display: inline-block;
+}
+
+p {
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+  display: inline-block;
+}
+
+blockquote {
+  color: black;
+  font-size: 17px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 23px;
+  display: inline-block;
+}
+
 /*---------- Header ---------*/
 header{
   width: 100%;
@@ -270,9 +320,9 @@ table {
 /*---------- Submit Button ----------*/
 .submitButton{
         color: white;
-        margin: auto;
+        margin: 25px 30% 25px 30%;
         padding: 5px;
-        width: 80%;
+        width: 40%;
         height: 33px;
         background-color: #EC2027;
         border-radius: 5px;
@@ -281,10 +331,35 @@ table {
 }
 
 /*---------- Add Job Form ----------*/
-form{
+.form{
+width: 100%;
+justify-content: center;
+}
+
+.grid2{
+  margin: 0 auto;
+  width: 40%;
   display: grid;
-  grid-template-columns: 20% 50%;
+  grid-template: 
+  "a b" 50px
+  "a b" 50px
+  "a b" 50px
+  "a b" 50px
+  "a b" 50px
+  "a b" 50px
+  "a b" 50px
+  "a b" 50px / 1fr 1fr;
   column-gap: 1px;
+}
+
+.columnA {
+  font-size: 20px;
+  font-weight: 300;
+  text-align: right;
+}
+
+.columnB {
+  justify-content: space-evenly;
 }
 
 .formHeader{
@@ -303,9 +378,8 @@ form{
 #addForm{
   height: auto;
   width: 100%;
-  border: 5px solid grey;
-  border-radius: 5px;
-  box-shadow: 0 0 5px grey;
+  border: 2px solid black;
+  border-radius: 2px;
   transition: all 0.30s ease-in-out;
   outline: none;
   padding: 10px;
@@ -338,8 +412,8 @@ label {
 }
   
 input {
-  height: 20px;
-  width: 50%;
+  height: 33px;
+  width: 80%;
   border: 1px solid #000;
   margin-top: 10px;
 }
@@ -446,8 +520,8 @@ input[type='radio']:checked:after {
 }
 
     select {
-        height: 20px;
-        width: 50%;
+        height: 33px;
+        width: 80%;
         border: 1px solid #000;
         margin-top: 10px;
         transition: all 0.30s ease-in-out;

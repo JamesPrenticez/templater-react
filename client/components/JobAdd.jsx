@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addJob } from '../api'
+import { FaEdit } from 'react-icons/fa'
 
 class JobAdd extends React.Component {
 	constructor(props){
@@ -10,7 +11,7 @@ class JobAdd extends React.Component {
 				jobName: '',
 				clientName: '',
 				siteAddress: '',
-				suburb: '',
+				collection: '',
 				lotNumber: '',
 				jobNumber: '',		
 				gfa: '',
@@ -24,9 +25,8 @@ class JobAdd extends React.Component {
 	setBackgroundColor = () => {
 		var img = document.getElementById("suburbDropDown");
 		var value = suburbDropDown.options[suburbDropDown.selectedIndex].value;
-		document.getElementById("addForm").style.border = `solid 5px ${value}`;
-		document.getElementById("addForm").style.boxShadow = `0 0 5px ${value}`;
-		console.log("here")
+		document.getElementById("addForm").style.border = `solid 2px ${value}`;
+		console.log(value)
 	}
 
 	handleChange = (event) => {
@@ -55,54 +55,55 @@ class JobAdd extends React.Component {
 	}
 
 	render() {
+		const plusStyle = {color: 'orange', marginLeft: '7px', cursor: 'pointer'}
 		return (
 			<>
 			<div className="jobContainer">
-				<h1>Add Job</h1>
+				<fieldset id="addForm">
+                <legend><h1>Add new job</h1></legend>
+					<form autoComplete="off">
+						<div className="grid2">
+							<label className="columnA" htmlFor="jobName" className="addDescription columnA">Job Name: </label>
+							<input type='text' name="jobName" id="jobName" className="addInput columnB" placeholder="Test Job" onChange={this.handleChange} />
 
-				<div id="addForm">
+							<label htmlFor="clientName" className="addDescription columnA">Client Name: </label>
+							<input type="text" name="clientName" id="clientName" className="addInput columnB" placeholder="John Doe" onChange={this.handleChange} />
 
-<form>
-						<label htmlFor="jobName" className="addDescription">Job Name</label>
-						<input type='text' name="jobName" id="jobName" className="addInput" placeholder="Test Job" onChange={this.handleChange} />
+							<label htmlFor="address" className="addDescription columnA">Site Address: </label>
+							<input type="text" name="address" id="address" className="addInput columnB" placeholder="123 Fake Street" onChange={this.handleChange}></input>
 
-						<label htmlFor="clientName" className="addDescription">Client Name</label>
-						<input type="text" name="clientName" id="clientName" className="addInput" placeholder="John Doe" onChange={this.handleChange} />
+							<label htmlFor="suburb" className="addDescription columnA">Suburb: </label>
+							<select id="suburbDropDown" className="addInput columnB" name="collection" onChange={this.handleChange, this.setBackgroundColor} >
+								<option value="black">None</option>
+								<option value="green">Meadows</option>
+								<option value="red">Richmond</option>
+							</select>
 
-						<label htmlFor="address" className="addDescription">Site Address</label>
-						<input type="text" name="address" id="address" className="addInput" placeholder="123 Fake Street" onChange={this.handleChange}></input>
+							<label htmlFor="lotNumber" className="addDescription columnA">Lot Number: </label>
+							<input type="text" name="lotNumber" id="lotNumber" className="addInput columnB" placeholder="DP 15692" onChange={this.handleChange}></input>
 
-						<label htmlFor="suburb" className="addDescription">Suburb</label>
-						<select id="suburbDropDown" className="addInput" onChange={this.setBackgroundColor, this.handleChange} >
-							<option value="grey">None</option>
-							<option value="green">Meadows</option>
-							<option value="red">Richmond</option>
-						</select>
+							<label htmlFor="jobNumber" className="addDescription columnA">Job Number: </label>
+							<input type="text" name="jobNumber" id="jobNumber" className="addInput columnB" placeholder="JNB 001" onChange={this.handleChange}></input>
+							
+							<label htmlFor="gfa" className="gfaDescription columnA">GFA: </label>
+							<input type="text" name="gfa" id="gfa" className="gfaInput columnB" placeholder="150m2" onChange={this.handleChange}></input>
 
-						<label htmlFor="lotNumber" className="addDescription">Lot Number</label>
-						<input type="text" name="lotNumber" id="lotNumber" className="addInput" placeholder="DP 15692" onChange={this.handleChange}></input>
+							<label htmlFor="salesPerson" className="addDescription columnA">Sales Person: </label>
+							<span stlye={{display: 'inline'}}>
+							<select id="salesPersonDropDown" name="salesPeople" className="salesPersonInput columnB">
+								<option value="Ryan">Ryan</option>
+								<option value="Christine">Christine</option>
+								<option value="Steve">Steve</option>
+								<option value="Hugh">Hugh</option>
+								<option value="None">None</option>
+							</select>
 
-						<label htmlFor="jobNumber" className="addDescription">Job Number</label>
-						<input type="text" name="jobNumber" id="jobNumber" className="addInput" placeholder="JNB 001" onChange={this.handleChange}></input>
-						
-						<label htmlFor="gfa" className="gfaDescription">GFA</label>
-						<input type="text" name="gfa" id="gfa" className="gfaInput" placeholder="150m2" onChange={this.handleChange}></input>
-
-						<label htmlFor="salesPerson" className="addDescription">Sales Person</label>
-
-						<select id="salesPersonDropDown" name="salesPeople" className="salesPersonInput">
-							<option value="Ryan">Ryan</option>
-							<option value="Christine">Christine</option>
-							<option value="Steve">Steve</option>
-							<option value="Hugh">Hugh</option>
-							<option value="None">None</option>
-						</select>
-						<button onClick={this.customSalesPerson}>Add Sales Person</button>
-
-						<button id="addJobButton" className="submitButton" onClick={this.handleSubmit}>Create Job</button>
-
-</form>
-				</div>
+							<FaEdit id="addJobButton" style={plusStyle} onClick={this.customSalesPerson} role='button'/>
+							</span>
+						</div>
+							<button id="addJobButton" className="submitButton" onClick={this.handleSubmit}>Create Job</button>
+					</form>
+				</fieldset>
 			</div>
 			</>
 		)
