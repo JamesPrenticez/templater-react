@@ -40,7 +40,7 @@ render(){
         <NavLink to="/job_add">Add</NavLink>
         <NavLink to="/job_list">List</NavLink>
         <NavLink to="/job_selections">Selections</NavLink>
-        <NavLink to="/job_scope_of_works">Scope Of Works</NavLink>
+        <NavLink to="/job_scope_of_works">Sales Doc</NavLink>
       </nav>
     
       <Route path="/home" component={Homepage}/>

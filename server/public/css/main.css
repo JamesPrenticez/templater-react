@@ -3,12 +3,15 @@
     margin:0;
     top: 0;
     left: 0;
+
 }
 /*---------- Body ---------*/
+/* 1920x1080 but really its less then this*/
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     background-image: url('../img/texture/feathers.png') ;
+    min-width: 900px;
 }
 /*---------- Header ---------*/
 header{
@@ -396,9 +399,6 @@ input[type='radio']:checked:after {
 }
 /*---------- View Job --------*/
 .jobDetails{
-  display: grid;
-  grid-template-columns: 20% 50%; 
-  column-gap: 1px;
   border: 5px, solid, black;
   border: 5px solid dodgerblue;
   border-radius: 5px;
@@ -406,17 +406,38 @@ input[type='radio']:checked:after {
   transition: all 0.30s ease-in-out;
   outline: none;
   padding: 10px;
+  display: inline-flex;
+  width: 100%;
+  overflow: auto;
+}
+
+.grid{
+  width: 60%;
+  display: grid;
+  grid-template: 
+  "a b" 25px
+  "a b" 25px
+  "a b" 25px / 1fr 2fr;
+  column-gap: 1px;
+  justify-content: space-evenly;
+  float: left;
 }
 
 .jobDetails img {
   height: 250px;
-  width: 250px;
+  width: 40%;
+  min-width: 300px;
+  max-width: 450px;
   border: 2px solid grey;
   border-radius: 3px;
   margin: 5px;
-  float: right;
   background-size: cover;
   background-image: url('');
+}
+
+.floatRight{
+  float: right;
+  display: inline-flex;
 }
 /*---------- Media Queries ----------*/
 @media screen and (max-height: 450px) {
