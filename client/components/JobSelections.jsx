@@ -4,6 +4,7 @@ import SelectionsPreliminary from './SelectionsPreliminary'
 import SelectionsEnvelope from './SelectionsEnvelope'
 import SelectionsInterior from './SelectionsInterior'
 import SelectionsServices from './SelectionsServices'
+import SidebarSelections from './SidebarSelections'
 
 export default class JobSelections extends React.Component {
 render(){
@@ -11,6 +12,7 @@ render(){
 
         return(
             <>
+                <SidebarSelections />
             <div className="jobContainer">					
                 <SelectionsPreliminary />
                 <SelectionsEnvelope />

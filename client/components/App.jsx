@@ -2,7 +2,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {BrowserRouter as Router, Switch, Route, Link, NavLink, useParams} from "react-router-dom";
 
-import Header from './Header'
 import Footer from './Footer'
 
 import Homepage from './Homepage'
@@ -32,7 +31,6 @@ class App extends React.Component{
 render(){
   return (
 <>
-  <Header/>
   <Router>
     <main>
       <nav>
