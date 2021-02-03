@@ -34,6 +34,7 @@ render(){
   <Router>
     <main>
       <nav>
+        <div className="title">Jennian Homes</div>
         <NavLink to="/home">Homepage</NavLink>
         <NavLink to="/job_add">Add</NavLink>
         <NavLink to="/job_list">List</NavLink>

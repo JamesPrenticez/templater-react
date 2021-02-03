@@ -7,7 +7,7 @@ render(){
         return(
             <>
             <header>
-                <div className="title">Jennian Homes</div>
+                
             </header> 
             </>
         )

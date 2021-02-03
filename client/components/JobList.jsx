@@ -22,8 +22,7 @@ class JobsList extends React.Component {
         <>
         <div className='jobContainer'>
             <h1>Job List</h1>
-            <p>A list of all current jobs displayed here.</p>
-
+  
             <table id="jobs">
                 <thead>
                 <tr>
