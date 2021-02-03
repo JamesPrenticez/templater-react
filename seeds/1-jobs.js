@@ -11,10 +11,11 @@ exports.seed = (knex, Promise) => {
       jobNumber: 'SS01',
       gfa: "170.69m2",
       salesPerson: 'Standard Pricing',
-      image_cover: './img/houses/alexandra/alexandra.png'
+      image_cover: '../img/houses/alexandra/alexandra.png'
     },
   ])
 }
+
 
 
 

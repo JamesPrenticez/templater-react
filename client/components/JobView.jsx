@@ -47,7 +47,7 @@ class JobView extends React.Component {
                             <h4>GFA</h4>
                             <p>{this.props.jobs[jobName].salesPerson}</p>
 
-                            <img style={{ backgroundImage: `url(${this.props.jobs.image_cover})` }}></img>
+                            <img style={{ backgroundImage: `url(${this.props.jobs[jobName].image_cover})` }}></img>
 
                         </div>
 

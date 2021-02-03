@@ -409,13 +409,14 @@ input[type='radio']:checked:after {
 }
 
 .jobDetails img {
-  height: 90%;
-  width: 15%;
+  height: 250px;
+  width: 250px;
   border: 2px solid grey;
   border-radius: 3px;
   margin: 5px;
   float: right;
   background-size: cover;
+  background-image: url('');
 }
 /*---------- Media Queries ----------*/
 @media screen and (max-height: 450px) {

@@ -10,6 +10,7 @@ exports.up = (knex, Promise) => {
     table.string('jobNumber')
     table.string('gfa')
     table.string('salesPerson')
+    table.string('image_cover')
     })  
 };
 
