@@ -31,7 +31,9 @@ class JobsList extends React.Component {
                     <th>Number</th>
                     <th>Collection</th>
                     <th>GFA</th>
-                    <th>DELETE</th>
+                    <th>Date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
                 </thead>
                 <tbody>

@@ -6,13 +6,17 @@ exports.seed = (knex, Promise) => {
       jobName: 'Alexandra',
       clientName: 'John Doe',
       siteAddress: '01 Fake Street',
-      suburb: 'Southern Series',
+      collection: 'Southern Series',
       lotNumber: 'Lot 01',
       jobNumber: 'SS01',
-      salesPerson: 'Standard Pricing'
+      gfa: "170.69m2",
+      salesPerson: 'Standard Pricing',
+      image_cover: './img/houses/alexandra/alexandra.png'
     },
   ])
 }
+
+
 
 
 
