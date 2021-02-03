@@ -16,6 +16,10 @@ class SelectionsSiteworks extends React.Component {
                         <h4>Timber Decking</h4>
                             <p></p>
 
+                        <h4>Sundry</h4>
+                            <p>Letter Box</p>
+                            <p>Clothes Line</p>
+
             </>
         )
     }

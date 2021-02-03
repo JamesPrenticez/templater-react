@@ -1,4 +1,5 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
 import SelectionsPreliminary from './SelectionsPreliminary'
 import SelectionsEnvelope from './SelectionsEnvelope'
@@ -6,20 +7,25 @@ import SelectionsInterior from './SelectionsInterior'
 import SelectionsServices from './SelectionsServices'
 import SidebarSelections from './SidebarSelections'
 
-export default class JobSelections extends React.Component {
+class JobSelections extends React.Component {
 render(){
-    const {job, dispatch} = this.props
-
+    console.log(this.props)
         return(
             <>
                 <SidebarSelections />
+
             <div className="jobContainer">					
-                <SelectionsPreliminary />
-                <SelectionsEnvelope />
-                <SelectionsInterior />
-                <SelectionsServices />
+                {this.props.currentPage == 'preliminary' ? <SelectionsPreliminary /> : ''}  
+                {this.props.currentPage == 'envelope' ? <SelectionsEnvelope /> : ''}  
+                {this.props.currentPage == 'interiors' ? <SelectionsInterior /> : ''}  
+                {this.props.currentPage == 'services' ? <SelectionsServices /> : ''}               
+                {this.props.currentPage == 'siteworks' ? <SelectionsSiteworks /> : ''}     
             </div>
+
             </>
         )
     }
 }
+
+
+export default connect()(JobSelections)

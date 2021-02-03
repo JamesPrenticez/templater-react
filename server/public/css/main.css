@@ -191,11 +191,11 @@ table {
   left: 0;
   background-color: black;
   overflow-x: hidden;
-  padding-top: 10VH;
+  padding-top: 10px;
 }
 
 .sidebar a, .dropdown-btn {
-  padding: 6px 8px 6px 16px;
+  padding: 6px 8px 6px 20px;
   text-decoration: none;
   font-size: 20px;
   color: white;
@@ -209,17 +209,17 @@ table {
 }
 
 .sidebar a:hover, .dropdown-btn:hover {
-  color: var(--terminalGreen);
+  color: #EC2027;
 }
 
 .dropdown-btn.active {
-  background-color: var(--terminalGreen);
+  background-color: #EC2027;
   color: black;
 }
 
 .sidebar .dropdown-container {
   display: none;
-  background-color: var(--offBlack);
+  background-color: #444444;
   padding-left: 8px;
 }
 

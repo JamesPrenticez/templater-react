@@ -8,15 +8,6 @@ class SelectionsInterior extends React.Component {
             <>
                     <h1 className="selectionsHeader">Interior</h1>
 
-                    <h4>Roof Access</h4>
-                        <p>Pre-fabricated manhole</p>
-                        <p>Attic Ladder</p>
-
-                    <h4>Insulation</h4>
-                        <p>R2.6 Pink Batts to the exterior walls</p>
-                        <p>R3.6 Pink Batts to the ceilings</p>
-                        <p>No insulation to garage</p>
-
                     <h4>Interior Linings</h4>
                         <p>Standard GIB plasterboard to walls</p>
                         <p>Aqualine GIB plasterboard to wet areas </p>
@@ -28,14 +19,24 @@ class SelectionsInterior extends React.Component {
                         <p>40 x 20 Pine Scotia to wardrobes and plywood lined garage</p>
                         <p>55mm GIB Cove</p>
 
+                    <h4>Ceiling Access</h4>
+                        <p>Pre-fabricated manhole</p>
+                        <p>Attic Ladder</p>
+
+                    <h4>Insulation</h4>
+                        <p>R2.6 Pink Batts to the exterior walls</p>
+                        <p>R3.6 Pink Batts to the ceilings</p>
+                        <p>No insulation to garage</p>
+
+                    <h4>Painting</h4>
+                        <p></p>
+
                     <h4>Interior Doors</h4>
                         <p>MDF Doors</p>
                         <p>HAG Doors</p>
                         <p>Cavity Sliders</p>
                         <p>Windsor Futura Hardware</p>
 
-                    <h4>Painting</h4>
-                        <p></p>
 
                     <h4>Wardrobes</h4>
                         <p>Melamine shelves, full and double hang walk in wardrobe</p>
@@ -70,11 +71,6 @@ class SelectionsInterior extends React.Component {
                         <p>Supply and Install by Hubbers - quote send by ____ on the _____</p>
                         <p>Includes a tiles splash, apron and cradle to the bath</p>  
                         <p>Includes flat laid tiling to the following areas - Ensuite, Bathroom, Kitchen, Entry</p>
-
-                    <h4>Painting</h4>
-                        <p></p>
-                        <p></p>
-                        <p></p>
 
             </>
         )

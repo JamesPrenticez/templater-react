@@ -1,7 +1,8 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import {FaCaretDown} from 'react-icons/fa'
 
-export default class SidebarSelections extends React.Component {
+class SidebarSelections extends React.Component {
     componentDidMount() {
         this.dropDown()
     }
@@ -25,30 +26,97 @@ export default class SidebarSelections extends React.Component {
         };
     }
     render() {
+        console.log(this.props)
         return (
             <>
                  <div className="sidebar">
-                    {/*---------- Week 1---------- */}
+                    {/*---------- Preliminary and General---------- */}
                     <div className="dropdown">
-                        <button className="dropdown-btn">Week 1<FaCaretDown /></button>
+                        <button className="dropdown-btn" onClick={this.props.viewPreliminary}>P&G<FaCaretDown /></button>
                         <div className="dropdown-container" style={{ display: 'none' }}>
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a href="#">Building Consent</a>
+                            <a href="#">Engineering</a>
+                            <a href="#">Site Survey</a>
+                            <a href="#">Temp Power</a>
                         </div>
                     </div>
 
-                    {/*---------- Week 2---------- */}
+                    {/*---------- Envelope ---------- */}
                     <div className="dropdown">
-                        <button className="dropdown-btn">Week 2<FaCaretDown /></button>
+                        <button className="dropdown-btn" onClick={this.props.viewEnvelope}>Envelope<FaCaretDown /></button>
                         <div className="dropdown-container" style={{ display: 'none' }}>
-                            <a href="#">Link a</a>
-                            <a href="#">Link b</a>
-                            <a href="#">Link c</a>
+                            <a href="#">Floor System</a>
+                            <a href="#">Framing</a>
+                            <a href="#">Cladding</a>
+                            <a href="#">Aluminium Joinery</a>
+                            <a href="#">Skylights</a>
+                            <a href="#">Garage Door</a>
+                            <a href="#">Roof, Fascia, Gutter</a>
+                            <a href="#">Soffits</a>
                         </div>
                     </div>
+                    {/*---------- Interior ---------- */}
+                    <div className="dropdown">
+                        <button className="dropdown-btn" onClick={this.props.viewInterior}>Interior<FaCaretDown /></button>
+                        <div className="dropdown-container" style={{ display: 'none' }}>
+                            <a href="#">Interior Linings</a>
+                            <a href="#">Skirting, Architrave & Scotia</a>
+                            <a href="#">Ceiling Access</a>
+                            <a href="#">Insulation</a>
+                            <a href="#">Painting</a>
+                            <a href="#">Interior Doors</a>
+                            <a href="#">Wardrobes</a>
+                            <a href="#">Kitchen & Pantry</a>
+                            <a href="#">Other Joinery</a>
+                            <a href="#">Carpet</a>
+                            <a href="#">Vinyl</a>
+                            <a href="#">Tiles</a>
+                        </div>
+                    </div>  
+                    {/*---------- Services --------- */}
+                    <div className="dropdown">
+                        <button className="dropdown-btn" onClick={this.props.viewServices}>Services<FaCaretDown /></button>
+                        <div className="dropdown-container" style={{ display: 'none' }}>
+                            <a href="#">Electrical</a>
+                            <a href="#">Heatpump</a>
+                            <a href="#">Gas</a>
+                            <a href="#">Appliances</a>
+                            <a href="#">Plumbing</a>
+                            <a href="#">Fittings & Fixtures</a>
+                            <a href="#">Drainage</a>
+                        </div>
+                    </div> 
+                    {/*---------- Site Work ---------- */}
+                    <div className="dropdown">
+                        <button className="dropdown-btn" onClick={this.props.viewSiteworks}>Sitework<FaCaretDown /></button>
+                        <div className="dropdown-container" style={{ display: 'none' }}>
+                            <a href="#">Driveways & Patios</a>
+                            <a href="#">Landscaping</a>
+                            <a href="#">Timber Decking</a>
+                            <a href="#">Sundry</a>
+                        </div>
+                    </div> 
+                                                  
                 </div>
             </>
         )
     }
 }
+
+function mapStateToProps(state){
+    console.log(state.currentPage)
+    return {
+      currentPage: state.currentPage    
+    }
+}
+function mapDispatchToProps(dispatch) {
+  return {
+    viewPreliminary: () => dispatch({type: 'CHANGE_PAGE', page: 'preliminary'}),
+    viewEnvelope: () => dispatch({type: 'CHANGE_PAGE', page: 'envelope'}),
+    viewInterior: () => dispatch({type: 'CHANGE_PAGE', page: 'interiors'}),
+    viewServices: () => dispatch({type: 'CHANGE_PAGE', page: 'services'}),
+    viewSiteworks: () => dispatch({type: 'CHANGE_PAGE', page: 'siteworks'}),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SidebarSelections)

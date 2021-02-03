@@ -38,7 +38,7 @@ class SelectionsServices extends React.Component {
                         <p>Waste Disposal – F & P Waste Disposal GD75IA1</p>
                         <p>Canopy rangehood to be vented to the exterior through the roof</p>
 
-                    <h4>Plumbing & Drainage</h4>
+                    <h4>Plumbing</h4>
                         <p>180L - 250L Mains Pressure HWC</p>
                         <p>Standard - Fusiotherm Pipework</p>
                         <p>Exterior Hose Taps x3</p>
@@ -54,6 +54,14 @@ class SelectionsServices extends React.Component {
                             <p>Basin Mixer</p>      <p>Elementi Ion</p>
                             <p>Bath Mixer</p>       <p>Elementi Ion</p>
                             <p>Bath Spout</p>       <p>Elementi Ion wall mounted</p>
+                            <p>Toilet</p>           <p>Elementi Uno</p>
+                            <p>Toilet Roll Holder</p><p>Alexander Tetris</p>
+
+                        <h6>WC</h6>
+                            <p>Vanity</p>           <p>500mm Athena Norfolk Classic wall hung cabinet with composite top</p>
+                            <p>Basin Mixer</p>      <p>Elementi Ion</p>                            
+                            <p>Toilet</p>           <p>Elementi Uno</p>
+                            <p>Toilet Roll Holder</p><p>Alexander Tetris</p>
 
                         <h6>Ensuite</h6>
                             <p>Shower</p>           <p>1400 x 1000  Tiled Shower with glass screen and two glass shelves</p>
@@ -64,12 +72,18 @@ class SelectionsServices extends React.Component {
                             <p>Basin Mixer</p>      <p>Elementi Ion</p>
                             <p>Bath Mixer</p>       <p>Elementi Ion</p>
                             <p>Bath Spout</p>       <p>Elementi Ion wall mounted</p>
+                            <p>Toilet</p>           <p>Elementi Uno</p>
+                            <p>Toilet Roll Holder</p><p>Alexander Tetris</p>
 
                         <h6>Kitchen</h6>
                             <p>Sink Mixer</p>       <p>Elementi Uno Gooseneck</p>
 
                         <h6>Laundry</h6>
                             <p>Tub</p>              <p>Aquatica Laundra Tubbie</p>
+                    
+                    <h4>Drainage</h4>
+                        <p>5K Prov Sum</p>
+                        <p>Sump</p>
 
             </>
         )
