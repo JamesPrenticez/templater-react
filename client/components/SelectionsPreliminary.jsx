@@ -81,7 +81,7 @@ class SelectionsPreliminary extends React.Component {
                             <img style={{height: "75%", width: "50%", margin: "30px"}}src={"../img/icons/electricity.png"}></img>
                         </div>
                     <form>
-                        <div className="Mains Cable and Temp Power" style={{height: "250px"}}>
+                        <div className="textContainer" style={{height: "250px"}}>
                                 <h2>Mains Cable and Temp Power</h2>
                                         <label>Includes for the supply of temporary power for the duration of the build</label>
                                         <select id="tp" name="tp" className="tp">

@@ -23,14 +23,13 @@ class JobListItem extends React.Component {
     }
 
     render(){
-    console.log(this.props)
     const {job} = this.props
     const editStyle = {color: 'orange', marginLeft: '7px', cursor: 'pointer'}
     const deleteStyle = {color: 'red', marginLeft: '7px', cursor: 'pointer'}
         return(
             <>
                 <td>
-                <Link to={`/job_view/${job.id}`}>{job.jobName}</Link>
+                <Link to={`/job_view/${job.jobName}`}>{job.jobName}</Link>
                 </td>
                 <td>
                     {job.jobNumber}
