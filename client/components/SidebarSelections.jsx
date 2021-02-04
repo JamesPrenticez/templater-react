@@ -26,13 +26,13 @@ class SidebarSelections extends React.Component {
         };
     }
     render() {
-        console.log(this.props)
+        console.log(this.props.parentProps.currentPage)
         return (
             <>
                  <div className="sidebar">
                     {/*---------- Preliminary and General---------- */}
                     <div className="dropdown">
-                        <button className="dropdown-btn" onClick={this.props.viewPreliminary}>P&G<FaCaretDown /></button>
+                        <button className="dropdown-btn" onClick={this.props.parentProps.viewPreliminary}>P&G<FaCaretDown /></button>
                         <div className="dropdown-container" style={{ display: 'none' }}>
                             <a href="#">Building Consent</a>
                             <a href="#">Engineering</a>
@@ -43,7 +43,7 @@ class SidebarSelections extends React.Component {
 
                     {/*---------- Envelope ---------- */}
                     <div className="dropdown">
-                        <button className="dropdown-btn" onClick={this.props.viewEnvelope}>Envelope<FaCaretDown /></button>
+                        <button className="dropdown-btn" onClick={this.props.parentProps.viewEnvelope}>Envelope<FaCaretDown /></button>
                         <div className="dropdown-container" style={{ display: 'none' }}>
                             <a href="#">Floor System</a>
                             <a href="#">Framing</a>
@@ -57,7 +57,7 @@ class SidebarSelections extends React.Component {
                     </div>
                     {/*---------- Interior ---------- */}
                     <div className="dropdown">
-                        <button className="dropdown-btn" onClick={this.props.viewInterior}>Interior<FaCaretDown /></button>
+                        <button className="dropdown-btn" onClick={this.props.parentProps.viewInterior}>Interior<FaCaretDown /></button>
                         <div className="dropdown-container" style={{ display: 'none' }}>
                             <a href="#">Interior Linings</a>
                             <a href="#">Skirting, Architrave & Scotia</a>
@@ -75,7 +75,7 @@ class SidebarSelections extends React.Component {
                     </div>  
                     {/*---------- Services --------- */}
                     <div className="dropdown">
-                        <button className="dropdown-btn" onClick={this.props.viewServices}>Services<FaCaretDown /></button>
+                        <button className="dropdown-btn" onClick={this.props.parentProps.viewServices}>Services<FaCaretDown /></button>
                         <div className="dropdown-container" style={{ display: 'none' }}>
                             <a href="#">Electrical</a>
                             <a href="#">Heatpump</a>
@@ -88,7 +88,7 @@ class SidebarSelections extends React.Component {
                     </div> 
                     {/*---------- Site Work ---------- */}
                     <div className="dropdown">
-                        <button className="dropdown-btn" onClick={this.props.viewSiteworks}>Sitework<FaCaretDown /></button>
+                        <button className="dropdown-btn" onClick={this.props.parentProps.viewSiteworks}>Sitework<FaCaretDown /></button>
                         <div className="dropdown-container" style={{ display: 'none' }}>
                             <a href="#">Driveways & Patios</a>
                             <a href="#">Landscaping</a>
@@ -103,20 +103,5 @@ class SidebarSelections extends React.Component {
     }
 }
 
-function mapStateToProps(state){
-    console.log(state.currentPage)
-    return {
-      currentPage: state.currentPage    
-    }
-}
-function mapDispatchToProps(dispatch) {
-  return {
-    viewPreliminary: () => dispatch({type: 'CHANGE_PAGE', page: 'preliminary'}),
-    viewEnvelope: () => dispatch({type: 'CHANGE_PAGE', page: 'envelope'}),
-    viewInterior: () => dispatch({type: 'CHANGE_PAGE', page: 'interiors'}),
-    viewServices: () => dispatch({type: 'CHANGE_PAGE', page: 'services'}),
-    viewSiteworks: () => dispatch({type: 'CHANGE_PAGE', page: 'siteworks'}),
-  }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(SidebarSelections)
+export default connect()(SidebarSelections)

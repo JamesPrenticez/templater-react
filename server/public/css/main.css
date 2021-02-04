@@ -143,6 +143,18 @@ height: auto;
     box-shadow: 5px 10px 8px 10px #888888;
 }
 
+.jobContainerWithSidebar{
+  background-color: white;
+  margin: 5px 2vw 5px 17vw;
+  border-radius: 5px;
+  height: auto;
+  width: 80%;
+  padding: 2%;
+  border: 1px solid;
+  box-shadow: 5px 10px 8px 10px #888888;
+}
+
+
 /*---------- Job Row ----------*/
 #jobs tr:nth-child(even){background-color: #f2f2f2;}
 
