@@ -36,7 +36,7 @@ class JobListItem extends React.Component {
                     {job.jobNumber}
                 </td>
                 <td>
-                    {job.suburb}
+                    {job.collection}
                 </td>
                 <td>
                     {job.gfa}          
