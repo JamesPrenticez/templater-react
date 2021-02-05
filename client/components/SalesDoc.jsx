@@ -10,7 +10,7 @@ class SalesDoc extends React.Component {
     render() {
         return (
                 <>
-                <div id="mainWrapper">
+                <div className="salesDoc">
                     <div className="page" id="page">
                         <div className="subpage">
                             <SalesDocCoverpage jobs={this.props.jobs}/>

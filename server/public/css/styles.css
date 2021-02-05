@@ -7,30 +7,19 @@ body {
     background-color: rgb(204,204,204); 
     font: 12pt "Tahoma";
 }
+
 * {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
 
-.contractZoom {
-    width: 85%;
-    float: right;
+.salesDoc{
     height: auto;
-    position: sticky;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
-    top: 50px;
-    left: 0;
-    z-index: 1; 
-}
-
-#mainWrapper{
-    height: auto;
-    width: 100%;
-    margin: auto;
+    width: 80%;
+    margin: 0 auto;
     transform: scale(1);
     position: relative;
-    top: 25px;
+
 }
 
 .page {
@@ -38,7 +27,7 @@ body {
     background: white;
     width: 21cm;
     height: 100VH;
-    margin: 1% auto 1% auto;
+    margin: 0.5% auto 0.5% auto;
     box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
     transform: scale(1);
 }
@@ -50,6 +39,7 @@ body {
 .pageFooter{
     
 }
+
 .subpage {
     padding: 2cm;
     height: 100%;
@@ -58,6 +48,55 @@ body {
     outline-offset: -2cm;
 }
 
+/*---------- Cover Page ---------*/
+.coverPage{
+    height: 85%;
+    width: 100%;
+  }
+  
+  #logo {
+    height: 40%;
+    width: 100%;
+    margin: 0 auto;
+    background-size: cover;
+  }
+  
+  #house {
+    height: 40%;
+    width: 100%;
+    margin: 0 auto;
+    background-size: cover;
+  }
+
+  #title{
+    height: 40%;
+    width: 100%;
+    text-align: center;
+  }
+
+  /*---------- Page ----------*/
+.page{
+    width: 595px;
+    height: 842px;
+    margin: 25px auto;
+    background-color: white;
+  }
+  
+  .pageHeader{
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background-color: blue;
+  }
+  
+  .pageFooter{
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: blue;
+  }
+
+/*---------- Media Queries ----------*/
   @media print {
     .page {
         margin: 0;
@@ -70,11 +109,3 @@ body {
         page-break-after: always;
     }
 }
-
-#cladding img{
-    height: 500px;
-    width: 500px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-

@@ -255,26 +255,6 @@ table {
   float: right;
   padding-right: 8px;
 }
-/*---------- Cover Page ---------*/
-.coverPage{
-  height: 90%;
-  width: 100%;
-}
-
-#logo {
-  height: 20%;
-  width: 40%;
-  padding: 2.5% 30% 0% 30%;
-  margin: 0 auto;
-  background-color: aqua;
-}
-
-#house {
-  height: 20%;
-  width: 40%;
-  padding: 2.5% 30% 0% 30%;
-  margin: 0 auto;
-}
 
 /*---------- Main Container ---------*/
 .contractContainer {
@@ -284,66 +264,6 @@ table {
   top: 0;
 }
 
-/*---------- Scope Of Work Side Navagation ----------*/
-.sideNav {
-  height: 100VH;
-  width: 15%;
-  position: sticky;
-  z-index: 1;
-  top: 50px;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding: 14px 16px;
-  display: flex;
-  float: left;
-}
-
-.sideNav a {
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
-}
-
-.sideNav ul li{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.sideNav li:hover {
-  background-color: #EC2027;
-}
-
-.sideNavTitle {
-  color: white;
-  font-weight: 700;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-/*---------- Page ----------*/
-.page{
-  width: 595px;
-  height: 842px;
-  margin: 25px auto;
-  margin-left: 15%;
-  background-color: white;
-}
-
-.pageHeader{
-  top: 0;
-  height: 50px;
-  width: 100%;
-  background-color: blue;
-}
-
-.pageFooter{
-  bottom: 0;
-  height: 50px;
-  width: 100%;
-  background-color: blue;
-}
 /*---------- Submit Button ----------*/
 .submitButton{
         color: white;
