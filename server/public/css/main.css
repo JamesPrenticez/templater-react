@@ -1,17 +1,15 @@
 /*---------- All ---------*/
-* {
-    margin:0;
-    top: 0;
-    left: 0;
-
-}
+* {}
 /*---------- Body ---------*/
 /* 1920x1080 but really its less then this*/
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px;
-    background-image: url('../img/texture/feathers.png') ;
-    min-width: 900px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  background-image: url('../img/texture/feathers.png') ;
+  min-width: 900px;
+  margin:0;
+  top: 0;
+  left: 0;
 }
 /*---------- Headings ---------*/
 h1 {
@@ -543,6 +541,111 @@ input[type='radio']:checked:after {
   float: right;
   display: inline-flex;
 }
+
+/*---------- Image Slide ----------*/
+
+.slideshow-container{
+  top: 150px;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container img{
+  background-size: cover;
+  height:500px;
+  width: 1000px;
+  margin: 5px;
+  vertical-align: middle;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+
+  width: 100%;
+  text-align: center;
+}
+  
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dotContainer {
+  text-align: "center"
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
 /*---------- Media Queries ----------*/
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
