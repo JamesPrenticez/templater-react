@@ -31,13 +31,12 @@ class JobsList extends React.Component {
                     <th>Collection</th>
                     <th>GFA</th>
                     <th>Date</th>
-                    <th>Edit</th>
                     <th>Delete</th>
                 </tr>
                 </thead>
                 <tbody>
                     
-                {this.props.jobs.map(job => <tr key={job.id}><JobListItem job={job}/></tr>)}
+                {this.props.jobs.map(job => <JobListItem key={job.id} job={job}/>)}
                 
                 </tbody>
             </table>

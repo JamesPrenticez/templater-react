@@ -1,7 +1,7 @@
 import request from 'superagent'
 
 //GET Jobs
-export function getJobs () {
+export function getJobs() {
     return request
     .get('/api/v1/get')
     .then(res => res.body.jobs)

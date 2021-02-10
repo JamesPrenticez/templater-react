@@ -7,12 +7,7 @@ import {FaMinusCircle, FaEdit} from 'react-icons/fa'
 import {removeJob} from '../actions'
 import {deleteJob} from '../api'
 
-
 class JobListItem extends React.Component {
-    state = {
-        editing: false
-    }
-
     deleteJob = () => {
         let {id} = this.props.job
         confirm("Are you sure you want to delete " + `${this.props.job.name}` + "?")
@@ -22,27 +17,14 @@ class JobListItem extends React.Component {
         })
     }
 
-    editJob = () => {
-        this.setState({
-            editing: true
-        })
-    }
-
-    hideEditForm = () => {
-        this.setState({
-            editing: false,
-        })
-    }
-
-
     render(){
     const {job} = this.props
-    const editStyle = {color: 'orange', marginLeft: '7px', cursor: 'pointer'}
-    const deleteStyle = {color: 'red', marginLeft: '7px', cursor: 'pointer'}
+     const deleteStyle = {color: 'red', marginLeft: '7px', cursor: 'pointer'}
         return(
             <>
+            <tr>
                 <td>
-                <Link to={`/job_view/${job.jobName}`}>{job.jobName}</Link>
+                    <Link to={`/job_view/${job.jobName}`}>{job.jobName}</Link>
                 </td>
                 <td>
                     {job.jobNumber}
@@ -56,13 +38,10 @@ class JobListItem extends React.Component {
                 <td>
                     {job.date_created}
                 </td>
-                <td name="edit">
-                    <FaEdit style={editStyle} onClick={this.editJob}/>
-                    <Link to={`/job_edit/${job.id}`}>edit</Link>
-                </td>
                 <td name="delete">
                     <FaMinusCircle style={deleteStyle} onClick={this.deleteJob} role='button'/>
-                </td>     
+                </td>   
+            </tr>  
             </>
         )
     }
