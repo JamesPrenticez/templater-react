@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import {fetchJobs} from '../actions'
+import {setJobs} from '../actions'
 import {getJobs} from '../api'
 
 import JobListItem from './JobListItem'
@@ -11,7 +11,7 @@ class JobsList extends React.Component {
     componentDidMount() {
         getJobs()
         .then(jobs => {
-            this.props.dispatch(fetchJobs(jobs))
+            this.props.dispatch(setJobs(jobs))
         })
         .catch(err => {
             console.log(err)

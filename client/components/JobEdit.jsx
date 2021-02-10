@@ -2,8 +2,8 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {FaPlusCircle} from 'react-icons/fa'
 
-import { updateTask } from '../actions'
-import { editTask } from '../api'
+import { updateJob } from '../actions'
+import { editJob } from '../api'
 
 class JobEdit extends React.Component {
     constructor(props) {
@@ -36,9 +36,9 @@ class JobEdit extends React.Component {
     submit = () => {
         let {id} = this.props.jobs[0]
         let {name} = this.state
-        editTask(id, name)
+        editJob(id, name)
             .then(() => {
-                this.props.dispatch(updateTask(id, name))
+                this.props.dispatch(updateJob(id, name))
                 if (this.props.onEscape) this.props.onEscape()
             })
         }
