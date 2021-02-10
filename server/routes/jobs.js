@@ -6,7 +6,7 @@ const router = express.Router()
 module.exports = router
 
 //GET Jobs 
-router.get('/api/jobs', (req, res) => {
+router.get('/api/v1/get', (req, res) => {
   db.getJobs()
     .then(jobs => res.json({jobs: jobs}))
     .catch(err => {
@@ -15,15 +15,7 @@ router.get('/api/jobs', (req, res) => {
 })
 
 //ADD Job
-// router.post('/api/jobs', (req, res) => {
-//   let {jobName, clientName} = req.body
-//       db.createJob({jobName, clientName})
-//           .then((ids) => {
-//               res.status(201).json({id: ids[0]})//broken?
-//           })
-// })
-
-router.post('/api/add', (req, res) => {
+router.post('/api/v1/post', (req, res) => {
   let {jobName, clientName} = req.body
     db.createJob({jobName, clientName})
     .then((ids) => {
@@ -32,7 +24,7 @@ router.post('/api/add', (req, res) => {
 })
 
 //DELETE Job
-router.delete('/api/jobs/:id', (req, res) => {
+router.delete('/api/v1/delete/:id', (req, res) => {
   let {id} = req.params
   if (!id) return res.status(400).send('no id specified')
     db.deleteJob(Number(id))
@@ -43,3 +35,17 @@ router.delete('/api/jobs/:id', (req, res) => {
         res.sendStatus(500)
       })
   })
+
+//UPDATE Task
+router.patch('/api/v1/edit/:id', (req, res) => {
+    let {id} = req.params
+    if (!id) return res.status(400).send("no id specified")
+
+    db.updateJob(Number(id), req.body.name)
+        .then(recordsUpdated => {
+            res.sendStatus(200)
+        })
+        .catch(error => {
+            res.sendStatus(500)
+        })
+})

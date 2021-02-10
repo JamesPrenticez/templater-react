@@ -1,4 +1,4 @@
-import {FETCH_JOBS, REMOVE_JOB} from '../actions'
+import {FETCH_JOBS, REMOVE_JOB, UPDATE_TASK} from '../actions'
 
 const initialState = []
 
@@ -8,6 +8,8 @@ export default function jobReducer(state = initialState, action) {
             return action.jobs
         case REMOVE_JOB:
             return state.filter(job => job.id != action.id)
+        case UPDATE_TASK:
+            return state.map(t => t.id == action.id ? {...t, name: action.name} : t)
         default:
             return state
     }

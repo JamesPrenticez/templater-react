@@ -6,6 +6,7 @@ import {getJobs} from '../api'
 
 import JobListItem from './JobListItem'
 
+
 class JobsList extends React.Component {
     componentDidMount() {
         getJobs()
@@ -22,7 +23,6 @@ class JobsList extends React.Component {
         <>
         <div className='jobContainer'>
             <h1>Job List</h1>
-  
             <table id="jobs">
                 <thead>
                 <tr>

@@ -2,6 +2,7 @@ exports.up = (knex, Promise) => {
     return knex.schema.createTable('jobs', (table) => {
     table.increments('id').primary()
     table.date('date_created')
+    table.string('name')
     table.string('jobName')
     table.string('clientName')
     table.string('siteAddress')

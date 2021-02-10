@@ -7,9 +7,10 @@ import {FaMinusCircle, FaEdit} from 'react-icons/fa'
 import {removeJob} from '../actions'
 import {deleteJob} from '../api'
 
+
 class JobListItem extends React.Component {
     state = {
-        showControls: false
+        editing: false
     }
 
     deleteJob = () => {
@@ -19,8 +20,20 @@ class JobListItem extends React.Component {
         .then (() => {
             this.props.dispatch(removeJob(id))
         })
-
     }
+
+    editJob = () => {
+        this.setState({
+            editing: true
+        })
+    }
+
+    hideEditForm = () => {
+        this.setState({
+            editing: false,
+        })
+    }
+
 
     render(){
     const {job} = this.props
@@ -44,11 +57,12 @@ class JobListItem extends React.Component {
                     {job.date_created}
                 </td>
                 <td name="edit">
-                    <FaEdit style={editStyle}/>
+                    <FaEdit style={editStyle} onClick={this.editJob}/>
+                    <Link to={`/job_edit/${job.id}`}>edit</Link>
                 </td>
                 <td name="delete">
                     <FaMinusCircle style={deleteStyle} onClick={this.deleteJob} role='button'/>
-                </td>          
+                </td>     
             </>
         )
     }

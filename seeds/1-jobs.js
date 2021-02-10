@@ -4,6 +4,7 @@ exports.seed = (knex, Promise) => {
       id: 0,
       date_created: new Date(Date.now()),
       jobName: 'Alexandra',
+      name: 'Alexandra',
       clientName: 'John Doe',
       siteAddress: '01 Fake Street',
       collection: 'Southern Series',
