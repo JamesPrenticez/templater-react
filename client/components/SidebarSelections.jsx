@@ -1,8 +1,12 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {FaCaretDown} from 'react-icons/fa'
+import {FaCaretDown, FaArrowLeft} from 'react-icons/fa'
 
 class SidebarSelections extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     componentDidMount() {
         this.dropDown()
     }
@@ -26,13 +30,26 @@ class SidebarSelections extends React.Component {
         };
     }
     render() {
-        console.log(this.props.parentProps.currentPage)
+        const { jobs } = this.props
+        const { id } = this.props.match.params
+        console.log(jobs)
+        console.log(id)
+    
+        const backStyle = { color: 'DarkMagenta', height: '35px', width: '35px', marginLeft: '7px', cursor: 'pointer', position: 'absolute' }
+
         return (
             <>
+
                  <div className="sidebar">
+
+                    {/*---------- Back Button ---------- */}
+                    <div style={{height: '50px'}}>
+                    <FaArrowLeft style={backStyle} onClick={this.props.view} />
+                    </div>
+
                     {/*---------- Preliminary and General---------- */}
                     <div className="dropdown">
-                        <button className="dropdown-btn" onClick={this.props.parentProps.viewPreliminary}>P&G<FaCaretDown /></button>
+                        <button className="dropdown-btn" onClick={this.props.viewPreliminary}>P&G<FaCaretDown /></button>
                         <div className="dropdown-container" style={{ display: 'none' }}>
                             <a href="#">Building Consent</a>
                             <a href="#">Engineering</a>
@@ -43,7 +60,7 @@ class SidebarSelections extends React.Component {
 
                     {/*---------- Envelope ---------- */}
                     <div className="dropdown">
-                        <button className="dropdown-btn" onClick={this.props.parentProps.viewEnvelope}>Envelope<FaCaretDown /></button>
+                        <button className="dropdown-btn" onClick={this.props.viewEnvelope}>Envelope<FaCaretDown /></button>
                         <div className="dropdown-container" style={{ display: 'none' }}>
                             <a href="#">Floor System</a>
                             <a href="#">Framing</a>
@@ -57,7 +74,7 @@ class SidebarSelections extends React.Component {
                     </div>
                     {/*---------- Interior ---------- */}
                     <div className="dropdown">
-                        <button className="dropdown-btn" onClick={this.props.parentProps.viewInterior}>Interior<FaCaretDown /></button>
+                        <button className="dropdown-btn" onClick={this.props.viewInterior}>Interior<FaCaretDown /></button>
                         <div className="dropdown-container" style={{ display: 'none' }}>
                             <a href="#">Interior Linings</a>
                             <a href="#">Skirting, Architrave & Scotia</a>
@@ -75,7 +92,7 @@ class SidebarSelections extends React.Component {
                     </div>  
                     {/*---------- Services --------- */}
                     <div className="dropdown">
-                        <button className="dropdown-btn" onClick={this.props.parentProps.viewServices}>Services<FaCaretDown /></button>
+                        <button className="dropdown-btn" onClick={this.props.viewServices}>Services<FaCaretDown /></button>
                         <div className="dropdown-container" style={{ display: 'none' }}>
                             <a href="#">Electrical</a>
                             <a href="#">Heatpump</a>
@@ -88,7 +105,7 @@ class SidebarSelections extends React.Component {
                     </div> 
                     {/*---------- Site Work ---------- */}
                     <div className="dropdown">
-                        <button className="dropdown-btn" onClick={this.props.parentProps.viewSiteworks}>Sitework<FaCaretDown /></button>
+                        <button className="dropdown-btn" onClick={this.props.viewSiteworks}>Sitework<FaCaretDown /></button>
                         <div className="dropdown-container" style={{ display: 'none' }}>
                             <a href="#">Driveways & Patios</a>
                             <a href="#">Landscaping</a>

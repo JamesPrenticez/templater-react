@@ -5,10 +5,12 @@ import { FaEdit, FaSearchPlus, FaRegFileAlt, FaArrowLeft, FaTrashAlt } from 'rea
 
 import JobEdit from './JobEdit'
 import JobDetails from './JobDetails'
+import JobSelections from './JobSelections'
+import SalesDoc from './SalesDoc'
 
 import { removeJob } from '../actions'
 import { deleteJob } from '../api'
-import currentForm from '../reducers/currentForm';
+
 
 class JobView extends React.Component {
     constructor(props) {
@@ -49,7 +51,7 @@ class JobView extends React.Component {
         const editStyle = { color: 'orange', height: '35px', width: '35px', marginLeft: '7px', cursor: 'pointer' }
         const selectionsStyle = { color: 'green', height: '35px', width: '35px', marginLeft: '7px', cursor: 'pointer' }
         const salesDocStyle = { color: 'blue', height: '35px', width: '35px', marginLeft: '7px', cursor: 'pointer' }
-        const backStyle = { color: 'DarkMagenta', height: '35px', width: '35px', marginLeft: '7px', cursor: 'pointer' }
+        const backStyle = { color: 'DarkMagenta', height: '35px', width: '35px', marginLeft: '7px', cursor: 'pointer', position: 'absolute' }
         const deleteStyle = { color: 'red', height: '35px', width: '35px', marginLeft: '7px', cursor: 'pointer' }
 
         const { jobs } = this.props
@@ -61,10 +63,9 @@ class JobView extends React.Component {
 
         return (
             <>
-                <div className="jobContainer">
-
                         {this.props.currentForm === 'view' ? 
                             <>
+                            <div className="jobContainer">
                                 <fieldset><legend><h1>View Job</h1></legend> 
                                     <FaArrowLeft style={backStyle} onClick={this.redirectToJobList} />
                                     <div className='jobDetailButtons'>
@@ -73,30 +74,35 @@ class JobView extends React.Component {
                                     <FaRegFileAlt style={salesDocStyle} onClick={this.props.salesDoc} role='button' />
                                     <FaTrashAlt style={deleteStyle} onClick={this.deleteJob} role='button' />
                                     </div>
-                                    <JobDetails {...this.props.match.params}{...this.props} onEscape={this.hideEditForm} />
+                                    <JobDetails {...this.props.match.params}{...this.props} onEscape={this.redirectToJobList} />
                                 </fieldset>
+                            </div>
                             </>
                         : ''}
 
                         {this.props.currentForm === 'edit' ? 
                             <>
+                            <div className="jobContainer">
                                 <fieldset><legend><h1>Edit Job</h1></legend>
                                     <FaArrowLeft style={backStyle} onClick={this.props.view} />
-                                    <JobEdit {...this.props.match.params}{...this.props} onEscape={this.hideEditForm} />
+                                    <JobEdit {...this.props.match.params}{...this.props} onEscape={this.props.view} />
                                 </fieldset>
+                            </div>
                             </> 
                         : ''}
 
                         {this.props.currentForm == 'selections' ?
                             <>
+                                    <JobSelections {...this.props.match.params}{...this.props} onEscape={this.props.view} />
                             </>
                         : ''}
 
                         {this.props.currentForm == 'salesDoc' ?
                             <>
-                            </>
+                                <FaArrowLeft style={backStyle} onClick={this.props.view} />
+                                <SalesDoc {...this.props.match.params}{...this.props} onEscape={this.props.view} />
+                        </>
                         : ''}
-                </div>
             </>
         )
     }
