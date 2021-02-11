@@ -24,7 +24,6 @@ class App extends React.Component {
             <nav>
               <div className="title">Jennian Homes</div>
               <NavLink to="/home">Homepage</NavLink>
-              <NavLink to="/job_add">Add</NavLink>
               <NavLink to="/job_list">List</NavLink>
               <Link to={`/job_selections/Alexandra`}>Selections (A)</Link>
               <Link to={`/sales_doc/Alexandra`}>Sales Doc (A)</Link>

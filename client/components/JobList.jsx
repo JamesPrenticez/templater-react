@@ -48,7 +48,7 @@ class JobsList extends React.Component {
 
     render() {
         const {showControls} = this.state
-        const addStyle = { color: 'green', height: '25px', width: '25px', marginLeft: '7px', cursor: 'pointer' }
+        const addStyle = { color: 'green', height: '35px', width: '35px', cursor: 'pointer', float: 'right'}
         if (this.state.toJobAdd === true) {
             return <Redirect to={'/job_add/'} />
         }
@@ -59,27 +59,30 @@ class JobsList extends React.Component {
                     <fieldset>
                         <legend><h1>Job List</h1></legend>
 
-                        <div className='jobDetailButtons'>
+                        <div style={{display: 'block', height: '35px', width: '100%', textAlign: 'right'}}>
                             {showControls ? 'Add new job' : ''}
+                        </div>
+
+                        <div style={{display: 'block', height: '25px', width: '100%'}}>
                             <FaPlusCircle style={addStyle}
                                           onClick={this.redirectToJobAdd}
                                           role='button'
                                           alt='Add new job'
                                           onMouseEnter={this.showControls}
                                           onMouseLeave={this.hideControls}
-                            />
+                                          />
                         </div>
 
                         <table id="jobs">
                             <thead>
                                 <tr>
+                                    <th>Id</th>
                                     <th>Name</th>
                                     <th>Number</th>
                                     <th>Collection</th>
                                     <th>Cost</th>
                                     <th>GFA</th>
                                     <th>Date</th>
-                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
