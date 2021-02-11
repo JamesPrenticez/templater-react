@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route, Link, useParams, Redirect } from "react-router-dom";
 import { FaPlusCircle } from 'react-icons/fa'
 
-
 import { setJobs } from '../actions'
 import { getJobs } from '../api'
 
@@ -49,6 +48,7 @@ class JobsList extends React.Component {
     render() {
         const {showControls} = this.state
         const addStyle = { color: 'green', height: '35px', width: '35px', cursor: 'pointer', float: 'right'}
+
         if (this.state.toJobAdd === true) {
             return <Redirect to={'/job_add/'} />
         }
@@ -67,7 +67,6 @@ class JobsList extends React.Component {
                             <FaPlusCircle style={addStyle}
                                           onClick={this.redirectToJobAdd}
                                           role='button'
-                                          alt='Add new job'
                                           onMouseEnter={this.showControls}
                                           onMouseLeave={this.hideControls}
                                           />

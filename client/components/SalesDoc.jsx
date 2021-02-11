@@ -1,5 +1,6 @@
 import React from 'react'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
+import { FaArrowLeft } from 'react-icons/fa'
 
 import SalesDocCoverpage from './SalesDocCoverpage'
 
@@ -8,9 +9,12 @@ class SalesDoc extends React.Component {
         super(props);
       }
     render() {
+        const backStyle = { color: 'DarkMagenta', height: '35px', width: '35px', marginLeft: '7px', cursor: 'pointer', position: 'absolute' }
+
         return (
                 <>
                 <div className="salesDoc">
+                    <FaArrowLeft style={backStyle} onClick={this.props.view} />
                     <div className="page" id="page">
                         <div className="subpage">
                             <SalesDocCoverpage jobs={this.props.jobs}/>

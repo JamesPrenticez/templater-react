@@ -56,6 +56,8 @@ class JobView extends React.Component {
 
         const { jobs } = this.props
         const { id } = this.props.match.params
+        console.log("view " + jobs)
+        console.log("view " + id)
 
         if (this.state.toJobList === true) {
             return <Redirect to={'/job_list/'} />
@@ -74,7 +76,7 @@ class JobView extends React.Component {
                                     <FaRegFileAlt style={salesDocStyle} onClick={this.props.salesDoc} role='button' />
                                     <FaTrashAlt style={deleteStyle} onClick={this.deleteJob} role='button' />
                                     </div>
-                                    <JobDetails {...this.props.match.params}{...this.props} onEscape={this.redirectToJobList} />
+                                    <JobDetails {...this.props} onEscape={this.redirectToJobList} />
                                 </fieldset>
                             </div>
                             </>
@@ -93,15 +95,14 @@ class JobView extends React.Component {
 
                         {this.props.currentForm == 'selections' ?
                             <>
-                                    <JobSelections {...this.props.match.params}{...this.props} onEscape={this.props.view} />
+                                <JobSelections {...this.props.match.params}{...this.props} onEscape={this.props.view} />
                             </>
                         : ''}
 
                         {this.props.currentForm == 'salesDoc' ?
                             <>
-                                <FaArrowLeft style={backStyle} onClick={this.props.view} />
                                 <SalesDoc {...this.props.match.params}{...this.props} onEscape={this.props.view} />
-                        </>
+                            </>
                         : ''}
             </>
         )

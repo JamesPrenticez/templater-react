@@ -12,6 +12,12 @@ class JobDetails extends React.Component {
         const { jobs } = this.props
         const { id } = this.props.match.params
 
+        console.log(jobs)
+        console.log("detail" + id)
+        console.log("detail" + jobs[`${id}`])
+        //indexOf time
+
+
         return (
                 <>
                 <div className="jobDetails">

@@ -17,7 +17,8 @@ class JobListItem extends React.Component {
 
     render() {
         const { job } = this.props
-
+          console.log(job.id)
+        
         if (this.state.toJobView === true) {
             return <Redirect to={`/job_view/${job.id}`} />
         }
