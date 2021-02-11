@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {BrowserRouter as Router, Switch, Route, Link, useParams, useHistory } from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, Link, useParams, useHistory, Redirect } from "react-router-dom";
 
 import {FaMinusCircle, FaEdit} from 'react-icons/fa'
 
@@ -10,6 +10,15 @@ import {deleteJob} from '../api'
 import moment from 'moment'
 
 class JobListItem extends React.Component {
+  state = {
+    toJobView: false,
+  }
+
+  handleClick = () => {
+     this.setState(() => ({
+        toJobView: true
+      }))
+  }
     
     deleteJob = () => {
         let {id} = this.props.job
@@ -19,15 +28,15 @@ class JobListItem extends React.Component {
             this.props.dispatch(removeJob(id))
         })
     }
-    
-    handleClick = () =>{
-        const history = useHistory();
-        history.push(`/job_view/${job.id}`);
-    }
 
     render(){
     const {job} = this.props
-     const deleteStyle = {color: 'red', marginLeft: '7px', cursor: 'pointer'}
+    const deleteStyle = {color: 'red', marginLeft: '7px', cursor: 'pointer'}
+
+    if (this.state.toJobView === true) {
+      return <Redirect to={`/job_view/${job.id}`}/>
+    }
+
         return(
             <>
             
