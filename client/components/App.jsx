@@ -34,7 +34,7 @@ class App extends React.Component {
             <Route path="/job_add" component={JobAdd} />
             <Route path="/job_list" component={JobList} />
             <Route path="/job_sums" component={JobSums} />
-            <Route path="/job_view/:jobName" render={(matchProps) => <JobView {...matchProps}{...this.props} />} />
+            <Route path="/job_view/:id" render={(matchProps) => <JobView {...matchProps}{...this.props} />} />
             <Route path="/job_edit/:jobName" render={(matchProps) => <JobEdit {...matchProps}{...this.props} />} />
             <Route path="/job_selections/:jobName" render={(matchProps) => <JobSelections {...matchProps}{...this.props} />} />
             <Route path="/sales_doc/:jobName" render={(matchProps) => <SalesDoc {...matchProps}{...this.props} />} />

@@ -1,27 +1,23 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { FaPlusCircle, FaArrowLeft } from 'react-icons/fa'
-import { BrowserRouter as Router, Switch, Route, Link, useParams } from "react-router-dom";
-
-import { updateJob } from '../actions'
-import { editJob } from '../api'
 
 class JobEdit extends React.Component {
     constructor(props) {
         super(props)
-        let { jobs } = this.props
+        const { jobs } = this.props
+        const { id } = this.props.match.params
         this.state = {
-            dateCreated: jobs[0].dateCreated,
-            jobName: jobs[0].jobName,
-            clientName: jobs[0].clientName,
-            siteAddress: jobs[0].siteAddress,
-            collection: jobs[0].collection,
-            lotNumber: jobs[0].lotNumber,
-            jobNumber: jobs[0].jobNumber,
-            salesPerson: jobs[0].salesPerson,
-            gfa: jobs[0].gfa,
-            cost: jobs[0].cost,
-
+            editing: false,
+            dateCreated: jobs[id].dateCreated,
+            jobName: jobs[id].jobName,
+            clientName: jobs[id].clientName,
+            siteAddress: jobs[id].siteAddress,
+            collection: jobs[id].collection,
+            lotNumber: jobs[id].lotNumber,
+            jobNumber: jobs[id].jobNumber,
+            salesPerson: jobs[id].salesPerson,
+            gfa: jobs[id].gfa,
+            cost: jobs[id].cost
         }
     }
 
@@ -43,20 +39,7 @@ class JobEdit extends React.Component {
         }
     }
 
-    submit = () => {
-        let { id } = this.props.jobs[0]
-        let { name } = this.state
-        editJob(id, name)
-            .then(() => {
-                this.props.dispatch(updateJob(id, name))
-                if (this.props.onEscape) this.props.onEscape()
-            })
-    }
-
-
     render() {
-        const addStyle = { color: 'green', marginLeft: '7px', cursor: 'pointer' }
-        const backStyle = {color: 'purple', height: '50px', width: '50px', marginLeft: '7px', cursor: 'pointer' }
         return (
             <>
                 <div className="jobDetails">
@@ -164,10 +147,7 @@ class JobEdit extends React.Component {
 
                     <img className='floatRight' style={{ backgroundImage: `url(${this.props.jobs[0].imageCover})` }}></img>
 
-
                 </div>
-
-                <FaPlusCircle onClick={this.submit} role='button' style={addStyle} />
             </>
         )
     }
@@ -181,9 +161,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        submit: () => dispatch({ type: 'UPDATE_TASK', id: this.props.jobs[0], name: thiis.state.name })
+        submit: () => dispatch({ type: 'UPDATE_TASK', id: this.props.jobs[0], name: this.state.name })
     }
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(JobEdit)
