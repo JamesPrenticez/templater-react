@@ -16,6 +16,7 @@ class JobView extends React.Component {
         }
         this.showEditForm = this.showEditForm.bind(this)
         this.hideEditForm = this.hideEditForm.bind(this)
+        this.redirectToJobList = this.redirectToJobList.bind(this)
     }
 
     redirectToJobList = () => {
