@@ -1,34 +1,22 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route, Link, useParams } from "react-router-dom";
-import { FaEdit, FaSearchPlus, FaRegFileAlt, FaArrowLeft, FaPlusCircle} from 'react-icons/fa'
+import { FaEdit, FaSearchPlus, FaRegFileAlt, FaArrowLeft} from 'react-icons/fa'
+
 import JobEdit from './JobEdit'
 
 class JobView extends React.Component {
     constructor(props) {
         super(props)
-        const { jobs } = this.props
-        const { id } = this.props.match.params
         this.state = {
             editing: false,
-            dateCreated: jobs[id].dateCreated,
-            jobName: jobs[id].jobName,
-            clientName: jobs[id].clientName,
-            siteAddress: jobs[id].siteAddress,
-            collection: jobs[id].collection,
-            lotNumber: jobs[id].lotNumber,
-            jobNumber: jobs[id].jobNumber,
-            salesPerson: jobs[id].salesPerson,
-            gfa: jobs[id].gfa,
-            cost: jobs[id].cost
         }
-        this.editJob = this.editJob.bind(this)
+        this.showEditForm = this.showEditForm.bind(this)
         this.hideEditForm = this.hideEditForm.bind(this)
-        this.submit = this.submit.bind(this)
     }
 
 
-    editJob = () => {
+    showEditForm = () => {
         this.setState({
             editing: true,
         })
@@ -40,18 +28,7 @@ class JobView extends React.Component {
         })
     }
 
-    submit = () => {
-        let { id } = this.props.match.params
-        let { name } = this.state.jobName
-        editJob(id, name)
-            .then(() => {
-                this.props.dispatch(updateJob(id, name))
-                if (this.props.onEscape) this.props.onEscape()
-            })
-    }
-
     render() {
-        const addStyle = {color: 'purple', height: '50px', width: '50px', marginLeft: '7px', cursor: 'pointer' }
         const editStyle = {color: 'purple', height: '50px', width: '50px', marginLeft: '7px', cursor: 'pointer' }
         const selectionsStyle = {color: 'purple', height: '50px', width: '50px', marginLeft: '7px', cursor: 'pointer' }
         const salesDocStyle = {color: 'purple', height: '50px', width: '50px', marginLeft: '7px', cursor: 'pointer' }
@@ -68,14 +45,13 @@ class JobView extends React.Component {
                     {this.state.editing ? 
                     <>
                     <FaArrowLeft style={backStyle} onClick={this.hideEditForm}/>
-                    <FaPlusCircle onClick={this.submit} role='button' style={addStyle} />
                     <JobEdit {...this.props.match.params}{...this.props} onEscape={this.hideEditForm}/>
                     </> :
 
                     <>
                     <div>
                         {/* Edit Job Info */}
-                        <FaEdit style={editStyle} onClick={this.editJob} role='button' />
+                        <FaEdit style={editStyle} onClick={this.showEditForm} role='button' />
                         {/* Selections */}
                         <Link to={`/job_selections/${jobs[id].jobName}`}>
                             <FaSearchPlus style={selectionsStyle}/>
@@ -120,7 +96,6 @@ class JobView extends React.Component {
                                 </div>
 
                                 <img className='floatRight' style={{ backgroundImage: `url(${jobs[id].imageCover})` }}></img>
-
 
                             </div>
                         </>

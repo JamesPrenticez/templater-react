@@ -1,5 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import {FaPlusCircle} from 'react-icons/fa'
+
+import { updateJob } from '../actions'
+import { editJob } from '../api'
 
 class JobEdit extends React.Component {
     constructor(props) {
@@ -39,9 +43,25 @@ class JobEdit extends React.Component {
         }
     }
 
+    submit = () => {
+        let x = this.props.match.params.id
+        let id = this.props.jobs[x].id
+        let { jobName } = this.state
+        console.log(x)
+        console.log(id)
+        editJob(id, jobName)
+            .then(() => {
+                this.props.dispatch(updateJob(id, jobName))
+                if (this.props.onEscape) this.props.onEscape()
+            })
+    }
+
     render() {
+        const addStyle = {color: 'purple', height: '50px', width: '50px', marginLeft: '7px', cursor: 'pointer' }
         return (
             <>
+            <FaPlusCircle onClick={this.submit} role='button' style={addStyle} />
+
                 <div className="jobDetails">
                     <div className="grid">
                         <h4>Date Created</h4>

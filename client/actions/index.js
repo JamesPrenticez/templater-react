@@ -1,4 +1,4 @@
-export const SET_JOBS = 'FETCH_JOBS'
+export const SET_JOBS = 'SET_JOBS'
 export const ADD_JOB = 'ADD_JOB'
 export const REMOVE_JOB = 'REMOVE_JOB'
 export const UPDATE_JOB = 'UPDATE_JOB'
@@ -19,16 +19,10 @@ export function removeJob(id){
     })
 }
 
-export function updateJob(id, name) {
+export function updateJob(id, jobName) {
     return ({
         type: UPDATE_JOB,
-        id, name
+        id, jobName
     })
 }
 
-export function changePage(page) {
-    return {
-        type: CHANGE_PAGE,
-        page
-    }
-}

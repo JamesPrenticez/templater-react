@@ -38,7 +38,7 @@ function deleteJob(id, db = database){
 }
 
 //UPDATE Task
-function updateJob(id, name, db = database) {
+function updateJob(id, jobName, db = database) {
     if (!id) return Promise.reject('id must be specified')
-    return db('jobs').where({id}).update({jobName: name})
+    return db('jobs').where({id}).update({jobName})
 }

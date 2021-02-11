@@ -1,9 +1,7 @@
 import {combineReducers} from 'redux'
 
-import jobsReducer from './jobs'
-import currentPageReducer from './currentPage'
+import jobs from './jobs'
 
 export default combineReducers({
-    jobs: jobsReducer,
-    currentPage: currentPageReducer
+    jobs,
 })
