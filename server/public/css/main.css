@@ -37,18 +37,20 @@ h3 {
 
 h4 {
   color: black;
-  font-size: 14px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 23px;
   display: inline-block;
+  margin: 0;
 }
 
 p {
   color: black;
-  font-size: 14px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 23px;
   display: inline-block;
+  margin: 0;
 }
 
 blockquote {
@@ -421,45 +423,37 @@ input[type='radio']:checked:after {
 }
 /*---------- View Job --------*/
 .jobDetails{
-  border: 5px, solid, black;
-  border: 5px solid dodgerblue;
-  border-radius: 5px;
-  box-shadow: 0 0 5px dodgerblue;
-  transition: all 0.30s ease-in-out;
-  outline: none;
   padding: 10px;
   display: inline-flex;
   width: 100%;
   overflow: auto;
 }
 
+.jobDetailButtons{
+  float: right;
+}
+
+.jobDetailsImg {
+  height: 180px;
+  width: 360px;
+  border: 2px solid grey;
+  border-radius: 3px;
+  margin-right: 50px;
+  
+  background-size: cover;
+  background-image: url('');
+  background-position: center;
+  float: right;
+  display: inline-flex;
+}
+
 .grid{
   width: 60%;
   display: grid;
   grid-template: 
-  "a b" 25px
-  "a b" 25px
-  "a b" 25px / 1fr 2fr;
-  column-gap: 1px;
-  justify-content: space-evenly;
-  float: left;
-}
-
-.jobDetails img {
-  height: 250px;
-  width: 40%;
-  min-width: 300px;
-  max-width: 450px;
-  border: 2px solid grey;
-  border-radius: 3px;
-  margin: 5px;
-  background-size: cover;
-  background-image: url('');
-}
-
-.floatRight{
-  float: right;
-  display: inline-flex;
+  "a b" auto / 1fr 2fr;
+  column-gap: 3px;
+  row-gap: 6px;
 }
 
 /*---------- Image Slide ----------*/
