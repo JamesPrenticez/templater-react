@@ -60,8 +60,9 @@ class JobEdit extends React.Component {
         const addStyle = {color: 'purple', height: '50px', width: '50px', marginLeft: '7px', cursor: 'pointer' }
         return (
             <>
-            <FaPlusCircle onClick={this.submit} role='button' style={addStyle} />
-
+            <div className='jobDetailButtons'>
+                <FaPlusCircle onClick={this.submit} role='button' style={addStyle} />
+            </div>
                 <div className="jobDetails">
                     <div className="grid">
                         <h4>Date Created</h4>

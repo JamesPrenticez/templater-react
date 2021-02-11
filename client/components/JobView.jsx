@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { BrowserRouter as Router, Switch, Route, Link, useParams } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, useParams, Redirect } from "react-router-dom";
 import { FaEdit, FaSearchPlus, FaRegFileAlt, FaArrowLeft } from 'react-icons/fa'
 
 import moment from 'moment'
@@ -12,11 +12,17 @@ class JobView extends React.Component {
         super(props)
         this.state = {
             editing: false,
+            toJobList: false
         }
         this.showEditForm = this.showEditForm.bind(this)
         this.hideEditForm = this.hideEditForm.bind(this)
     }
 
+    redirectToJobList = () => {
+        this.setState(() => ({
+            toJobList: true
+        }))
+    }
 
     showEditForm = () => {
         this.setState({
@@ -34,9 +40,14 @@ class JobView extends React.Component {
         const editStyle = { color: 'purple', height: '50px', width: '50px', marginLeft: '7px', cursor: 'pointer' }
         const selectionsStyle = { color: 'purple', height: '50px', width: '50px', marginLeft: '7px', cursor: 'pointer' }
         const salesDocStyle = { color: 'purple', height: '50px', width: '50px', marginLeft: '7px', cursor: 'pointer' }
-        const backStyle = { color: 'purple', height: '50px', width: '50px', marginLeft: '7px', cursor: 'pointer' }
+        const backStyle = { color: 'purple', height: '50px', width: '50px', marginLeft: '7px', cursor: 'pointer'}
         const { jobs } = this.props
         const { id } = this.props.match.params
+
+        if (this.state.toJobList === true) {
+            return <Redirect to={'/job_list/'} />
+        }
+
         return (
             <>
                 <div className="jobContainer">
@@ -50,6 +61,8 @@ class JobView extends React.Component {
                             </> :
 
                             <>
+                                    {/* Back To JobList */}
+                                    <FaArrowLeft style={backStyle} onClick={this.redirectToJobList} />
                                 <div className='jobDetailButtons'>
                                     {/* Edit Job Info */}
                                     <FaEdit style={editStyle} onClick={this.showEditForm} role='button' />

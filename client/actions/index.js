@@ -26,3 +26,9 @@ export function updateJob(id, jobName) {
     })
 }
 
+export function changePage(page) {
+    return {
+        type: CHANGE_PAGE,
+        page
+    }
+}
