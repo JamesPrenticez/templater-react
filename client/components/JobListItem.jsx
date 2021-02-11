@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {BrowserRouter as Router, Switch, Route, Link, useParams} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, Link, useParams, useHistory } from "react-router-dom";
 
 import {FaMinusCircle, FaEdit} from 'react-icons/fa'
 
@@ -10,6 +10,7 @@ import {deleteJob} from '../api'
 import moment from 'moment'
 
 class JobListItem extends React.Component {
+    
     deleteJob = () => {
         let {id} = this.props.job
         confirm("Are you sure you want to delete " + `${this.props.job.name}` + "?")
@@ -18,15 +19,21 @@ class JobListItem extends React.Component {
             this.props.dispatch(removeJob(id))
         })
     }
+    
+    handleClick = () =>{
+        const history = useHistory();
+        history.push(`/job_view/${job.id}`);
+    }
 
     render(){
     const {job} = this.props
      const deleteStyle = {color: 'red', marginLeft: '7px', cursor: 'pointer'}
         return(
             <>
-            <tr>
+            
+            <tr onClick={this.handleClick}>
                 <td>
-                    <Link to={`/job_view/${job.id}`}>{job.jobName}</Link>
+                    {job.jobName}
                 </td>
                 <td>
                     {job.jobNumber}
@@ -47,6 +54,7 @@ class JobListItem extends React.Component {
                     <FaMinusCircle style={deleteStyle} onClick={this.deleteJob} role='button'/>
                 </td>   
             </tr>  
+
             </>
         )
     }
