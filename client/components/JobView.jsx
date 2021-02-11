@@ -8,17 +8,15 @@ import JobDetails from './JobDetails'
 
 import { removeJob } from '../actions'
 import { deleteJob } from '../api'
+import currentForm from '../reducers/currentForm';
 
 class JobView extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            editing: false,
-            selecting: false,
-            selling: false,
-            toJobList: false
+            currentForm: '',
+            toJobList: false,
         }
-        this.showEditForm = this.showEditForm.bind(this)
         this.redirectToJobList = this.redirectToJobList.bind(this)
         this.deleteJob = this.deleteJob.bind(this)
     }
@@ -27,42 +25,6 @@ class JobView extends React.Component {
         this.setState(() => ({
             toJobList: true
         }))
-    }
-
-    showEditForm = () => {
-        this.setState({
-            editing: true,
-        })
-    }
-
-    showSelections = () => {
-        this.setState({
-            selecting: true,
-        })
-    }
-
-    showSalesDoc = () => {
-        this.setState({
-            selling: true,
-        })
-    }
-
-    hideEditForm = () => {
-        this.setState({
-            editing: false,
-        })
-    }
-
-    hideSelections = () => {
-        this.setState({
-            selecting: false,
-        })
-    }
-
-    hideSalesDoc = () => {
-        this.setState({
-            selling: false,
-        })
     }
 
     handleChange = (event) => {
@@ -100,31 +62,61 @@ class JobView extends React.Component {
         return (
             <>
                 <div className="jobContainer">
-                        {this.state.editing ?   <>
-                                <fieldset><legend><h1>Edit Job</h1></legend>
-                                    <FaArrowLeft style={backStyle} onClick={this.hideEditForm} />
-                                    <JobEdit {...this.props.match.params}{...this.props} onEscape={this.hideEditForm} />
-                                </fieldset>
-                            </> :
+
+                        {this.props.currentForm === 'view' ? 
                             <>
                                 <fieldset><legend><h1>View Job</h1></legend> 
                                     <FaArrowLeft style={backStyle} onClick={this.redirectToJobList} />
                                     <div className='jobDetailButtons'>
-                                    <FaEdit style={editStyle} onClick={this.showEditForm} role='button' />
-                                    <FaSearchPlus style={selectionsStyle} onClick={this.showSelections} role='button' />
-                                    <FaRegFileAlt style={salesDocStyle} onClick={this.showSalesDoc} role='button' />
+                                    <FaEdit style={editStyle} onClick={this.props.edit} role='button' />
+                                    <FaSearchPlus style={selectionsStyle} onClick={this.props.selections} role='button' />
+                                    <FaRegFileAlt style={salesDocStyle} onClick={this.props.salesDoc} role='button' />
                                     <FaTrashAlt style={deleteStyle} onClick={this.deleteJob} role='button' />
                                     </div>
-
                                     <JobDetails {...this.props.match.params}{...this.props} onEscape={this.hideEditForm} />
+                                </fieldset>
+                            </>
+                        : ''}
 
-                            </fieldset>
-                        </>
-                    }              
+                        {this.props.currentForm === 'edit' ? 
+                            <>
+                                <fieldset><legend><h1>Edit Job</h1></legend>
+                                    <FaArrowLeft style={backStyle} onClick={this.props.view} />
+                                    <JobEdit {...this.props.match.params}{...this.props} onEscape={this.hideEditForm} />
+                                </fieldset>
+                            </> 
+                        : ''}
+
+                        {this.props.currentForm == 'selections' ?
+                            <>
+                            </>
+                        : ''}
+
+                        {this.props.currentForm == 'salesDoc' ?
+                            <>
+                            </>
+                        : ''}
                 </div>
             </>
         )
     }
 }
 
-export default connect()(JobView)
+function mapStateToProps(state){
+    console.log(state.currentForm)
+    return {
+      currentForm: state.currentForm
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    view: () => dispatch({type: 'CHANGE_FORM', form: 'view'}),
+    edit: () => dispatch({type: 'CHANGE_FORM', form: 'edit'}),
+    selections: () => dispatch({type: 'CHANGE_FORM', form: 'selections'}),
+    salesDoc: () => dispatch({type: 'CHANGE_FORM', form: 'salesDoc'}),
+
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(JobView)

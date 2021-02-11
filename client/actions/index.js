@@ -4,6 +4,7 @@ export const REMOVE_JOB = 'REMOVE_JOB'
 export const UPDATE_JOB = 'UPDATE_JOB'
 
 export const CHANGE_PAGE = 'CHANGE_PAGE'
+export const CHANGE_FORM = 'CHANGE_FORM'
 
 export function setJobs(jobs){
     return {
@@ -30,5 +31,12 @@ export function changePage(page) {
     return {
         type: CHANGE_PAGE,
         page
+    }
+}
+
+export function changeForm(form) {
+    return {
+        type: CHANGE_FORM,
+        form
     }
 }
