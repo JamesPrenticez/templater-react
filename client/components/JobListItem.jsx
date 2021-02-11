@@ -7,6 +7,8 @@ import {FaMinusCircle, FaEdit} from 'react-icons/fa'
 import {removeJob} from '../actions'
 import {deleteJob} from '../api'
 
+import moment from 'moment'
+
 class JobListItem extends React.Component {
     deleteJob = () => {
         let {id} = this.props.job
@@ -33,10 +35,13 @@ class JobListItem extends React.Component {
                     {job.collection}
                 </td>
                 <td>
+                    {job.cost}          
+                </td>
+                <td>
                     {job.gfa}          
                 </td>
                 <td>
-                    {job.date_created}
+                    {moment.unix(job.dateCreated/1000).format('MMM YY')}
                 </td>
                 <td name="delete">
                     <FaMinusCircle style={deleteStyle} onClick={this.deleteJob} role='button'/>

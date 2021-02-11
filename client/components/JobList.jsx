@@ -29,6 +29,7 @@ class JobsList extends React.Component {
                     <th>Name</th>
                     <th>Number</th>
                     <th>Collection</th>
+                    <th>Cost</th>
                     <th>GFA</th>
                     <th>Date</th>
                     <th>Delete</th>
