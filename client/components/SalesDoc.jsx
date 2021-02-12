@@ -11,13 +11,20 @@ class SalesDoc extends React.Component {
     render() {
         const backStyle = { color: 'DarkMagenta', height: '35px', width: '35px', marginLeft: '7px', cursor: 'pointer', position: 'absolute' }
 
+        const { id } = this.props.match.params
+        const { jobs } = this.props
+
+        let array = jobs
+        let idYourLookingFor = id
+        let i = array.findIndex(obj => obj.id == idYourLookingFor)
+
         return (
                 <>
                 <div className="salesDoc">
                     <FaArrowLeft style={backStyle} onClick={this.props.view} />
                     <div className="page" id="page">
                         <div className="subpage">
-                            <SalesDocCoverpage jobs={this.props.jobs}/>
+                            <SalesDocCoverpage {...this.props}/>
                         </div>
                     </div>
                     <div className="page" id="page">

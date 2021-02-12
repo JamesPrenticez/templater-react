@@ -7,15 +7,19 @@ constructor(props){
 }
 
 render(){
-console.log(this.props)
-const {jobs} = this.props
-const id = 0
+       const { id } = this.props.match.params
+        const { jobs } = this.props
+
+        let array = jobs
+        let idYourLookingFor = id
+        let i = array.findIndex(obj => obj.id == idYourLookingFor)
+
         return(
             <>
             <div className="coverPage">
 				<img id="logo" style={{ backgroundImage: `url("../img/logo.png")`}}></img>
-				<img id="house" style={{ backgroundImage: `url(${jobs[id].imageCover})`}}></img>
-				<h1 id="title">{this.props.jobs[id].jobName}</h1>
+				<img id="house" style={{ backgroundImage: `url(${jobs[i].imageCover})`}}></img>
+				<h1 id="title">{jobs[i].jobName}</h1>
             </div>
             </>
         )

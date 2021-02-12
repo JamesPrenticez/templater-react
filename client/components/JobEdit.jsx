@@ -8,20 +8,26 @@ import { editJob } from '../api'
 class JobEdit extends React.Component {
     constructor(props) {
         super(props)
-        const { jobs } = this.props
+
         const { id } = this.props.match.params
+        const { jobs } = this.props
+
+        let array = jobs
+        let idYourLookingFor = id
+        let i = array.findIndex(obj => obj.id == idYourLookingFor)
+
         this.state = {
-            dateCreated: jobs[id].dateCreated,
-            jobName: jobs[id].jobName,
-            clientName: jobs[id].clientName,
-            siteAddress: jobs[id].siteAddress,
-            collection: jobs[id].collection,
-            lotNumber: jobs[id].lotNumber,
-            jobNumber: jobs[id].jobNumber,
-            salesPerson: jobs[id].salesPerson,
-            gfa: jobs[id].gfa,
-            cost: jobs[id].cost,
-            imageCover: jobs[id].imageCover
+            dateCreated: jobs[i].dateCreated,
+            jobName: jobs[i].jobName,
+            clientName: jobs[i].clientName,
+            siteAddress: jobs[i].siteAddress,
+            collection: jobs[i].collection,
+            lotNumber: jobs[i].lotNumber,
+            jobNumber: jobs[i].jobNumber,
+            salesPerson: jobs[i].salesPerson,
+            gfa: jobs[i].gfa,
+            cost: jobs[i].cost,
+            imageCover: jobs[i].imageCover
         }
         this.hideEditForm = this.hideEditForm.bind(this)
     }

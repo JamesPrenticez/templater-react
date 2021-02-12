@@ -15,14 +15,17 @@ class JobSelections extends React.Component {
     this.state = { currentPage: "" };
   }
   render() {
-    console.log(this.props)
-    const { jobs } = this.props
-    const { id } = this.props.match.params
+        const { id } = this.props.match.params
+        const { jobs } = this.props
+
+        let array = jobs
+        let idYourLookingFor = id
+        let i = array.findIndex(obj => obj.id == idYourLookingFor)
 
     return (
       <>
         <div className="jobContainerWithSidebar">
-          <fieldset><legend><h1>Job Selections - {jobs[id].jobName}</h1> </legend>
+          <fieldset><legend><h1>Job Selections - {jobs[i].jobName}</h1> </legend>
             <SidebarSelections {...this.props} />
 
             {this.props.currentPage == 'home' ? <SelectionsPreliminary /> : ''}
