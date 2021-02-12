@@ -7,59 +7,56 @@ class JobDetails extends React.Component {
     constructor(props) {
         super(props)
     }
-    
+
     render() {
-        const { jobs } = this.props
         const { id } = this.props.match.params
+        const { jobs } = this.props
 
-        console.log(jobs)
-        console.log("detail" + id)
-        console.log("detail" + jobs[`${id}`])
-        //indexOf time
-
+        let array = jobs
+        let idYourLookingFor = id
+        let i = array.findIndex(obj => obj.id == idYourLookingFor)
+        console.log("deatils " + i) 
 
         return (
-                <>
+            <>
                 <div className="jobDetails">
-                <img className='jobDetailsImg' style={{ backgroundImage: `url(${jobs[id].imageCover})` }}></img>
+                    <img className='jobDetailsImg' style={{ backgroundImage: `url(${jobs[i].imageCover})` }}></img>
 
-                <div className="grid">
+                    <div className="grid">
 
-                    <h4>Job Name</h4>
-                    <p>{jobs[id].jobName}</p>
+                        <h4>Job Name</h4>
+                        <p>{jobs[i].jobName}</p>
 
-                    <h4>Date Created</h4>
-                    <p>{moment.unix(jobs[id].dateCreated / 1000).format('MMM YY')}</p>
+                        <h4>Date Created</h4>
+                        <p>{moment.unix(jobs[id].dateCreated / 1000).format('MMM YY')}</p>
 
-                    <h4>Client Name</h4>
-                    <p>{jobs[id].clientName}</p>
+                        <h4>Client Name</h4>
+                        <p>{jobs[i].clientName}</p>
 
-                    <h4>Site Address</h4>
-                    <p>{jobs[id].siteAddress}</p>
+                        <h4>Site Address</h4>
+                        <p>{jobs[i].siteAddress}</p>
 
-                    <h4>Collection</h4>
-                    <p>{jobs[id].collection}</p>
+                        <h4>Collection</h4>
+                        <p>{jobs[i].collection}</p>
 
-                    <h4>Lot Number</h4>
-                    <p>{jobs[id].lotNumber}</p>
+                        <h4>Lot Number</h4>
+                        <p>{jobs[i].lotNumber}</p>
 
-                    <h4>Job Number</h4>
-                    <p>{jobs[id].jobNumber}</p>
+                        <h4>Job Number</h4>
+                        <p>{jobs[i].jobNumber}</p>
 
-                    <h4>GFA</h4>
-                    <p>{jobs[id].gfa}</p>
+                        <h4>GFA</h4>
+                        <p>{jobs[i].gfa}</p>
 
-                    <h4>Cost</h4>
-                    <p>{jobs[id].cost}</p>
+                        <h4>Cost</h4>
+                        <p>{jobs[i].cost}</p>
 
-                    <h4>Sales Person</h4>
-                    <p>{jobs[id].salesPerson}</p>
+                        <h4>Sales Person</h4>
+                        <p>{jobs[i].salesPerson}</p>
+                    </div>
                 </div>
-            </div>
-                </>
+            </>
         )
     }
 }
-
 export default connect()(JobDetails)
-
