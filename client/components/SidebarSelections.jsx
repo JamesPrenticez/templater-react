@@ -47,6 +47,10 @@ class SidebarSelections extends React.Component {
                     <FaArrowLeft style={backStyle} onClick={this.props.view} />
                     </div>
 
+                    {/*---------- Home---------- */}
+                    <div className="dropdown">
+                        <button className="dropdown-btn" onClick={this.props.viewHome}>Home</button>
+                    </div>
                     {/*---------- Preliminary and General---------- */}
                     <div className="dropdown">
                         <button className="dropdown-btn" onClick={this.props.viewPreliminary}>P&G<FaCaretDown /></button>
