@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { BrowserRouter as Router, Switch, Route, Link, NavLink, useParams } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, NavLink, useParams, Redirect } from "react-router-dom";
 
 import Footer from './Footer'
 
@@ -15,18 +15,26 @@ import JobSelections from './JobSelections'
 import SalesDoc from './SalesDoc'
 
 class App extends React.Component {
+    constructor(props) {
+      super(props)
+      this.state = {
+          toHome: false,
+      }
+  }
 
   render() {
-    return (
+     return (
       <>
         <Router>
           <main>
             <nav>
-              <div className="title">Jennian Homes</div>
-              <NavLink to="/home">Homepage</NavLink>
-              <NavLink to="/job_list">List</NavLink>
-              <Link to={`/job_selections/Alexandra`}>Selections (A)</Link>
-              <Link to={`/sales_doc/Alexandra`}>Sales Doc (A)</Link>
+              <NavLink className='navLogo'to="/home">
+                <img src={'../img/logoSimple.png'}></img>
+              </NavLink>
+            <div className='floatRight'>
+              <NavLink className='navLink' to="/home">Homepage</NavLink>
+              <NavLink className='navLink' to="/job_list">List</NavLink>
+            </div>
             </nav>
 
             <Route path="/home" component={Homepage} />

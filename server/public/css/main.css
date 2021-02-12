@@ -62,13 +62,22 @@ blockquote {
   line-height: 23px;
   display: inline-block;
 }
+/*---------- Floats ---------*/
+.floatRight{
+  float: right;
+}
+
+.floatLeft{
+  float: left;
+}
 
 /*---------- Header ---------*/
 header{
   width: 100vw;
   height: 100vh;
-  margin-top: -50px;
-  background-color: #444444;
+  margin-top: -90px;
+  background-color: #6d6e71;
+  z-index: -10px;
 }
 
 .title{
@@ -80,33 +89,39 @@ header{
 }
 /*---------- Nav ---------*/
   nav{
-  display: inline-flex;
-  position: sticky;
-  top: 0;
-  height: 50px;
-  width: 100%;
-  background: rgb(236,32,39);
-  background: linear-gradient(135deg, rgba(236,32,39,1) 22%, rgba(236,32,39,1) 25%, rgba(200,26,26,1) 29%, rgba(156,19,25,1) 32%, rgba(94,14,17,1) 36%, rgba(0,0,0,0.76234243697479) 100%, rgba(0,0,0,0.3113620448179272) 100%);
-  overflow: hidden;
-  z-index: 1;
-  }
-
-nav a {
-  display: inherit;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 15px 50px 15px 50px;
-  text-decoration: none;
-  font-size: 17px;
+    top: 0;
+    height: 90px;
+    width: 100%;
+    background: rgb(236,32,39);
+    background: linear-gradient(130deg, rgba(236,32,39,1) 40%, rgba(0,0,0,0.5494572829131652) 42%, rgba(0,0,0,0.5718662464985995) 45%);
+    background-image: './img/logo/background.svg';
+    overflow: hidden;
+    z-index: 3;
+    padding-right: 20%;
+}
+  
+.navLogo{
+    width: 'auto';
+    cursor: 'pointer';
 }
 
-nav a:hover{
+.navLink {
+  display: inline-flex;
+
+  color: #f2f2f2;
+  padding: 30px;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.navLink:hover{
 background-color: white;
 color: black;
 cursor: pointer;
 }
 
-nav a.active{
+.navLink.active{
   text-decoration: none;
   background-color: white;
   color: black;
@@ -534,7 +549,7 @@ input[type='radio']:checked:after {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.dot.active, .dot:hover {
   background-color: #717171;
 }
 
