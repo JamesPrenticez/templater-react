@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import moment from 'moment'
 
+
+
 class JobDetails extends React.Component {
     constructor(props) {
         super(props)
@@ -15,7 +17,7 @@ class JobDetails extends React.Component {
         let array = jobs
         let idYourLookingFor = id
         let i = array.findIndex(obj => obj.id == idYourLookingFor)
-        console.log("deatils " + i) 
+        console.log("deatils " + i ) 
 
         return (
             <>

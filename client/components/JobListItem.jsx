@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route, Link, useParams, useHistory, Re
 
 import moment from 'moment'
 
+import { changeForm } from '../actions'
+
 class JobListItem extends React.Component {
     state = {
         toJobView: false,
@@ -11,13 +13,13 @@ class JobListItem extends React.Component {
 
     redirectToJobView = () => {
         this.setState(() => ({
-            toJobView: true
+            toJobView: true,
         }))
-    }
+        this.props.dispatch(changeForm('view'))
+     }
 
     render() {
         const { job } = this.props
-          console.log(job.id)
         
         if (this.state.toJobView === true) {
             return <Redirect to={`/job_view/${job.id}`} />
