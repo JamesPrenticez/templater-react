@@ -29,10 +29,10 @@ class App extends React.Component {
               <NavLink className='navLogo'to="/home">
                 <img src={'../img/logo/logoSimple.png'}></img>
               </NavLink>
-            <div className='floatRight'>
-              <NavLink className='navLink' to="/home">Homepage</NavLink>
-              <NavLink className='navLink' to="/job_list">List</NavLink>
-            </div>
+              <div className='floatRight'>
+                <NavLink className='navLink' to="/home">Homepage</NavLink>
+                <NavLink className='navLink' to="/job_list">List</NavLink>
+              </div>
             </nav>
 
             <Route exact path="/" component={Homepage} />

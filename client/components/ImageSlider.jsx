@@ -75,39 +75,34 @@ export default class ImageSlider extends React.Component {
 			<>
 				<div className="slideshow-container">
 					<div className="mySlides fade">
-						<div className="numbertext">1 / 5</div>
 						<img style={{ backgroundImage: `url(../img/houses/alexandra/alexandra.png)`}}></img>
-						<div className="text">Alexandra</div>
+						<div className="imageSlideText">Alexandra</div>
 					</div>
 
 					<div className="mySlides fade">
-						<div className="numbertext">2 / 5</div>
 						<img style={{ backgroundImage: `url(../img/houses/george/george.png)`}}></img>
-						<div className="text">George</div>
+						<div className="imageSlideText">George</div>
 					</div>
 
 					<div className="mySlides fade">
-						<div className="numbertext">3 / 5</div>
 						<img style={{ backgroundImage: `url(../img/houses/catherine/catherine.png)`}}></img>
-						<div className="text">Catherine</div>
+						<div className="imageSlideText">Catherine</div>
 					</div>
 
 					<div className="mySlides fade">
-						<div className="numbertext">4 / 5</div>
 						<img style={{ backgroundImage: `url(../img/houses/mary/mary.png)`}}></img>
-						<div className="text">Mary</div>
+						<div className="imageSlideText">Mary</div>
 					</div>
 
 					<div className="mySlides fade">
-						<div className="numbertext">5 / 5</div>
 						<img style={{ backgroundImage: `url(../img/houses/james/james.png)`}}></img>
-						<div className="text">James</div>
+						<div className="imageSlideText">James</div>
 					</div>
 					
 					<a className="prev" onClick={() => { this.minusSlides(1) }}>&#10094;</a>
 					<a className="next" onClick={() => { this.plusSlides(1)  }}>&#10095;</a>
 		
-				<div style={{ textAlign: "center", marginTop: "30px"}}>
+				<div className='dotContainer'>
 					<span className="dot" onClick={ () => { this.currentSlide(1) }}></span>
 					<span className="dot" onClick={ () => { this.currentSlide(2) }}></span>
 					<span className="dot" onClick={ () => { this.currentSlide(3) }}></span>

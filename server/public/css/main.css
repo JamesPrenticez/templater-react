@@ -1,10 +1,12 @@
-/*---------- Contents ---------
+/*---------- Contents ---------*/
+/*
 1. Colours and Fonts
 2. Body
 3. Text/Headings
 4. Float Left/Right
-5. Nav
 6. Main
+5. Nav
+16. Image SLide
 7. Job Container
 8. jobContainerWithSidebar Inner Containers
 9. Job Row
@@ -14,9 +16,9 @@
 13. Add Job Form
 14. Add Job Radio Buttons
 15. View Job
-16. Image SLide
 17. Media Queries
---------------------------------*/
+*/
+/*--------------------------------*/
 
 /*---------- Colours and Fonts ---------*/
 :root {
@@ -38,7 +40,7 @@
 body {
   font-family: 'Proxima Nova', 'Source Sans Pro', sans-serif;
   font-size: 20px;
-  margin:0;
+  margin: 0;
   top: 0;
   left: 0;
 }
@@ -102,16 +104,23 @@ blockquote {
   float: left;
 }
 
+/*---------- Main ----------*/
+main{
+  height: auto;
+}
+
 /*---------- Nav ---------*/
-  nav{
-    top: 0;
-    height: 90px;
-    width: 100%;
-    background: rgb(236,32,39);
-    background: linear-gradient(130deg, rgba(236,32,39,1) 40%, rgba(0,0,0,0.5494572829131652) 42%, rgba(0,0,0,0.5718662464985995) 45%);
-    background-image: './img/logo/background.svg';
-    overflow: hidden;
-    padding-right: 20%;
+nav{
+  top: 0;
+  position: fixed;
+  height: 90px;
+  width: 100%;
+  background: rgb(236,32,39);
+  background: linear-gradient(130deg, rgba(236,32,39,1) 40%, rgba(0,0,0,0.5494572829131652) 42%, rgba(0,0,0,0.5718662464985995) 45%);
+  background-image: './img/logo/background.svg';
+  overflow: hidden;
+  padding-right: 20%;
+  z-index: 100;
 }
   
 .navLogo{
@@ -121,7 +130,6 @@ blockquote {
 
 .navLink {
   display: inline-flex;
-
   color: #f2f2f2;
   padding: 30px;
   text-decoration: none;
@@ -130,28 +138,118 @@ blockquote {
 }
 
 .navLink:hover{
-background-color: white;
-color: black;
-cursor: pointer;
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
 .navLink.active{
   text-decoration: none;
   background-color: white;
   color: black;
-
 }
 
-/*---------- Main ----------*/
-main{
-height: auto;
+/*---------- Image Slide ----------*/
+.slideshow-container{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  margin: auto;
+  background-color: var(--grey2);
 }
 
-.container {
+.slideshow-container img{
+  background-size: cover;
+  background-position: center;
   width: 100%;
-  height: 100%;
+  height: 90vh;
+  margin: 0 auto;
+  vertical-align: middle;
 }
 
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.imageSlideText {
+  color: var(--darkText);
+  width: 100%;
+  padding: 15px;
+  position: absolute;
+  text-align: center;
+}
+  
+.dotContainer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: var(--grey3);
+  transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+  background-color: var(--darkGrey);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/*---------- Featured Products ----------*/
+.featuredProductsContainer{
+  width: 100vw;
+  position: relative;
+  margin: auto;
+  background-color: var(--grey2);
+}
 /*---------- Job Container ----------*/
 .jobContainer{
     background-color: white;
@@ -473,110 +571,6 @@ input[type='radio']:checked:after {
   "a b" auto / 1fr 2fr;
   column-gap: 3px;
   row-gap: 6px;
-}
-
-/*---------- Image Slide ----------*/
-
-.slideshow-container{
-  width: 100vw;
-  position: relative;
-  margin: auto;
-}
-
-.slideshow-container img{
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 80vh;
-  margin: 0 auto;
-  vertical-align: middle;
-}
-
-.mySlides {
-  display: none;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-
-  width: 100%;
-  text-align: center;
-}
-  
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.dotContainer {
-  text-align: "center"
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.dot.active, .dot:hover {
-  background-color: #717171;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
 }
 
 /*---------- Media Queries ----------*/
