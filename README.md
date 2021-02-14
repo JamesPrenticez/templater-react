@@ -8,3 +8,7 @@ By James Prentice
 npm i
 
 Optional npm run reset:db
+
+### Development
+Need to add redux persist
+https://www.npmjs.com/package/redux-persist

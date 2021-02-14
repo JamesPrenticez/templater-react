@@ -25,10 +25,10 @@ class JobSelections extends React.Component {
 
     return (
       <>
-        <div className="jobContainerWithSidebar">
-          <fieldset><legend><h1>Job Selections - {jobs[i].jobName}</h1> </legend>
             <SidebarSelections {...this.props} />
 
+        <div className="jobContainerWithSidebar">
+          <fieldset><legend><h1>Job Selections - {jobs[i].jobName}</h1> </legend>
             {this.props.currentPage == 'home' ? <SelectionsHome {...this.props}/> : ''}
             {this.props.currentPage == 'preliminary' ? <SelectionsPreliminary /> : ''}
             {this.props.currentPage == 'envelope' ? <SelectionsEnvelope /> : ''}
