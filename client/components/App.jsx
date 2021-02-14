@@ -29,7 +29,7 @@ class App extends React.Component {
           <main>
             <nav>
               <NavLink className='navLogo'to="/home">
-                <img src={'../img/logoSimple.png'}></img>
+                <img src={'../img/logo/logoSimple.png'}></img>
               </NavLink>
             <div className='floatRight'>
               <NavLink className='navLink' to="/home">Homepage</NavLink>
