@@ -1,13 +1,14 @@
 import React from 'react'
 
-import Header from './Header'
+import ImageSlider from './ImageSlider'
+import FeaturedProducts from './FeaturedProducts'
 
 export default class Homepage extends React.Component {
 render(){
-
         return(
             <>
-                <Header />
+                <ImageSlider/>
+                <FeaturedProducts />
             </>
         )
     }

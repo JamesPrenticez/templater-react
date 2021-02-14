@@ -2,8 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route, Link, NavLink, useParams, Redirect } from "react-router-dom";
 
-import Footer from './Footer'
-
 import Homepage from './Homepage'
 
 import JobList from './JobList'
@@ -37,6 +35,7 @@ class App extends React.Component {
             </div>
             </nav>
 
+            <Route exact path="/" component={Homepage} />
             <Route path="/home" component={Homepage} />
             <Route path="/job_add" component={JobAdd} />
             <Route path="/job_list" component={JobList} />
@@ -48,7 +47,6 @@ class App extends React.Component {
           </main>
           
         </Router>
-        <Footer />
       </>
     )
   }

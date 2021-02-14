@@ -1,12 +1,43 @@
-/*---------- All ---------*/
-* {}
-/*---------- Body ---------*/
-/* 1920x1080 but really its less then this*/
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
+/*---------- Contents ---------
+1. Colours and Fonts
+2. Body
+3. Text/Headings
+4. Float Left/Right
+5. Nav
+6. Main
+7. Job Container
+8. jobContainerWithSidebar Inner Containers
+9. Job Row
+10. Sidebar
+11. Main Container
+12. Submit Button
+13. Add Job Form
+14. Add Job Radio Buttons
+15. View Job
+16. Image SLide
+17. Media Queries
+--------------------------------*/
 
-  min-width: 900px;
+/*---------- Colours and Fonts ---------*/
+:root {
+  --red: #39ff14;
+  --grey1: #f9f9f9;
+  --grey2: #f1f1f1;
+  --grey3: #cecece;
+  --darkGrey: #333333;
+
+  --darkText: black;
+  --lightText: white;
+}
+
+@font-face {
+  font-family: Proxima Nova;
+  src: url('../assets/ProximaNova-Regular.otf') ;
+}
+/*---------- Body ---------*/
+body {
+  font-family: 'Proxima Nova', 'Source Sans Pro', sans-serif;
+  font-size: 20px;
   margin:0;
   top: 0;
   left: 0;
@@ -71,21 +102,6 @@ blockquote {
   float: left;
 }
 
-/*---------- Header ---------*/
-header{
-  width: 100vw;
-  height: 100vh;
-  margin-top: -90px;
-  background-image: url('../img/#') ;
-}
-
-.title{
-  color: rgb(255, 255, 255);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 5px;
-  font-size: 1.75em;
-  margin-right: 40%;
-}
 /*---------- Nav ---------*/
   nav{
     top: 0;
@@ -95,7 +111,6 @@ header{
     background: linear-gradient(130deg, rgba(236,32,39,1) 40%, rgba(0,0,0,0.5494572829131652) 42%, rgba(0,0,0,0.5718662464985995) 45%);
     background-image: './img/logo/background.svg';
     overflow: hidden;
-    z-index: 3;
     padding-right: 20%;
 }
   
@@ -127,15 +142,6 @@ cursor: pointer;
 
 }
 
-/*---------- Footer ---------*/
-footer{
-    width: 100%;
-    height: 5%;
-    background-color: blue;
-    position: inherit;
-    bottom:0;
-}
-
 /*---------- Main ----------*/
 main{
 height: auto;
@@ -145,6 +151,7 @@ height: auto;
   width: 100%;
   height: 100%;
 }
+
 /*---------- Job Container ----------*/
 .jobContainer{
     background-color: white;
@@ -453,12 +460,10 @@ input[type='radio']:checked:after {
   border: 2px solid grey;
   border-radius: 3px;
   margin-right: 50px;
-  
-  background-size: cover;
-  background-image: url('');
-  background-position: center;
   float: right;
   display: inline-flex;
+  background-size: cover;
+  background-position: center;
 }
 
 .grid{
@@ -473,17 +478,17 @@ input[type='radio']:checked:after {
 /*---------- Image Slide ----------*/
 
 .slideshow-container{
-  top: 150px;
-  max-width: 1000px;
+  width: 100vw;
   position: relative;
   margin: auto;
 }
 
 .slideshow-container img{
   background-size: cover;
-  height:500px;
-  width: 1000px;
-  margin: 5px;
+  background-position: center;
+  width: 100%;
+  height: 80vh;
+  margin: 0 auto;
   vertical-align: middle;
 }
 
