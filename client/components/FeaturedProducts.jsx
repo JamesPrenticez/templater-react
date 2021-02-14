@@ -4,8 +4,8 @@ export default class Homepage extends React.Component {
 render(){
         return(
             <>
-<div className='featuredProducts'>
-    
+<div className='featuredProductsContainer'>
+
 </div>
             </>
         )

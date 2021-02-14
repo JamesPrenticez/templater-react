@@ -73,7 +73,12 @@ export default class ImageSlider extends React.Component {
 	render() {
 		return (
 			<>
-				<div className="slideshow-container">
+				<div className="slideshowContainer">
+				<div className="mySlides fade">
+						<img style={{ backgroundImage: `url(../img/houses/james/james.png)`}}></img>
+						<div className="imageSlideText">James</div>
+					</div>
+
 					<div className="mySlides fade">
 						<img style={{ backgroundImage: `url(../img/houses/alexandra/alexandra.png)`}}></img>
 						<div className="imageSlideText">Alexandra</div>
@@ -92,11 +97,6 @@ export default class ImageSlider extends React.Component {
 					<div className="mySlides fade">
 						<img style={{ backgroundImage: `url(../img/houses/mary/mary.png)`}}></img>
 						<div className="imageSlideText">Mary</div>
-					</div>
-
-					<div className="mySlides fade">
-						<img style={{ backgroundImage: `url(../img/houses/james/james.png)`}}></img>
-						<div className="imageSlideText">James</div>
 					</div>
 					
 					<a className="prev" onClick={() => { this.minusSlides(1) }}>&#10094;</a>

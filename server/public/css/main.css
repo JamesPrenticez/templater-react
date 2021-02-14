@@ -22,14 +22,15 @@
 
 /*---------- Colours and Fonts ---------*/
 :root {
-  --red: #39ff14;
   --grey1: #f9f9f9;
-  --grey2: #f1f1f1;
+  --grey2: #eeeeee;
   --grey3: #cecece;
   --darkGrey: #333333;
 
   --darkText: black;
   --lightText: white;
+
+  --red: #EC2027;
 }
 
 @font-face {
@@ -38,12 +39,18 @@
 }
 /*---------- Body ---------*/
 body {
+  background-color: var(--grey1);
   font-family: 'Proxima Nova', 'Source Sans Pro', sans-serif;
   font-size: 20px;
   margin: 0;
   top: 0;
   left: 0;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 /*---------- Headings ---------*/
 h1 {
   color: black;
@@ -150,19 +157,19 @@ nav{
 }
 
 /*---------- Image Slide ----------*/
-.slideshow-container{
+.slideshowContainer{
   width: 100vw;
-  height: 100vh;
+  height: 99vh;
   position: relative;
   margin: auto;
   background-color: var(--grey2);
 }
 
-.slideshow-container img{
+.slideshowContainer img{
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 90vh;
+  height: 85vh;
   margin: 0 auto;
   vertical-align: middle;
 }
@@ -245,34 +252,28 @@ nav{
 }
 /*---------- Featured Products ----------*/
 .featuredProductsContainer{
+  height: 100vh;
   width: 100vw;
   position: relative;
   margin: auto;
-  background-color: var(--grey2);
+  background-color: var(--grey3);
 }
-/*---------- Job Container ----------*/
+/*---------- Job List ----------*/
 .jobContainer{
-    background-color: white;
-    margin: 5px auto;
-    border-radius: 5px;
-    height: auto;
-    width: 80%;
-    padding: 2%;
-    border: 1px solid;
-    box-shadow: 5px 10px 8px 10px #888888;
+  height: auto;
+  width: 90vw;
+  margin: 90px auto;
+  padding: 2%;
 }
 
+/*---------- Job Selections ----------*/
 .jobContainerWithSidebar{
-  background-color: white;
-  margin: 5px 2vw 5px 17vw;
-  border-radius: 5px;
   height: auto;
-  width: 80%;
+  width: 80vw;
+  margin: 90px 2.5vw 0 17.5vw;
   padding: 2%;
-  border: 1px solid;
-  box-shadow: 5px 10px 8px 10px #888888;
 }
-/*---------- jobContainerWithSidebar Inner Containers ----------*/
+
 .innerContainer{
   display: inline-flex;
   display: grid;
