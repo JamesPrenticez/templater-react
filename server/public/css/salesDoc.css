@@ -15,11 +15,11 @@
 }
 
 .subpage {
-  padding: 2cm;
+  padding: 1.5cm;
   height: 100%;
   width: 100%;
-  outline: 2px dodgerblue dashed;
-  outline-offset: -2cm;
+  outline: 1.5px dodgerblue dashed;
+  outline-offset: -1.5cm;
 }
 
 .pageHeader{
@@ -30,7 +30,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 2cm;
+  height: 1.5cm;
   width: 100%;
 }
 
@@ -38,7 +38,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 2cm;
+  height: 1.5cm;
   width: 100%;
   text-align: center;
 }
@@ -49,6 +49,16 @@
   width: 443px;
   margin: 0 auto 3px auto;
   background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(.5, var(--red)), color-stop(0.98, white) )
+}
+
+/*---------- Images ----------*/
+.salesImages{
+  height: 180px;
+  width: 180px;
+  background-image: url("../img/sales/default.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /*---------- Cover Page ---------*/

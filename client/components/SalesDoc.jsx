@@ -4,7 +4,14 @@ import { FaArrowLeft } from 'react-icons/fa'
 
 import SalesDocCoverpage from './SalesDocCoverpage'
 import SalesDocTOC from './SalesDocTOC'
+
 import SalesDocPage1 from './SalesDocPage1'
+import SalesDocPage2 from './SalesDocPage2'
+import SalesDocPage3 from './SalesDocPage3'
+import SalesDocPage4 from './SalesDocPage4'
+// import SalesDocPage5 from './SalesDocPage5'
+// import SalesDocPage6 from './SalesDocPage6'
+// import SalesDocPage7 from './SalesDocPage7'
 
 class SalesDoc extends React.Component {
     constructor(props) {
@@ -50,25 +57,24 @@ class SalesDoc extends React.Component {
                     {/*---------- Page 2 - Preliminary & General ----------*/}
                     <div className="page" id="page">
                         <div className="subpage">
-                            {/* <SalesDocPage2 /> */}
+                            <SalesDocPage2 {...this.props}/>
                         </div>
                     </div>
 
-                    {/*---------- Page 2 - # ----------*/}
+                    {/*---------- Page 3 - EXCAVTION ----------*/}
                     <div className="page" id="page">
-                        <div className="subpage">Page 2/10</div>
+                        <div className="subpage">
+                            <SalesDocPage3 {...this.props}/>
+                        </div>
                     </div>
 
+                    {/*---------- Page 4 - FLOOR AND ROOF ----------*/}
                     <div className="page" id="page">
-                        <div className="subpage">Page 3/10</div>
+                        <div className="subpage">
+                            <SalesDocPage4 {...this.props}/>
+                        </div>
                     </div>
-                    
-                    <div className="page" id="page">
-                        <div className="subpage">Page 4/10</div>
-                    </div>
-                    <div className="page" id="page">
-                        <div className="subpage">Page 5/10</div>
-                    </div>
+
                 </div>
                 </>
             )

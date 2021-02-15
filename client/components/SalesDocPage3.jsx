@@ -46,6 +46,7 @@ render(){
                         <li>This contract makes provision for a temporary power supply from the on-site black box</li>
                         <li>Includes the supply and laying of a maximum of 20.0m of underground power and telephone cable with connection to the onsite power box and connection fees</li>
                     </ol>
+                    <div className='salesImages'></div>
                 </div>
 
                 <div className='excavation'>
@@ -65,6 +66,7 @@ render(){
                     <ol>
                         <li>No allowance has been made for any form of timber retaining wall</li>
                     </ol>
+                    <div className='salesImages'></div>
                 </div>
 
                 <div className='pageFooter'>

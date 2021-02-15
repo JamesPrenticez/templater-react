@@ -2,7 +2,7 @@ import React from 'react'
 import moment from 'moment'
 import {formatCurrency} from './Utilities/utilities'
 
-export default class SalesDocPage3 extends React.Component {
+export default class SalesDocPage5 extends React.Component {
 render(){
     const { id } = this.props.match.params
     const { jobs } = this.props
