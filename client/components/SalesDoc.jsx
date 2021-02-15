@@ -36,14 +36,21 @@ class SalesDoc extends React.Component {
                     {/*---------- Table of Contents ----------*/}
                     <div className="page" id="page">
                         <div className="subpage">
-                            <SalesDocTOC />
+                            <SalesDocTOC {...this.props}/>
                         </div>
                     </div>
 
-                    {/*---------- Page 1 - Preliminary and General ----------*/}
+                    {/*---------- Page 1 - Main Page ----------*/}
                     <div className="page" id="page">
                         <div className="subpage">
-                            <SalesDocPage1 />
+                            <SalesDocPage1 {...this.props}/>
+                        </div>
+                    </div>
+
+                    {/*---------- Page 2 - Preliminary & General ----------*/}
+                    <div className="page" id="page">
+                        <div className="subpage">
+                            {/* <SalesDocPage2 /> */}
                         </div>
                     </div>
 

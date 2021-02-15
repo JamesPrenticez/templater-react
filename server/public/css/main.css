@@ -19,7 +19,6 @@
 17. Media Queries
 */
 /*--------------------------------*/
-
 /*---------- Colours and Fonts ---------*/
 :root {
   --grey1: #f9f9f9;
@@ -127,7 +126,10 @@ nav{
   width: 100%;
   background: rgb(236,32,39);
   background: linear-gradient(130deg, rgba(236,32,39,1) 40%, rgba(0,0,0,0.5494572829131652) 42%, rgba(0,0,0,0.5718662464985995) 45%);
-  background-image: './img/logo/background.svg';
+  /* background-image: url("../img/logo/logo.png");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat; */
   overflow: hidden;
   padding-right: 5vw;
   z-index: 100;
@@ -567,8 +569,6 @@ input[type='radio']:checked:after {
 .jobDetailsImg {
   height: 180px;
   width: 360px;
-  border: 2px solid grey;
-  border-radius: 3px;
   margin-right: 50px;
   float: right;
   display: inline-flex;

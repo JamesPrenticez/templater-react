@@ -10,15 +10,15 @@ render(){
        const { id } = this.props.match.params
         const { jobs } = this.props
 
-        let array = jobs
+        let array = jobs 
         let idYourLookingFor = id
         let i = array.findIndex(obj => obj.id == idYourLookingFor)
 
         return(
             <>
             <div className="coverPage">
-				<img id="logo" style={{ backgroundImage: `url("../img/logo/logo.png")`}}></img>
-				<img id="house" style={{ backgroundImage: `url(${jobs[i].imageCover})`}}></img>
+				<div id="logo" src='#' style={{ backgroundImage: `url("../img/logo/logo.png")`}}></div>
+				<div id="house" src='#' style={{ backgroundImage: `url(${jobs[i].imageCover})`}}></div>
 				<h1 id="title">{jobs[i].jobName}</h1>
             </div>
             </>
