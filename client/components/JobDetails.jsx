@@ -3,8 +3,6 @@ import { connect } from 'react-redux'
 
 import moment from 'moment'
 
-
-
 class JobDetails extends React.Component {
     constructor(props) {
         super(props)
@@ -47,11 +45,23 @@ class JobDetails extends React.Component {
                         <h4>Job Number</h4>
                         <p>{jobs[i].jobNumber}</p>
 
+                        <h4>House Type</h4>
+                        <p>{jobs[i].houseType}</p>
+
                         <h4>GFA</h4>
                         <p>{jobs[i].gfa}</p>
 
-                        <h4>Cost</h4>
-                        <p>{jobs[i].cost}</p>
+                        <h4>Budget</h4>
+                        <p>{jobs[i].budget}</p>
+
+                        <h4>Deposit</h4>
+                        <p>{jobs[i].deposit}</p>
+
+                        <h4>Retail Price</h4>
+                        <p>{jobs[i].retailPrice}</p>
+
+                        <h4>Contract Price</h4>
+                        <p>{jobs[i].contractPrice}</p>
 
                         <h4>Sales Person</h4>
                         <p>{jobs[i].salesPerson}</p>
