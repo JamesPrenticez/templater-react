@@ -17,7 +17,7 @@ render(){
         return(
             <>
             <div className="coverPage">
-				<img id="logo" style={{ backgroundImage: `url("../img/logo.png")`}}></img>
+				<img id="logo" style={{ backgroundImage: `url("../img/logo/logo.png")`}}></img>
 				<img id="house" style={{ backgroundImage: `url(${jobs[i].imageCover})`}}></img>
 				<h1 id="title">{jobs[i].jobName}</h1>
             </div>

@@ -37,6 +37,13 @@
   font-family: Proxima Nova;
   src: url('../assets/ProximaNova-Regular.otf') ;
 }
+
+/*---------- Body ---------*/
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
 /*---------- Body ---------*/
 body {
   background-color: var(--grey1);
@@ -291,18 +298,18 @@ nav{
 
 /*---------- Selections Nav----------*/
 .selectionsNav{
-  position: fixed;
   height: 45px;
+  width: 100%;
   background: var(--darkGrey);
   color: white;
   z-index: 100;
-
 }
 
 .selectionsNav button{
   color: var(--lightText);
   background-color: var(--red);
   height: 100%;
+  width: 20%;
 }
 
 /*---------- Job Row ----------*/
@@ -604,19 +611,7 @@ input[type='radio']:checked:after {
         margin: 5px 1px 3px 0px;
         border: 1px solid #EC2027;
     }
-  
-
-    button{
-        color: white;
-        padding: 5px;
-        width: 66px;
-        height: 33px;
-        background-color: green;
-        border-radius: 5px;
-        cursor: pointer;
-        display: inline;
-    }
-    
+      
     select {
         font-size: 12px;
     }

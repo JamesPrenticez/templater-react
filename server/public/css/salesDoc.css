@@ -1,0 +1,78 @@
+.salesDoc{
+    margin: 90px auto;
+    transform: scale(1);
+}
+
+.page {
+    size: "A4";
+    width: 595px;
+    height: 842px;
+    background: white;
+    margin: 2vh auto 0 auto;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+    transform: scale(1);
+}
+
+.subpage {
+  padding: 2cm;
+  height: 100%;
+  width: 100%;
+  outline: 2px dodgerblue dashed;
+  outline-offset: -2cm;
+}
+
+.pageHeader{
+  top: 0;
+  height: 50px;
+  width: 100%;
+  background-color: blue;
+}
+
+.pageFooter{
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: blue;
+}
+
+/*---------- Cover Page ---------*/
+.coverPage{
+    height: 100%;
+    width: 100%;
+  }
+  
+  #logo {
+    height: 30%;
+    width: 100%;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #house {
+    height: 40%;
+    width: 100%;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #title{
+    height: 40%;
+    width: 100%;
+    text-align: center;
+  }
+
+/*---------- Media Queries ----------*/
+  @media print {
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+}
