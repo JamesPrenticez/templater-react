@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import {formatCurrency} from './Utilities/utilities'
 
 export default class SalesDocPage1 extends React.Component {
 render(){
@@ -50,22 +51,22 @@ render(){
 
                                 <tr>
                                     <td className='a'>RETAIL PRICE</td>
-                                    <td className='b'>{jobs[i].cost} (Including GST)</td>
+                                    <td className='b'>{formatCurrency(jobs[i].retailPrice)} (Including GST)</td>
                                 </tr>
 
                                 <tr>
                                     <td className='a'>CONTRACT PRICE</td>
-                                    <td className='b'>{jobs[i].cost} (Including GST)</td>
+                                    <td className='b'>{formatCurrency(jobs[i].contractPrice)} (Including GST)</td>
                                 </tr>
 
                                 <tr>
                                     <td className='a'>LESS DEPOSIT</td>
-                                    <td className='b'>$5000 (Including GST)</td>
+                                    <td className='b'>{formatCurrency(jobs[i].deposit)} (Including GST)</td>
                                 </tr>
 
                                 <tr>
                                     <td className='a'>BALANCE</td>
-                                    <td className='b'>{jobs[i].cost} (Including GST)</td>{/*Need to preform some maths on this*/}
+                                    <td className='b'>{formatCurrency(jobs[i].contractPrice - jobs[i].deposit)} (Including GST)</td>{/*Need to preform some maths on this*/}
                                 </tr>
 
                                 <tr className='blankRow'>

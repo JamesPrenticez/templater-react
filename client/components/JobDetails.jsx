@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import {formatCurrency} from './Utilities/utilities'
 
 import moment from 'moment'
 
@@ -55,13 +56,13 @@ class JobDetails extends React.Component {
                         <p>{jobs[i].budget}</p>
 
                         <h4>Deposit</h4>
-                        <p>{jobs[i].deposit}</p>
+                        <p>{formatCurrency(jobs[i].deposit)}</p>
 
                         <h4>Retail Price</h4>
-                        <p>{jobs[i].retailPrice}</p>
+                        <p>{formatCurrency(jobs[i].retailPrice)}</p>
 
                         <h4>Contract Price</h4>
-                        <p>{jobs[i].contractPrice}</p>
+                        <p>{formatCurrency(jobs[i].contractPrice)}</p>
 
                         <h4>Sales Person</h4>
                         <p>{jobs[i].salesPerson}</p>

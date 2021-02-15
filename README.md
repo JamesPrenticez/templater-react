@@ -18,3 +18,4 @@ https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
 
 Maybe some backend security too? Probably not required for this app but still interesting to learn about
 https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security
+

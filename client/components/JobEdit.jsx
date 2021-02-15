@@ -17,7 +17,6 @@ class JobEdit extends React.Component {
         let i = array.findIndex(obj => obj.id == idYourLookingFor)
 
         this.state = {
-            dateCreated: jobs[i].dateCreated,
             jobName: jobs[i].jobName,
             clientName: jobs[i].clientName,
             siteAddress: jobs[i].siteAddress,
@@ -99,18 +98,7 @@ class JobEdit extends React.Component {
                                 onChange={this.handleChange}
                                 placeholder={this.state.jobName}
                             />
-
-                            <h4>Date Created</h4>
-                            <input
-                                name='dateCreated'
-                                className='addInput'
-                                autoFocus={true}
-                                value={this.state.dateCreated}
-                                onKeyDown={this.listenForKeys}
-                                onChange={this.handleChange}
-                                placeholder={this.state.dateCreated}
-                            />
-
+                            
                             <h4>Client Name</h4>
                             <input
                                 name='clientName'
