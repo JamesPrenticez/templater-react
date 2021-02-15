@@ -45,6 +45,25 @@ class JobsList extends React.Component {
         }))
     }
 
+    search() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("jobsTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[1]; //Change index to select column
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }       
+        }
+      }
+
     render() {
         const {showControls} = this.state
         const addStyle = { color: 'green', height: '35px', width: '35px', cursor: 'pointer', float: 'right'}
@@ -64,6 +83,7 @@ class JobsList extends React.Component {
                         </div>
 
                         <div style={{display: 'block', height: '25px', width: '100%'}}>
+                            <input type="text" id="myInput" placeholder="Search by job name..." onChange={this.search} autoComplete='off'/>
                             <FaPlusCircle style={addStyle}
                                           onClick={this.redirectToJobAdd}
                                           role='button'
@@ -72,7 +92,7 @@ class JobsList extends React.Component {
                                           />
                         </div>
 
-                        <table id="jobs">
+                        <table id="jobsTable">
                             <thead>
                                 <tr>
                                     <th>Id</th>

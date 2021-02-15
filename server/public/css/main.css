@@ -347,41 +347,41 @@ nav{
 }
 
 /*---------- Job Row ----------*/
-#jobs tr:nth-child(even){background-color: #f2f2f2;}
+#jobsTable tr:nth-child(even){background-color: #f2f2f2;}
 
-#jobs tr:hover {
+#jobsTable tr:hover {
     background-color: #ddd;
     cursor: pointer;
 }
 
-#jobs{
+#jobsTable {
     width: 100%;
     height: 100%;
     border-radius: 5px;
+}
+
+
+#jobsTable td, #jobs th {
+  border-bottom: 1px solid firebrick;
+  padding: 8px;
+}
+
+#jobsTable th{
+  padding: 8px;
+  text-align: left;
+  background-color: #EC2027;
+  color: white;
+}
+
+#jobsTable a{
+  text-decoration: none;
+  color: black;
 }
 
 table {
     border-collapse: collapse;
     margin: 25px auto 25px auto;
   }
-
-#jobs td, #jobs th {
-    border-bottom: 1px solid firebrick;
-    padding: 8px;
-  }
-
-#jobs th{
-    padding: 8px;
-    text-align: left;
-    background-color: #EC2027;
-    color: white;
-}
-
-#jobs a{
-    text-decoration: none;
-    color: black;
-}
-
 /*---------- Sidebar ---------*/
 /* The sidebar menu */
 .sidebar {
