@@ -29,7 +29,7 @@ class JobDetails extends React.Component {
                         <p>{jobs[i].jobName}</p>
 
                         <h4>Date Created</h4>
-                        <p>{moment.unix(jobs[id].dateCreated / 1000).format('MMM YY')}</p>
+                        <p>{moment.unix(jobs[i].dateCreated / 1000).format('MMM YY')}</p>
 
                         <h4>Client Name</h4>
                         <p>{jobs[i].clientName}</p>

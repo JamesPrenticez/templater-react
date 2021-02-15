@@ -37,11 +37,18 @@ class JobView extends React.Component {
 
     deleteJob = () => {
         const { jobs } = this.props
-        const { id } = this.props.match.params
+        let id = this.props.match.params.id
 
-        if (confirm("Are you sure you want to delete " + `${jobs[id].jobName}` + "?")) {
+        let array = jobs
+        let idYourLookingFor = id
+        let i = array.findIndex(obj => obj.id == idYourLookingFor)
+        console.log("deatils " + i ) 
+
+
+        if (confirm("Are you sure you want to delete " + `${jobs[i].jobName}` + "?")) {
             deleteJob(id)
                 .then(() => {
+                    this.redirectToJobList()
                     this.props.dispatch(removeJob(id))
                 })
         }
