@@ -20,10 +20,10 @@ export function removeJob(id){
     })
 }
 
-export function updateJob(id, jobName) {
+export function updateJob(id, jobName, clientName, siteAddress, collection, lotNumber, jobNumber, houseType, gfa, salesPerson, imageCover, deposit, retailPrice, contractPrice) {
     return ({
         type: UPDATE_JOB,
-        id, jobName
+        id, jobName, clientName, siteAddress, collection, lotNumber, jobNumber, houseType, gfa, salesPerson, imageCover, deposit, retailPrice, contractPrice
     })
 }
 

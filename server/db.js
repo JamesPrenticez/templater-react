@@ -19,18 +19,6 @@ function createJob({jobName, clientName, siteAddress, collection, lotNumber, job
     return db('jobs').insert({jobName, clientName, siteAddress, collection, lotNumber, jobNumber, gfa, salesPerson, image_cover})
 }
 
-// id: 0,
-// date_created: new Date(Date.now()),
-// jobName: 'Alexandra',
-// clientName: 'John Doe',
-// siteAddress: '01 Fake Street',
-// collection: 'Southern Series',
-// lotNumber: 'Lot 01',
-// jobNumber: 'SS01',
-// gfa: "170.69m2",
-// salesPerson: 'Standard Pricing',
-// image_cover: '../img/houses/alexandra/alexandra.png'
-
 // DELETE Job
 function deleteJob(id, db = database){
     if(!id) return Promise.reject('id must be specified')
@@ -38,7 +26,7 @@ function deleteJob(id, db = database){
 }
 
 //UPDATE Task
-function updateJob(id, jobName, db = database) {
+function updateJob(id, jobName, clientName, siteAddress, collection, lotNumber, jobNumber, houseType, gfa, salesPerson, imageCover, deposit, retailPrice, contractPrice, db = database) {
     if (!id) return Promise.reject('id must be specified')
-    return db('jobs').where({id}).update({jobName})
+    return db('jobs').where({id}).update({jobName, clientName, siteAddress, collection, lotNumber, jobNumber, houseType, gfa, salesPerson, imageCover, deposit, retailPrice, contractPrice})
 }

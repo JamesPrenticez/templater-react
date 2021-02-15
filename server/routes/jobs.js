@@ -38,9 +38,9 @@ router.delete('/api/v1/jobs/:id', (req, res) => {
 //UPDATE Task
 router.patch('/api/v1/jobs/:id', (req, res) => {
   let {id} = req.params
+  let {jobName, clientName, siteAddress, collection, lotNumber, jobNumber, houseType, gfa, salesPerson, imageCover, deposit, retailPrice, contractPrice} = req.body
   if (!id) return res.status(400).send('no id specified')
-
-  db.updateJob(Number(id), req.body.jobName)
+  db.updateJob(Number(id), jobName, clientName, siteAddress, collection, lotNumber, jobNumber, houseType, gfa, salesPerson, imageCover, Number(deposit), Number(retailPrice), Number(contractPrice))
     .then(recordsUpdated => {
       res.sendStatus(200)
     })

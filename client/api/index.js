@@ -21,8 +21,9 @@ export function deleteJob(id){
 }
 
 //Edit Job
-export function editJob(id, jobName) {
+export function editJob(id, jobName, clientName, siteAddress, collection, lotNumber, jobNumber, houseType, gfa, salesPerson, imageCover, deposit, retailPrice, contractPrice) {
+    console.log( jobName, clientName)
     return request.patch('/api/v1/jobs/' + id)
-        .send({jobName})
+        .send({jobName, clientName, siteAddress, collection, lotNumber, jobNumber, houseType, gfa, salesPerson, imageCover, deposit, retailPrice, contractPrice})
         .then(res => res.body)
 }

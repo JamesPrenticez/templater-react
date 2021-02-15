@@ -8,10 +8,14 @@ exports.up = (knex, Promise) => {
     table.string('collection')
     table.string('lotNumber')
     table.string('jobNumber')
+    table.string('houseType')
     table.string('gfa')
-    table.string('cost')
     table.string('salesPerson')
     table.string('imageCover')
+    table.string('budget')
+    table.integer('deposit')
+    table.integer('retailPrice')
+    table.integer('contractPrice')
     })  
 };
 

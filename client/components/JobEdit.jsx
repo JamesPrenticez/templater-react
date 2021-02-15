@@ -24,9 +24,12 @@ class JobEdit extends React.Component {
             collection: jobs[i].collection,
             lotNumber: jobs[i].lotNumber,
             jobNumber: jobs[i].jobNumber,
-            salesPerson: jobs[i].salesPerson,
+            houseType: jobs[i].houseType,
             gfa: jobs[i].gfa,
-            cost: jobs[i].cost,
+            deposit: jobs[i].deposit,
+            retailPrice: jobs[i].retailPrice,
+            contractPrice: jobs[i].contractPrice,
+            salesPerson: jobs[i].salesPerson,
             imageCover: jobs[i].imageCover
         }
         this.hideEditForm = this.hideEditForm.bind(this)
@@ -59,12 +62,12 @@ class JobEdit extends React.Component {
     submit = () => {
         let x = this.props.match.params.id
         let id = this.props.jobs[x].id
-        let { jobName } = this.state
+        let { jobName, clientName, siteAddress, collection, lotNumber, jobNumber, houseType, gfa, salesPerson, imageCover, deposit, retailPrice, contractPrice } = this.state
         console.log(x)
         console.log(id)
-        editJob(id, jobName)
+        editJob(id, jobName, clientName, siteAddress, collection, lotNumber, jobNumber, houseType, gfa, salesPerson, imageCover, deposit, retailPrice, contractPrice)
             .then(() => {
-                this.props.dispatch(updateJob(id, jobName))
+                this.props.dispatch(updateJob(id, jobName, clientName, siteAddress, collection, lotNumber, jobNumber, houseType, gfa, salesPerson, imageCover, deposit, retailPrice, contractPrice))
                 if (this.props.onEscape) this.props.onEscape()
             })
     }
@@ -163,6 +166,17 @@ class JobEdit extends React.Component {
                                 placeholder={this.state.jobNumber}
                             />
 
+                            <h4>House Type</h4>
+                            <input
+                                name='houseType'
+                                className='addInput'
+                                autoFocus={true}
+                                value={this.state.houseType}
+                                onKeyDown={this.listenForKeys}
+                                onChange={this.handleChange}
+                                placeholder={this.state.houseType}
+                            />
+
                             <h4>GFA</h4>
                             <input
                                 name='gfa'
@@ -174,15 +188,37 @@ class JobEdit extends React.Component {
                                 placeholder={this.state.gfa}
                             />
 
-                            <h4>Cost</h4>
+                            <h4>Deposit</h4>
                             <input
-                                name='cost'
+                                name='deposit'
                                 className='addInput'
                                 autoFocus={true}
-                                value={this.state.cost}
+                                value={this.state.deposit}
                                 onKeyDown={this.listenForKeys}
                                 onChange={this.handleChange}
-                                placeholder={this.state.cost}
+                                placeholder={this.state.deposit}
+                            />
+
+                            <h4>Retail Price</h4>
+                            <input
+                                name='retailPrice'
+                                className='addInput'
+                                autoFocus={true}
+                                value={this.state.retailPrice}
+                                onKeyDown={this.listenForKeys}
+                                onChange={this.handleChange}
+                                placeholder={this.state.retailPrice}
+                            />
+
+                            <h4>Contract Price</h4>
+                            <input
+                                name='contractPrice'
+                                className='addInput'
+                                autoFocus={true}
+                                value={this.state.contractPrice}
+                                onKeyDown={this.listenForKeys}
+                                onChange={this.handleChange}
+                                placeholder={this.state.contractPrice}
                             />
 
                             <h4>Sales Person</h4>
