@@ -89,11 +89,18 @@
 #mainPageTable .a {
   width: '70%';
   font-weight: 700;
+  font-size: 14px;
 }
 
 #mainPageTable .b {
   width: '70%';
   text-align: right;
+  font-size: 14px;
+}
+
+.blankRow
+{
+    height: 14px !important; 
 }
 
 /*---------- Media Queries ----------*/
