@@ -15,13 +15,19 @@ render(){
             <>
                 <div className='pageHeader'></div>
 
-                <div className=''>
-                    <h6></h6>
+                <div className='appliances'>
+                    <h6>APPLIANCES</h6>
+                    <p>All appliances Fisher and Paykel stainless steel finish</p>
                     <ol>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>a)	Oven – F & P Pyrolytic Wall Oven OB60SC7CEPX1</li>
+                        <li>b)	Cooktop ¬– F & P Induction Cooktop CI604CTB1 </li>
+                        <li>c)	Rangehood ¬– F & P Designer Rangehood HC90DCXB3</li>
+                        <li>d)	Dishwasher – F & P Dishwasher DW60FC6X1</li>
+                        <li>e)	Canopy rangehood to be vented to the exterior through the soffit</li>
                     </ol>
+                    <div className='salesImages'></div>
+                    <div className='salesImages'></div>
+                    <div className='salesImages'></div>
                     <div className='salesImages'></div>
                 </div>
 
