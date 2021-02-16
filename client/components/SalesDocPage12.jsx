@@ -15,20 +15,18 @@ render(){
             <>
                 <div className='pageHeader'></div>
 
-                <div className=''>
-                    <h6></h6>
-                    <ol>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ol>
+                <div className='plumbingFitting'>
+                    <div className='salesImages'></div>
+                    <div className='salesImages'></div>
+                    <div className='salesImages'></div>
                     <div className='salesImages'></div>
                 </div>
+
 
                 <div className='pageFooter'>
                     <div id='hozLine'></div>
                     Initial for Customer:
-                    Page 8  
+                    Page 12  
                     Initial for Jennian Homes:
                 </div>
             </>

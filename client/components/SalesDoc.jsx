@@ -15,6 +15,8 @@ import SalesDocPage7 from './SalesDocPage7'
 import SalesDocPage8 from './SalesDocPage8'
 import SalesDocPage9 from './SalesDocPage9'
 import SalesDocPage10 from './SalesDocPage10'
+import SalesDocPage11 from './SalesDocPage11'
+import SalesDocPage12 from './SalesDocPage12'
 
 class SalesDoc extends React.Component {
     constructor(props) {
@@ -117,6 +119,20 @@ class SalesDoc extends React.Component {
                     <div className="page" id="page">
                         <div className="subpage">
                             <SalesDocPage10 {...this.props}/>
+                        </div>
+                    </div>
+
+                    {/*---------- Page 11 - PLUMBING FITTINGS & FIXTURES ----------*/}
+                    <div className="page" id="page">
+                        <div className="subpage">
+                            <SalesDocPage11 {...this.props}/>
+                        </div>
+                    </div>
+
+                    {/*---------- Page 12 - PLUMBING FITTINGS & FIXTURES PICTURES ONLY ----------*/}
+                    <div className="page" id="page">
+                        <div className="subpage">
+                            <SalesDocPage12 {...this.props}/>
                         </div>
                     </div>
 
