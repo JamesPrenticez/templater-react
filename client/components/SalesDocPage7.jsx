@@ -58,7 +58,7 @@ render(){
                 <div className='pageFooter'>
                     <div id='hozLine'></div>
                     Initial for Customer:
-                    Page 7
+                    Page 7  
                     Initial for Jennian Homes:
                 </div>
             </>
