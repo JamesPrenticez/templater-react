@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route, Link, useParams, useHistory, Redirect } from "react-router-dom";
 
 import moment from 'moment'
+import {formatCurrency} from './Utilities/utilities'
 
 import { changeForm } from '../actions'
 
@@ -42,7 +43,7 @@ class JobListItem extends React.Component {
                         {job.collection}
                     </td>
                     <td>
-                        {job.cost}
+                        {formatCurrency(job.retailPrice)}
                     </td>
                     <td>
                         {job.gfa}

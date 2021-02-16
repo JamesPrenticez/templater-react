@@ -156,12 +156,11 @@ nav{
   position: fixed;
   height: 90px;
   width: 100%;
-  background: rgb(236,32,39);
-  background: linear-gradient(130deg, rgba(236,32,39,1) 20%, rgba(0,0,0,0.5494572829131652) 22%, rgba(0,0,0,0.5718662464985995) 45%);
-  /* background-image: url("../img/logo/logo.png");
-  background-size: auto;
-  background-position: center;
-  background-repeat: no-repeat; */
+  /* background: rgb(236,32,39);
+  background: linear-gradient(130deg, rgba(236,32,39,1) 20%, rgba(0,0,0,0.5494572829131652) 22%, rgba(0,0,0,0.5718662464985995) 45%); */
+  background: rgba(0,0,0,0.5718662464985995);
+  background-image: url("../img/logo/background.svg");
+  background-repeat: no-repeat; 
   overflow: hidden;
   padding-right: 5vw;
   z-index: 100;
