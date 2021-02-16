@@ -60,7 +60,10 @@ render(){
                         <li>Skirting shall be 60mm x 12mm MDF bevel edge with the same profile in pine to the wet areas</li>
                         <li>Architrave shall be 60mm x 12mm MDF bevel edge with the same profile in pine to the wet areas</li>
                         <li>Scotia shall be 55mm GIB coving fitted to the wall/ceiling junction in the 2.4-metre-high ceiling areas</li>
+                        <li>Scotia shall be MDF bevelled cornice to the wall/ceiling junction in wardrobes and cupboards</li>
                     </ol>
+                    <div className='salesImages'></div>
+                    <div className='salesImages'></div>
                 </div>
 
                 <div className='pageFooter'>

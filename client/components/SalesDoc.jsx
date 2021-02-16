@@ -11,7 +11,10 @@ import SalesDocPage3 from './SalesDocPage3'
 import SalesDocPage4 from './SalesDocPage4'
 import SalesDocPage5 from './SalesDocPage5'
 import SalesDocPage6 from './SalesDocPage6'
-// import SalesDocPage7 from './SalesDocPage7'
+import SalesDocPage7 from './SalesDocPage7'
+import SalesDocPage8 from './SalesDocPage8'
+import SalesDocPage9 from './SalesDocPage9'
+import SalesDocPage10 from './SalesDocPage10'
 
 class SalesDoc extends React.Component {
     constructor(props) {
@@ -86,6 +89,34 @@ class SalesDoc extends React.Component {
                     <div className="page" id="page">
                         <div className="subpage">
                             <SalesDocPage6 {...this.props}/>
+                        </div>
+                    </div>
+
+                    {/*---------- Page 7 - INTERIOR DOORS, WARDROBES ----------*/}
+                    <div className="page" id="page">
+                        <div className="subpage">
+                            <SalesDocPage7 {...this.props}/>
+                        </div>
+                    </div>
+
+                    {/*---------- Page 8 - KITCHEN & PANTRY JOINERY ----------*/}
+                    <div className="page" id="page">
+                        <div className="subpage">
+                            <SalesDocPage8 {...this.props}/>
+                        </div>
+                    </div>
+
+                    {/*---------- Page 9 - APPLIANCES ----------*/}
+                    <div className="page" id="page">
+                        <div className="subpage">
+                            <SalesDocPage9 {...this.props}/>
+                        </div>
+                    </div>
+
+                    {/*---------- Page 10 - ELECTRICAL ----------*/}
+                    <div className="page" id="page">
+                        <div className="subpage">
+                            <SalesDocPage10 {...this.props}/>
                         </div>
                     </div>
 
