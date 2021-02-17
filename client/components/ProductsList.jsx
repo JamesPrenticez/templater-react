@@ -13,7 +13,8 @@ class ProductsList extends React.Component {
         super(props)
         this.state = {
             showControls : false,
-            toProductAdd: false
+            toProductAdd: false,
+            active: 'show'
         }
         this.redirectToJobAdd = this.redirectToJobAdd.bind(this)
         this.showControls = this.showControls.bind(this)
@@ -28,6 +29,7 @@ class ProductsList extends React.Component {
             .catch(err => {
                 console.log(err)
             })
+        this.filterSelection("all")
     }
 
     showControls = () => {
@@ -45,24 +47,52 @@ class ProductsList extends React.Component {
         }))
     }
 
-    search() {
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("jobsTable");
-        tr = table.getElementsByTagName("tr");
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[1]; //Change index to select column
-          if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }       
+    //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_elements
+    filterSelection(catagory) {
+        var x, i;
+        x = document.getElementsByClassName('card');
+        console.log(x)
+        //https://www.google.com/search?q=how+to+traverse+htmlcollection&rlz=1C1GCEA_enNZ920NZ920&oq=how+to+traverse+a+html&aqs=chrome.1.69i57j0i22i30l4.8887j0j7&sourceid=chrome&ie=UTF-8
+        console.log(x[0])
+        if (catagory == 'all') catagory = '';
+        for (i = 0; i < x.length; i++) {
+            this.RemoveClass(x[i], 'show');
+            if (x[i].className.indexOf(catagory) > -1) this.AddClass(x[i], 'show');
+        }
+    }
+
+    AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {element.className += ' ' + arr2[i];}
         }
       }
+
+    RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+
+    handelChange() {
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("productNavButton");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    }
 
     render() {
         const {showControls} = this.state
@@ -82,17 +112,16 @@ class ProductsList extends React.Component {
                             {showControls ? 'Add new job' : ''}
                         </div>
 
-                        <div style={{display: 'block', height: '25px', width: '100%'}}>
-                            <input type="text" id="myInput" placeholder="Search by job name..." onChange={this.search} autoComplete='off'/>
-                            <FaPlusCircle style={addStyle}
-                                          onClick={this.redirectToJobAdd}
-                                          role='button'
-                                          onMouseEnter={this.showControls}
-                                          onMouseLeave={this.hideControls}
-                                          />
+                        <div id="myBtnContainer">
+                            <button className="productNavButton active" onClick={this.filterSelection('all')} onChange={this.handelChange}>Show all</button>
+                            <button className="productNavButton" onClick={this.filterSelection('preliminary')} onChange={this.handelChange}>Preliminary</button>
+                            <button className="productNavButton" onClick={this.filterSelection('envelope')} onChange={this.handelChange}>Envelope</button>
+                            <button className="productNavButton" onClick={this.filterSelection('interior')} onChange={this.handelChange}>Interior</button>
+                            <button className="productNavButton" onClick={this.filterSelection('services')} onChange={this.handelChange}>Services</button>
+                            <button className="productNavButton" onClick={this.filterSelection('siteworks')} onChange={this.handelChange}>Siteworks</button>
                         </div>
 
-                        <div className='productsList'>
+                        <div className='productsContainer'>
                             {this.props.products.map(product => <div className='card' key={product.id}><ProductListItem product={product} /></div>)}
                         </div>
 

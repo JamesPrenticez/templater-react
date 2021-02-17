@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import axios from 'axios';
+
 function FileUpload() {
     const [file, setFile] = useState(''); // storing the uploaded file    // storing the recived file from backend
     const [data, getFile] = useState({ name: "", path: "" }); const [progress, setProgess] = useState(0); // progess bar

@@ -9,7 +9,7 @@ class ProductListItem extends React.Component {
         return (
             <>
                 <img style={{ backgroundImage: `url(${product.image})` }}></img>
-                <h1 className="recipe_name">{product.name}</h1>
+                <h4 className="recipe_name">{product.name}</h4>
             </>
         )
     }

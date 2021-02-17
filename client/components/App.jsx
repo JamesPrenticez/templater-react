@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Switch, Route, Link, NavLink, useParams, Redir
 import Homepage from './Homepage'
 
 import JobList from './JobList'
-import PhotoUpload from './PhotoUpload'
 import ProductsList from './ProductsList'
 import JobAdd from './JobAdd'
 import JobView from './JobView'
@@ -33,8 +32,7 @@ class App extends React.Component {
               </NavLink>
               <div className='floatRight'>
                 <NavLink className='navLink' to="/home">Homepage</NavLink>
-                <NavLink className='navLink' to="/job_list">List</NavLink>
-                <NavLink className='navLink' to="/upload">Upload</NavLink>
+                <NavLink className='navLink' to="/job_list">Jobs</NavLink>
                 <NavLink className='navLink' to="/products">Products</NavLink>
               </div>
             </nav>
@@ -43,7 +41,6 @@ class App extends React.Component {
             <Route path="/home" component={Homepage} />
             <Route path="/job_add" component={JobAdd} />
             <Route path="/job_list" component={JobList} />
-            <Route path="/upload" component={PhotoUpload} />
             <Route path="/products" component={ProductsList} />
             <Route path="/job_sums" component={JobSums} />
             <Route path="/job_view/:id" render={(matchProps) => <JobView {...matchProps}{...this.props} />} />

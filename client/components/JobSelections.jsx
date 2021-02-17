@@ -25,7 +25,7 @@ class JobSelections extends React.Component {
 
     return (
       <>
-            <SidebarSelections {...this.props} />
+            {/* <SidebarSelections {...this.props} /> */}
 
         <div className="jobContainerWithSidebar">
           <fieldset><legend><h1>Job Selections - {jobs[i].jobName}</h1> </legend>
