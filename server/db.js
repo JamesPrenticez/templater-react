@@ -6,9 +6,11 @@ module.exports = {
     getJobs,
     createJob,
     deleteJob,
-    updateJob
+    updateJob,
+    getProducts
 }
 
+// ------------------------------------------------------------ JOBS ------------------------------------------------------------
 // GET Jobs
 function getJobs(db = database){
     return db('jobs')
@@ -29,4 +31,9 @@ function deleteJob(id, db = database){
 function updateJob(id, jobName, clientName, siteAddress, collection, lotNumber, jobNumber, houseType, gfa, salesPerson, imageCover, deposit, retailPrice, contractPrice, db = database) {
     if (!id) return Promise.reject('id must be specified')
     return db('jobs').where({id}).update({jobName, clientName, siteAddress, collection, lotNumber, jobNumber, houseType, gfa, salesPerson, imageCover, deposit, retailPrice, contractPrice})
+}
+// ------------------------------------------------------------ IMAGES ------------------------------------------------------------
+// GET Imgs
+function getProducts(db = database){
+    return db('products-envelope').select()
 }

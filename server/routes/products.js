@@ -4,7 +4,17 @@ const db = require('../db')
 
 module.exports = router
 
-//ADD img
+
+//GET Products 
+router.get('/api/v1/products', (req, res) => {
+    db.getProducts()
+      .then(products => res.json({products: products}))
+      .catch(err => {
+          res.status(500).send('something went wrong')
+    })
+  })
+
+//ADD img - need to change route
 router.post('/api/v1/upload', (req, res) => {
     if (!req.files) {
         return res.status(500).send({ msg: "file is not found" })

@@ -35,7 +35,7 @@ export default class ImageSlider extends React.Component {
 	}
 
 	showSlides = (n) => { 
-		console.log(n)
+		// console.log(n)
 		var i;
 		var slides = document.getElementsByClassName("mySlides");
 		var dots = document.getElementsByClassName("dot");

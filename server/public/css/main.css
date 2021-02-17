@@ -615,6 +615,41 @@ input[type='radio']:checked:after {
   column-gap: 3px;
   row-gap: 6px;
 }
+/*---------- Products  --------*/
+.productsList{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  column-gap: 3px;
+  row-gap: 3px;
+  justify-content: space-evenly;
+  padding: 50px;
+}
+
+.card {
+  background-color: white;
+  border:  var(--grey3) solid 2px;
+  border-radius: 15px;
+  width: 90%;
+  height: 100%;
+  justify-self: center;
+  position: relative;
+  padding: 4%;
+  margin: 10px 10px 10px 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.card:hover {
+  border: var(--red) solid 2px;
+  cursor: pointer;
+}
 /*---------- Photo Upload --------*/
 /* img{
   width: 500px;
