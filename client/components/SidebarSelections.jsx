@@ -11,24 +11,23 @@ class SidebarSelections extends React.Component {
         this.dropDown()
     }
 
-    dropDown = () => {
-        var dropDown = document.getElementsByClassName("dropdown-btn");
+    // dropDown = () => {
+    //     var dropDown = document.getElementsByClassName("dropdown-btn");
 
-        for (let i = 0; i < dropDown.length; i++) {
-            dropDown[i].addEventListener("click", () => {
-                dropDown[i]?.classList.toggle("active");
+    //     for (let i = 0; i < dropDown.length; i++) {
+    //         dropDown[i].addEventListener("click", () => {
+    //             dropDown[i]?.classList.toggle("active");
 
-            var dropdownContent = dropDown[i]?.nextElementSibling;
-            // var computedStyle = window.getComputedStyle(dropdownContent, null).getPropertyValue("display")
-            if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-              } else {
-                dropdownContent.style.display = "block";
-              }
+    //         var dropdownContent = dropDown[i]?.nextElementSibling
+    //         if (dropdownContent.style.display === "block") {
+    //             dropdownContent.style.display = "none";
+    //           } else {
+    //             dropdownContent.style.display = "block";
+    //           }
 
-            })
-        };
-    }
+    //         })
+    //     };
+    // }
     render() {
         const { jobs } = this.props
         const { id } = this.props.match.params
