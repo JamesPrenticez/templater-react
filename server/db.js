@@ -7,7 +7,7 @@ module.exports = {
     createJob,
     deleteJob,
     updateJob,
-    getProducts,
+    getProductsEnvelope,
     getSelectionsPreliminary,
     getSelectionsEnvelope
 }
@@ -36,7 +36,7 @@ function updateJob(id, jobName, clientName, siteAddress, collection, lotNumber, 
 }
 // ------------------------------------------------------------ PRODUCTS ------------------------------------------------------------
 // GET Products
-function getProducts(db = database){
+function getProductsEnvelope(db = database){
     return db('products-envelope').select()
 }
 

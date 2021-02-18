@@ -1,10 +1,10 @@
 {
   "name": "templater",
   "version": "0.0.0",
-  "description": "A webpack React starter",
+  "description": "",
   "repository": "https://github.com/JamesPrenticez/templater-react",
   "main": "server/index.js",
-  "author": "EDA",
+  "author": "James Prentice",
   "license": "ISC",
   "scripts": {
     "client": "webpack-dev-server --hot --inline",
@@ -53,7 +53,7 @@
     "@testing-library/react": "^11.0.0",
     "axios": "^0.21.1",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^25.3.0",
+    "babel-jest": "^23.4.2",
     "babel-loader": "^8.1.0",
     "cors": "^2.8.5",
     "express-fileupload": "^1.2.1",

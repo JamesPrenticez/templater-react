@@ -1,8 +1,8 @@
-import {SET_PRODUCTS} from '../actions'
+import {SET_PRODUCTS_ENVELOPE} from '../actions'
 
 export default function(state = [], action) {
     switch (action.type) {
-        case SET_PRODUCTS:
+        case SET_PRODUCTS_ENVELOPE:
             return action.products
             
         default:

@@ -2,13 +2,15 @@ import React from 'react'
 import {connect} from 'react-redux'
 import { setSelectionsEnvelope } from '../actions'
 import { getSelectionsEnvelope } from '../api'
+import { setProductsEnvelope } from '../actions'
+import { getProductsEnvelope } from '../api'
 
 class SelectionsEnvelope extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-        }
-    }
+    // constructor(props) {
+    //     super(props)
+    //     this.state = {
+    //     }
+    // }
 
     componentDidMount() {
         getSelectionsEnvelope()
@@ -18,18 +20,40 @@ class SelectionsEnvelope extends React.Component {
             .catch(err => {
                 console.log(err)
             })
+        // getProductsEnvelope()
+        //     .then(products => {
+        //         this.props.dispatch(setProductsEnvelope(products))
+        //     })
+        //     .catch(err => {
+        //         console.log(err)
+        //     })
     }
 
     render() {
-        let { selections } = this.props
+        const {selections} = this.props
+
+        console.log(selections[0])
+
+
+
+        // console.log(selections[0]?.description)
         return (
             <>
                     <h1 className="selectionsHeader">Envelope</h1>
 
-                    <h4>Floor System</h4>
-                        <p>Ribraft Concrete Floor</p>
-                        <p></p>
-                        <p></p>
+                    <form>
+                {/* ---------- Bulding Consent ----------*/}
+                        <h3>Floor System</h3>
+                        {/* <blockquote>{selections[0].description}</blockquote> */}
+
+                        {/* <input type='radio' id='floorSytemA' name='floorSytemA' value='Tasman District Council'/>
+                        <label for= 'floorSytemA'>{}</label><br/>
+
+                        {selections[0].options.map(options => <li>{options}</li>)} */}
+
+                        <br />
+                </form>
+
 
                     <h4>Framing</h4>
                         <p>90 x 45 H1.2 Radiata Pine Frames</p>

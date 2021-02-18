@@ -31,9 +31,9 @@ export function editJob(id, jobName, clientName, siteAddress, collection, lotNum
 
 // ------------------------------------------------------------ PRODUCTS ------------------------------------------------------------
 //GET Products
-export function getProducts() {
+export function getProductsEnvelope() {
     return request
-    .get('/api/v1/products')
+    .get('/api/v1/products/envelope')
     .then(res => res.body.products)
 }
 

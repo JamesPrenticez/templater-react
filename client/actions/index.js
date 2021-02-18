@@ -3,7 +3,7 @@ export const ADD_JOB = 'ADD_JOB'
 export const REMOVE_JOB = 'REMOVE_JOB'
 export const UPDATE_JOB = 'UPDATE_JOB'
 
-export const SET_PRODUCTS = 'SET_PRODUCTS'
+export const SET_PRODUCTS_ENVELOPE = 'SET_PRODUCTS_ENVELOPE'
 
 export const SET_SELECTIONS_PRELIMINARY = 'SET_SELECTIONS_PRELIMINARY'
 export const SET_SELECTIONS_ENVELOPE = 'SET_SELECTIONS_ENVELOPE'
@@ -35,9 +35,9 @@ export function updateJob(id, jobName, clientName, siteAddress, collection, lotN
 }
 
 // ------------------------------------------------------------ PRODUCTS ------------------------------------------------------------
-export function setProducts(products){
+export function setProductsEnvelope(products){
     return {
-        type: SET_PRODUCTS,
+        type: SET_PRODUCTS_ENVELOPE,
         products
     }
 }

@@ -6,8 +6,8 @@ module.exports = router
 
 
 //GET Products 
-router.get('/api/v1/products', (req, res) => {
-    db.getProducts()
+router.get('/api/v1/products/envelope', (req, res) => {
+    db.getProductsEnvelope()
       .then(products => res.json({products: products}))
       .catch(err => {
           res.status(500).send('something went wrong')

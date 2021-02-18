@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route, Link, useParams, Redirect } from "react-router-dom";
 import { FaPlusCircle } from 'react-icons/fa'
 
-import { setProducts } from '../actions'
-import { getProducts } from '../api'
+import { setProductsEnvelope } from '../actions'
+import { getProductsEnvelope } from '../api'
 
 import ProductListItem from './ProductListItem'
 
@@ -22,9 +22,9 @@ class ProductsList extends React.Component {
     }
 
     componentDidMount() {
-        getProducts()
+        getProductsEnvelope()
             .then(products => {
-                this.props.dispatch(setProducts(products))
+                this.props.dispatch(setProductsEnvelope(products))
             })
             .catch(err => {
                 console.log(err)
