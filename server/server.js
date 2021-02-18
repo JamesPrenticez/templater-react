@@ -6,7 +6,8 @@ const cors = require('cors')
 const server = express()
 
 const jobsRoutes = require('./routes/jobs')
-const productRoutes = require('./routes/products')
+const productsRoutes = require('./routes/products')
+const selectionsRoutes = require('./routes/selections')
 const catchAll = require('./routes/catchAll')
 
 // Middle ware
@@ -18,7 +19,8 @@ server.use(fileUpload())
 module.exports = server
 
 // Routes
-server.use('/', productRoutes)
+server.use('/', selectionsRoutes)
+server.use('/', productsRoutes)
 server.use('/', jobsRoutes)
 server.use('/', catchAll)
 

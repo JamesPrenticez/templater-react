@@ -1,7 +1,6 @@
 import request from 'superagent'
 
 // ------------------------------------------------------------ JOBS ------------------------------------------------------------
-
 //GET Jobs
 export function getJobs() {
     return request
@@ -31,10 +30,22 @@ export function editJob(id, jobName, clientName, siteAddress, collection, lotNum
 }
 
 // ------------------------------------------------------------ PRODUCTS ------------------------------------------------------------
-
 //GET Products
 export function getProducts() {
     return request
     .get('/api/v1/products')
     .then(res => res.body.products)
+}
+
+// ------------------------------------------------------------ SELECTIONS ------------------------------------------------------------//GET Products
+export function getSelectionsPreliminary() {
+    return request
+    .get('/api/v1/selections/preliminary')
+    .then(res => res.body.selectionsPreliminary)
+}
+
+export function getSelectionsEnvelope() {
+    return request
+    .get('/api/v1/selections/envelope')
+    .then(res => res.body.selectionsEnvelope)
 }

@@ -25,22 +25,34 @@ class JobSelections extends React.Component {
 
     return (
       <>
-            {/* <SidebarSelections {...this.props} /> */}
 
-        <div className="jobContainerWithSidebar">
+        {/* <SidebarSelections {...this.props} /> */}
+        {/* <div className='jobContainerWithSideBar'> */}
+
+        <div className='jobContainer'>
           <fieldset><legend><h1>Job Selections - {jobs[i].jobName}</h1> </legend>
-            {this.props.currentPage == 'home' ? <SelectionsHome {...this.props}/> : ''}
-            {this.props.currentPage == 'preliminary' ? <SelectionsPreliminary /> : ''}
-            {this.props.currentPage == 'envelope' ? <SelectionsEnvelope /> : ''}
-            {this.props.currentPage == 'interiors' ? <SelectionsInterior /> : ''}
-            {this.props.currentPage == 'services' ? <SelectionsServices /> : ''}
-            {this.props.currentPage == 'siteworks' ? <SelectionsSiteworks /> : ''}
+          <div className='selectionsNav'>
+            <button onClick={this.props.viewPreliminary}>P&G</button>
+            <button onClick={this.props.viewEnvelope}>Envelope</button>
+            <button onClick={this.props.viewInterior}>Interior</button>
+            <button onClick={this.props.viewServices}>Services</button>
+            <button onClick={this.props.viewSiteworks}>Sitework</button>
+          </div>
+
+          {this.props.currentPage == 'home' ? <SelectionsHome/> : ''}
+          {this.props.currentPage == 'preliminary' ? <SelectionsPreliminary /> : ''}
+          {this.props.currentPage == 'envelope' ? <SelectionsEnvelope /> : ''}
+          {this.props.currentPage == 'interiors' ? <SelectionsInterior /> : ''}
+          {this.props.currentPage == 'services' ? <SelectionsServices /> : ''}
+          {this.props.currentPage == 'siteworks' ? <SelectionsSiteworks /> : ''}
+          
           </fieldset>
         </div>
       </>
     )
   }
 }
+
 
 function mapStateToProps(state) {
   console.log(state.currentPage)
