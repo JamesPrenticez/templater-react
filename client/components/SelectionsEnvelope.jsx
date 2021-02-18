@@ -31,12 +31,9 @@ class SelectionsEnvelope extends React.Component {
 
     render() {
         const {selections} = this.props
-
         console.log(selections[0])
-
-
-
         // console.log(selections[0]?.description)
+
         return (
             <>
                     <h1 className="selectionsHeader">Envelope</h1>
