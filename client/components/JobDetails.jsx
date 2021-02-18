@@ -16,7 +16,6 @@ class JobDetails extends React.Component {
         let array = jobs
         let idYourLookingFor = id
         let i = array.findIndex(obj => obj.id == idYourLookingFor)
-        console.log("deatils " + i ) 
 
         return (
             <>

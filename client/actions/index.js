@@ -5,6 +5,9 @@ export const UPDATE_JOB = 'UPDATE_JOB'
 
 export const SET_PRODUCTS = 'SET_PRODUCTS'
 
+export const SET_SELECTIONS_PRELIMINARY = 'SET_SELECTIONS_PRELIMINARY'
+export const SET_SELECTIONS_ENVELOPE = 'SET_SELECTIONS_ENVELOPE'
+
 export const CHANGE_PAGE = 'CHANGE_PAGE'
 export const CHANGE_FORM = 'CHANGE_FORM'
 
@@ -32,13 +35,28 @@ export function updateJob(id, jobName, clientName, siteAddress, collection, lotN
 }
 
 // ------------------------------------------------------------ PRODUCTS ------------------------------------------------------------
-
 export function setProducts(products){
     return {
         type: SET_PRODUCTS,
         products
     }
 }
+
+// ------------------------------------------------------------ SELECTIONS ------------------------------------------------------------
+export function setSelectionsPreliminary(selections){
+    return {
+        type: SET_SELECTIONS_PRELIMINARY,
+        selections
+    }
+}
+
+export function setSelectionsEnvelope(selections){
+    return {
+        type: SET_SELECTIONS_ENVELOPE,
+        selections
+    }
+}
+
 
 // ------------------------------------------------------------ CHANGE PAGE & CHANGE FORM ------------------------------------------------------------
 

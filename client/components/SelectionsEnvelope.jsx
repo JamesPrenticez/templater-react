@@ -1,9 +1,27 @@
 import React from 'react'
 import {connect} from 'react-redux'
-
+import { setSelectionsEnvelope } from '../actions'
+import { getSelectionsEnvelope } from '../api'
 
 class SelectionsEnvelope extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+        }
+    }
+
+    componentDidMount() {
+        getSelectionsEnvelope()
+            .then(selections => {
+                this.props.dispatch(setSelectionsEnvelope(selections))
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
     render() {
+        let { selections } = this.props
         return (
             <>
                     <h1 className="selectionsHeader">Envelope</h1>
@@ -60,4 +78,10 @@ class SelectionsEnvelope extends React.Component {
     }
 }
 
-export default connect()(SelectionsEnvelope)
+function mapStateToProps(state) {
+    return {
+        selections: state.selections
+    }
+}
+
+export default connect(mapStateToProps)(SelectionsEnvelope)

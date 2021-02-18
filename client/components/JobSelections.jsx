@@ -55,7 +55,6 @@ class JobSelections extends React.Component {
 
 
 function mapStateToProps(state) {
-  console.log(state.currentPage)
   return {
     currentPage: state.currentPage
   }

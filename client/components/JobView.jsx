@@ -42,8 +42,6 @@ class JobView extends React.Component {
         let array = jobs
         let idYourLookingFor = id
         let i = array.findIndex(obj => obj.id == idYourLookingFor)
-        console.log("deatils " + i ) 
-
 
         if (confirm("Are you sure you want to delete " + `${jobs[i].jobName}` + "?")) {
             deleteJob(id)
@@ -60,11 +58,6 @@ class JobView extends React.Component {
         const salesDocStyle = { color: 'blue', height: '35px', width: '35px', marginLeft: '7px', cursor: 'pointer' }
         const backStyle = { color: 'DarkMagenta', height: '35px', width: '35px', marginLeft: '7px', cursor: 'pointer', position: 'absolute' }
         const deleteStyle = { color: 'red', height: '35px', width: '35px', marginLeft: '7px', cursor: 'pointer' }
-
-        const { jobs } = this.props
-        const { id } = this.props.match.params
-        console.log("view " + jobs)
-        console.log("view " + id)
 
         if (this.state.toJobList === true) {
             return <Redirect to={'/job_list/'} />
@@ -117,7 +110,6 @@ class JobView extends React.Component {
 }
 
 function mapStateToProps(state){
-    console.log(state.currentForm)
     return {
       currentForm: state.currentForm
     }
